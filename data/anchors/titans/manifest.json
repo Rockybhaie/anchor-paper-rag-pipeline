@@ -1,0 +1,242 @@
+{
+  "anchor": "titans",
+  "papers": [
+    {
+      "id": "00_anchor",
+      "role": "anchor",
+      "urls": [
+        "https://arxiv.org/pdf/2501.00663v1"
+      ],
+      "sha256": "a65e4a7d02784df1a040b487127e6dd09fff4474e5caf94d93263af3d50cfbc2",
+      "pages": 27,
+      "title": "Titans: Learning to Memorize at Test Time",
+      "authors": "Behrouz, Zhong, Mirrokni",
+      "year": 2025,
+      "category": "Anchor"
+    },
+    {
+      "id": "2508_10824",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2508.10824v2"
+      ],
+      "sha256": "25e7049a11f482f59591adeb0baf17964dbe5a24feeb60e756b7745fd1f31f11",
+      "pages": 30,
+      "title": "Memory-Augmented Transformers: A Systematic Review from Neuroscience Principles to Enhanced Model Architectures",
+      "authors": "Parsa Omidi, Xingshuai Huang, Axel Laborieux, Bahareh Nikpour, Tianyu Shi, A. Eshaghi",
+      "year": 2025,
+      "category": "Core Extension",
+      "total": 15,
+      "influential": true,
+      "reason": "The paper systematically reviews and builds upon memory-augmented concepts relevant to the anchor's focus on test-time learning."
+    },
+    {
+      "id": "2607_25380",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2607.25380v1"
+      ],
+      "sha256": "4b239639242fc2ca1be467cf49ad70789c9467f9917c2869d1c2c712a8367e26",
+      "pages": 20,
+      "title": "Memory for Large Language Models",
+      "authors": "Sining Zhoubian, Dan Zhang, Evgeny Kharlamov, Jie Tang",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 15,
+      "influential": true,
+      "reason": "The paper systematically explores and extends the concepts of memory mechanisms in LLMs, directly building on the ideas presented in the anchor paper."
+    },
+    {
+      "id": "2608_21308",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2608.21308v2"
+      ],
+      "sha256": "bf669bc5790fd1a4cb1f0b60e4f72facd02814d1800a7902d32d8323a7beefb9",
+      "pages": 23,
+      "title": "Rethinking Expressivity and Efficiency in Test-Time Training",
+      "authors": "Ze-Yun Zhong, Joya Chen, Manuel Mart\u00edn, Frederik Diederichs, Juergen Gall, Juergen Beyerer",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 15,
+      "influential": true,
+      "reason": "The paper builds directly on the concepts of Test-Time Training and enhances them with a new method."
+    },
+    {
+      "id": "2610_38255",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2610.38255v1"
+      ],
+      "sha256": "2c80d98a2d390a06eb7d28831cb5f25babba830a5ceaa15b04e401af317d4203",
+      "pages": 34,
+      "title": "ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories",
+      "authors": "Noel Loo, Neehal Tumma, T. Konstantin Rusch, Mathias Lechner, Alexander Amini, Daniela Rus",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 15,
+      "influential": true,
+      "reason": "The paper directly builds upon and enhances the test-time training concept introduced in the anchor paper."
+    },
+    {
+      "id": "2603_06642",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2603.06642v2"
+      ],
+      "sha256": "3718c863701a484e12c2187c293bdf5cadbf7795e812b90a915d2258b5685535",
+      "pages": 7,
+      "title": "SR-TTT Does Not Learn Retrieval: A Correction and Mechanistic Post-Mortem of Surprisal-Aware Residual Test-Time Training",
+      "authors": "P. SwamynathanV",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 15,
+      "influential": true,
+      "reason": "The paper critically evaluates and corrects the claims of the anchor paper, providing substantial insights into the mechanisms of Test-Time Training."
+    },
+    {
+      "id": "2603_09221",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2603.09221v2"
+      ],
+      "sha256": "22c616e6d5e2f4534838ca3d69debe6b366e04a786665f5486a419986a2bb78c",
+      "pages": 33,
+      "title": "Beyond Test-Time Memory: State-Space Optimal Control for LLM Reasoning",
+      "authors": "Pei-Hao Wang, Shanzhe Yang, Xijun Wang, Tesi Xiao, Xin Liu, Chang-Long Yu",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 14,
+      "influential": true,
+      "reason": "The paper builds on the concepts of test-time memory and introduces a new architectural component for reasoning."
+    },
+    {
+      "id": "2501_12352",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2501.12352v3"
+      ],
+      "sha256": "832438bde8b0af015815df5380901f581437666b98f4268c3178afee8cc6f6bc",
+      "pages": 31,
+      "title": "Test-time regression: a unifying framework for designing sequence models with associative memory",
+      "authors": "Ke Alexander Wang, Jia-Xin Shi, Emily B. Fox",
+      "year": 2025,
+      "category": "Core Extension",
+      "total": 13,
+      "influential": true,
+      "reason": "The paper builds on the concepts of memorization and retrieval from the anchor paper, providing a unifying framework that extends its ideas."
+    },
+    {
+      "id": "2601_22766",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2601.22766v4"
+      ],
+      "sha256": "a1f118d50eeb2228df727a567dfd2d83e7d1460696deb4eff58be6a8e5f7d560",
+      "pages": 25,
+      "title": "Sparse Attention as Compact Kernel Regression",
+      "authors": "Saul Santos, Nuno Gon\u00e7alves, Daniel C. McNamee, Marcos Vin\u00edcius Treviso, Andr\u00e9 F. T. Martins",
+      "year": 2026,
+      "category": "Related Theory",
+      "total": 13,
+      "influential": true,
+      "reason": "The paper establishes a formal correspondence between sparse attention and kernel regression, closely linking to the concepts of the anchor paper."
+    },
+    {
+      "id": "2507_06203",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2507.06203v2"
+      ],
+      "sha256": "e8d22c10d7fd50f77765313f385bb56eb129ceb5839cf26e3127983445e5ebdf",
+      "pages": 38,
+      "title": "A Survey on Latent Reasoning",
+      "authors": "Rui-Jie Zhu, Tian-Hao Peng, Tianhao Cheng, Xing-Wei Qu, Jin-Fa Huang, Da-Wei Zhu",
+      "year": 2025,
+      "category": "Related Theory",
+      "total": 12,
+      "influential": true,
+      "reason": "The paper explores reasoning methodologies that relate to the concepts of memorization and inference discussed in the anchor paper."
+    },
+    {
+      "id": "2602_21204",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2602.21204v4"
+      ],
+      "sha256": "d84398005dad0b95d64a66a850eb8b114b76951387afd670442f95e21b898cd4",
+      "pages": 20,
+      "title": "Test-Time Training with KV Binding Is Secretly Linear Attention",
+      "authors": "Jun-Cheng Liu, Sven Elflein, O. Litany, Zan Gojcic, Ruilong Li",
+      "year": 2026,
+      "category": "Related Theory",
+      "total": 12,
+      "influential": true,
+      "reason": "The paper provides a theoretical analysis that reframes the understanding of test-time training, closely relating to the concepts in the anchor paper."
+    },
+    {
+      "id": "2606_31830",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2606.31830v1"
+      ],
+      "sha256": "c865f86f0d46dc20d4cb4d98a76cc935c2198068757a64a8a29bf9ede5ab74f1",
+      "pages": 28,
+      "title": "PriorEye: Geospatial Visual Priors for End-to-End Autonomous Driving",
+      "authors": "Kyuhwan Yeon, Benjamin Ramtoula, Daniele De Martini",
+      "year": 2026,
+      "category": "Application",
+      "total": 12,
+      "influential": true,
+      "reason": "The paper applies memory augmentation concepts relevant to the anchor paper in the context of autonomous driving."
+    },
+    {
+      "id": "2411_07279",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2411.07279v2"
+      ],
+      "sha256": "9da8f434864b90ec18378dfa8c920e1d128e5bb694343f8a5a524302e17a5dad",
+      "pages": 22,
+      "title": "The Surprising Effectiveness of Test-Time Training for Few-Shot Learning",
+      "authors": "Ekin Aky\u00fcrek, Mehul Damani, Adam Zweiger, Lin-Lu Qiu, Han Guo, Jyothish Pari",
+      "year": 2024,
+      "category": "Application",
+      "total": 13,
+      "influential": false,
+      "reason": "The paper applies test-time training concepts to enhance language model performance, closely relating to the anchor's focus on memorization at test time."
+    },
+    {
+      "id": "2603_01241",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2603.01241v1"
+      ],
+      "sha256": "f956fc6f4de14ee9460b4408652df8b9014af14b2be196cbf4f2d5b421d4ad8e",
+      "pages": 20,
+      "title": "TARSE: Test-Time Adaptation via Retrieval of Skills and Experience for Reasoning Agents",
+      "authors": "Jun-Da Wang, Zonghai Tao, Hansi Zeng, Zhi-Chao Yang, Hamed Zamani, Hong Yu",
+      "year": 2026,
+      "category": "Application",
+      "total": 13,
+      "influential": false,
+      "reason": "The paper applies the anchor's concepts of test-time adaptation and retrieval to a clinical decision-making context."
+    },
+    {
+      "id": "2602_10491",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2602.10491v1"
+      ],
+      "sha256": "a486b5fff8a4249b99876e9456407e995d30055816f09db3b875aa6cc1376519",
+      "pages": 13,
+      "title": "Towards Remote Sensing Change Detection with Neural Memory",
+      "authors": "Zhen-Yu Yang, Gen-Sheng Pei, Ya-Zhou Yao, Tian-Fei Zhou, Lizhong Ding, Fumin Shen",
+      "year": 2026,
+      "category": "Application",
+      "total": 13,
+      "influential": false,
+      "reason": "The paper applies the Titans framework to a new domain, demonstrating its effectiveness in remote sensing change detection."
+    }
+  ]
+}

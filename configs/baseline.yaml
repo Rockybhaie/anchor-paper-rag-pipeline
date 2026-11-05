@@ -1,0 +1,26 @@
+# Starting setup for the staged evaluation.
+chunking:
+  method: recursive
+  chunk_size: 400
+  overlap: 80
+embedding:
+  provider: openai
+  model: text-embedding-3-small
+index:
+  provider: pinecone
+  cloud: aws
+  region: us-east-1
+retrieval:
+  mode: hybrid_rerank
+  candidates: 15
+  final_k: 5
+generation:
+  provider: openai
+  model: gpt-4o-mini
+  prompt: p0
+  temperature: 0.1
+  max_tokens: 512
+judge:
+  provider: openai
+  model: gpt-4o-mini
+  prompt: binary

@@ -1,0 +1,242 @@
+{
+  "anchor": "ttt_rnn",
+  "papers": [
+    {
+      "id": "00_anchor",
+      "role": "anchor",
+      "urls": [
+        "https://arxiv.org/pdf/2407.04620v4"
+      ],
+      "sha256": "46c960fa5abc08a651d52ffba5e2e59d9b4cd2ebecda02f4fb999a1873102163",
+      "pages": 33,
+      "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
+      "authors": "Sun et al.",
+      "year": 2024,
+      "category": "Anchor"
+    },
+    {
+      "id": "2511_21882",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2511.21882v1"
+      ],
+      "sha256": "be96c9babd4f3a11efe1f83024cce5bcbcea38155f238583bedce0c85931a37f",
+      "pages": 22,
+      "title": "Closed-Loop Transformers: Autoregressive Modeling as Iterative Latent Equilibrium",
+      "authors": "Akbar Anbar Jafari, G. Anbarjafari",
+      "year": 2025,
+      "category": "Core Extension",
+      "total": 14,
+      "influential": true,
+      "reason": "The paper builds on the concept of iterative refinement of hidden states, directly responding to the anchor paper's focus on learning at test time."
+    },
+    {
+      "id": "2602_10796",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2602.10796v4"
+      ],
+      "sha256": "284993adb53c3483b8e79e47beb6eb8acf7a8de89cf88e986f05fb2e19af164f",
+      "pages": 19,
+      "title": "PRISM: Parallel Residual Iterative Sequence Model",
+      "authors": "Jie Jiang, Ke Cheng, Xin Xu, Mengyang Pang, Tianhao Lu, Jiaheng Li",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 14,
+      "influential": true,
+      "reason": "The paper builds on the concepts of expressivity and efficiency in sequence modeling, directly addressing the limitations of existing architectures related to Test-Time Training."
+    },
+    {
+      "id": "2610_16268",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2610.16268v2"
+      ],
+      "sha256": "05986efda42a448f85d24db7ae8404e02c0f963dff5b3cdc1dd65233f08508e8",
+      "pages": 13,
+      "title": "Error Correction in Trained TTT Layers",
+      "authors": "Yu-He Hu",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 14,
+      "influential": true,
+      "reason": "The paper deeply analyzes and extends the test-time training mechanisms introduced in the anchor paper."
+    },
+    {
+      "id": "2504_05298",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2504.05298v1"
+      ],
+      "sha256": "9390623bdd4eef918beb9717151bbf8844f31dc5d5737aed1b62a9b835d50afc",
+      "pages": 14,
+      "title": "One-Minute Video Generation with Test-Time Training",
+      "authors": "Karan Dalal, Daniel Koceja, Gashon Hussein, Jia-Rui Xu, Yue Zhao, Youjin Song",
+      "year": 2025,
+      "category": "Application",
+      "total": 13,
+      "influential": true,
+      "reason": "The paper applies Test-Time Training, inspired by the anchor's expressive hidden states, to improve video generation."
+    },
+    {
+      "id": "2608_30692",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2608.30692v2"
+      ],
+      "sha256": "9b84432962f3e32b0bb3836f65894a127839b286f0bf0d1f09b46f47a15690f1",
+      "pages": 30,
+      "title": "Can Video World Models Track Unobserved World States?",
+      "authors": "Joonghyuk Shin, Yi-Cong Hong, Jaesik Park, Xun Huang",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 13,
+      "influential": true,
+      "reason": "The paper builds on the concepts of hidden state tracking and generalization in RNNs, directly relating to the anchor's focus on expressive hidden states."
+    },
+    {
+      "id": "2608_01672",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2608.01672v1"
+      ],
+      "sha256": "dabab248a0289557ce1d7ef795a6b544e36e388c50277966c134ffd4da5551fa",
+      "pages": 21,
+      "title": "Learning What to Remember: Test-Time Training via Context Distillation",
+      "authors": "Zi-Xuan Wang, Xing-Yu Dang, Rui-Jie Zhu, Zixin Wen, Heng-Yu Fu, Wen-Hao Chai",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 13,
+      "influential": true,
+      "reason": "The paper builds on the concepts of test-time training and memory allocation introduced in the anchor paper."
+    },
+    {
+      "id": "2608_07110",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2608.07110v1"
+      ],
+      "sha256": "f668a1aed3a924ba09e9a2cb9a47a915b6bb67a20174a465ad371dad67309719",
+      "pages": 35,
+      "title": "Modular TTT: Rethinking Test-Time Training as Composable Modules",
+      "authors": "Bo-Hao Tang, Zhen Qin, Yu-Qi Pan, Zheng Li, Peng-Fei Liu, Ya Zhang",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 13,
+      "influential": true,
+      "reason": "The paper builds on the concepts of test-time training and proposes a modular framework that enhances the original ideas presented in the anchor paper."
+    },
+    {
+      "id": "2509_26645",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2509.26645v4"
+      ],
+      "sha256": "88ba0c3c6c2d61f3fd38e12318b8cd04f7c1ff125ffa7a66227de0351794129f",
+      "pages": 25,
+      "title": "TTT3R: 3D Reconstruction as Test-Time Training",
+      "authors": "Xingyu Chen, Yue Chen, Yuliang Xiu, Andreas Geiger, An-Pei Chen",
+      "year": 2025,
+      "category": "Application",
+      "total": 12,
+      "influential": true,
+      "reason": "The paper applies test-time training concepts to improve 3D reconstruction, closely relating to the anchor's focus on learning at test time."
+    },
+    {
+      "id": "2603_03269",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2603.03269v2"
+      ],
+      "sha256": "f27392e85eab5ed1add2a55fd7f2f62485801a3ee6cb5472d3771a417288ec3a",
+      "pages": 17,
+      "title": "LoGeR: Long-Context Geometric Reconstruction with Hybrid Memory",
+      "authors": "Junyi Zhang, Charles Herrmann, Junhwa Hur, Cheng Sun, Ming-Hsuan Yang, Forrester Cole",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 12,
+      "influential": true,
+      "reason": "The paper builds on the concepts of memory and attention mechanisms relevant to the anchor paper."
+    },
+    {
+      "id": "2604_08542",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2604.08542v1"
+      ],
+      "sha256": "bb4df820c6587241fa07206a80397b616eb6988a9a01405f2c8709a5b9e1b839",
+      "pages": 16,
+      "title": "Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction",
+      "authors": "Tao Xie, Peishan Yang, Yu-Dong Jin, Yingfeng Cai, Wei Yin, Wei-Qiang Ren",
+      "year": 2026,
+      "category": "Application",
+      "total": 12,
+      "influential": true,
+      "reason": "The paper applies concepts of test-time adaptation and contextual representation, resonating with the anchor's focus on learning at test time."
+    },
+    {
+      "id": "2602_20160",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2602.20160v2"
+      ],
+      "sha256": "d7110d0b849f5495a2ab23527a1cfdce0890056dc07e3e526a07606279cadf5e",
+      "pages": 13,
+      "title": "tttLRM: Test-Time Training for Long Context and Autoregressive 3D Reconstruction",
+      "authors": "Chen Wang, Hao Tan, Wang Yifan, Zhiqin Chen, Yuheng Liu, Kalyan Sunkavalli",
+      "year": 2026,
+      "category": "Application",
+      "total": 12,
+      "influential": true,
+      "reason": "The paper applies test-time training concepts to a new domain of 3D reconstruction, building on the ideas of learning at test time."
+    },
+    {
+      "id": "2608_06216",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2608.06216v2"
+      ],
+      "sha256": "65ab4fc89d7095712ef9d3bc9ccd43c4a2f832d8d45739e4b568c862b1b81e0f",
+      "pages": 32,
+      "title": "Continual Learning in Transition",
+      "authors": "Zhi-Yan Hou, Dan Zhang, Tao Feng, Li-Yuan Wang, Wei Li, Xiang-Zhao Hao",
+      "year": 2026,
+      "category": "Related Theory",
+      "total": 12,
+      "influential": true,
+      "reason": "The paper discusses broader continual learning concepts that relate to the anchor's focus on learning mechanisms."
+    },
+    {
+      "id": "2504_06823",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2504.06823v1"
+      ],
+      "sha256": "298a36ecc93e35fefcaae20c966a7a4814fe69364fbd53835655e6ad53b15675",
+      "pages": 16,
+      "title": "Open Problems and a Hypothetical Path Forward in LLM Knowledge Paradigms",
+      "authors": "Xiaotian Ye, Mengqi Zhang, Shu Wu",
+      "year": 2025,
+      "category": "Related Theory",
+      "total": 9,
+      "influential": true,
+      "reason": "The paper discusses knowledge paradigms in LLMs, which relates to the expressive hidden states concept in the anchor paper."
+    },
+    {
+      "id": "2604_17121",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2604.17121v5"
+      ],
+      "sha256": "b4b1e34095038b180f55d917737cb10101fd6c4e224c1de8a306cb69ecc68813",
+      "pages": 16,
+      "title": "The Topological Trouble With Transformers",
+      "authors": "M. Mozer, Shoaib Ahmed Siddiqui, Rosanne Liu",
+      "year": 2026,
+      "category": "Related Theory",
+      "total": 13,
+      "influential": false,
+      "reason": "The paper critiques feedforward architectures and emphasizes the importance of recurrent structures, aligning closely with the anchor's focus on RNNs."
+    }
+  ]
+}

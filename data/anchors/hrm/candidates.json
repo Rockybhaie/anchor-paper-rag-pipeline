@@ -1,0 +1,1631 @@
+[
+ {
+  "arxiv": "2605.19943",
+  "title": "Probabilistic Tiny Recursive Model",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 24
+ },
+ {
+  "arxiv": "2601.10679",
+  "title": "Are Your Reasoning Models Reasoning or Guessing? A Mechanistic Analysis of Hierarchical Reasoning Models",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 12
+ },
+ {
+  "arxiv": "2603.22871",
+  "title": "Dynamical Systems Theory Behind a Hierarchical Reasoning Model",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2610.11570",
+  "title": "Scaling to Tens of Thousands of Test-Time Iterations with Loop-Native Attention Residuals",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2610.18174",
+  "title": "Looped Reasoning Finishes Earlier Than You Think",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.25646",
+  "title": "Spherical Fixed-Point Reasoners: Adaptive Loop Halting on the Hypersphere",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.26542",
+  "title": "Breaking Diffusion: Parallel Reasoning with Draft Refinement",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2605.19376",
+  "title": "Generative Recursive Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 16
+ },
+ {
+  "arxiv": "2609.11801",
+  "title": "Thinking with Looped Flows",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 13
+ },
+ {
+  "arxiv": "2510.00355",
+  "title": "Hierarchical Reasoning Models: Perspectives and Misconceptions",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 12
+ },
+ {
+  "arxiv": "2511.16886",
+  "title": "Latent Reasoning in TRMs is Secretly a Policy Improvement Operator",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2602.12078",
+  "title": "Tiny Recursive Reasoning with Mamba-2 Attention Hybrid",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2604.21999",
+  "title": "Universal Transformers Need Memory: Depth-State Trade-offs in Adaptive Recursive Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2604.14442",
+  "title": "Hierarchical vs. Flat Iteration in Shared-Weight Transformers",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2603.05234",
+  "title": "Recursive Inference Machines for Neural Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2510.08222",
+  "title": "Selection, Reflection and Self-Refinement: Revisit Reasoning Tasks via a Causal Lens",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2604.13521",
+  "title": "C-voting: Confidence-Based Test-Time Voting without Explicit Energy Functions",
+  "year": 2026,
+  "total": 13,
+  "category": "Application",
+  "influential": true,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2605.17811",
+  "title": "One Model, Two Roles: Emergent Specialization in a Shared Recurrent Transformer",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2608.24136",
+  "title": "Steering Recurrent Reasoners at Inference Time with Readout Feedback",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2609.26487",
+  "title": "When Recursive Models Finish Computing",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2609.39967",
+  "title": "What Limits Recursive Reasoning Models: Optimization, Architecture and Test-Time Scaling",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2610.18649",
+  "title": "Tiny Recursive Message Passing",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2607.02491",
+  "title": "G-RRM: Guiding Symbolic Solvers with Recurrent Reasoning Models",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.28809",
+  "title": "Stream Recursion Model (SRM)",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.33270",
+  "title": "Structured Sparse Memory for Recurrent Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.09759",
+  "title": "Unrolled Flow Models for Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.16427",
+  "title": "Resample the Answer: Where to Spend Test-Time Compute in Recursive Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2604.12946",
+  "title": "Parcae: Scaling Laws For Stable Looped Language Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 79
+ },
+ {
+  "arxiv": "2606.18206",
+  "title": "Fixed-Point Reasoners: Stable and Adaptive Deep Looped Transformers",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 37
+ },
+ {
+  "arxiv": "2604.15259",
+  "title": "Stability and Generalization in Looped Transformers",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": true,
+  "citation_count": 16
+ },
+ {
+  "arxiv": "2512.14693",
+  "title": "Universal Reasoning Model",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 14
+ },
+ {
+  "arxiv": "2607.13491",
+  "title": "DeepLoop: Depth Scaling for Looped Transformers",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2604.18839",
+  "title": "One Step Forward and K Steps Back: Better Reasoning with Denoising Recursion Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 6
+ },
+ {
+  "arxiv": "2605.25230",
+  "title": "Boosting Inference with Guided Reasoning: Stochastic Exploration for Recursive Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2603.16661",
+  "title": "Self-Aware Markov Models for Discrete Reasoning",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.20922",
+  "title": "Winfree Oscillatory Neural Network",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2609.36126",
+  "title": "Reasoning with Neural Cellular Automata",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2608.29376",
+  "title": "Evaluating Tiny Recursive Models Across Training for Code Generation",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.05988",
+  "title": "DART: Distributional Adversarial Recurrent Training for Algorithm Learning",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.09009",
+  "title": "Let It Go or Learn to Self-Correct: Continuous Diffusion for Constrained Discrete Tasks",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.36653",
+  "title": "Scheduling Recursive Reasoning in Looped Transformers",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.39277",
+  "title": "A Tilted Bowl Is Not a Slippery Slope: Compressing Looped Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.00541",
+  "title": "Random Recursive Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.28543",
+  "title": "Binary Discrete Diffusion: Candidate-Set Diffusion for Logic and Planning Tasks",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.30068",
+  "title": "Loopholing All the Way: Language Modeling with pure Self-Conditioning",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.33288",
+  "title": "Tiny Recursive Policy: Recursive Latent Refinement for Visuomotor Control",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2603.08082",
+  "title": "Tiny Autoregressive Recursive Models",
+  "year": 2026,
+  "total": 10,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 6
+ },
+ {
+  "arxiv": "2605.12466",
+  "title": "Solve the Loop: Attractor Models for Language and Reasoning",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 21
+ },
+ {
+  "arxiv": "2601.21582",
+  "title": "Depth-Recurrent Attention Mixtures: Giving Latent Reasoning the Attention it Deserves",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 15
+ },
+ {
+  "arxiv": "2606.29150",
+  "title": "Flow Reasoning Models: Turning Flows Into Efficient Recurrent Reasoners",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2610.23036",
+  "title": "Towards Looped Models Done Right, Part I: Topology, Input Injection, Recurrent-State Design",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 6
+ },
+ {
+  "arxiv": "2607.05381",
+  "title": "What Does a Discrete Diffusion Model Learn?",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2605.15309",
+  "title": "One Pass Is Not Enough: Recursive Latent Refinement for Generative Models",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.00206",
+  "title": "State Stream Transformer (SST) V2: Parallel Training of Nonlinear Recurrence for Latent Space Reasoning",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2606.16730",
+  "title": "Attention is Just Another Name for Coupling?: A Fast-Slow ODE Perspective on Hierarchical Pretraining",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2607.19635",
+  "title": "Anatomy of a Sound Neural Reasoner: One-Shot Amortization, First-Pass Poisoning, and Search Inertness in Clue-Rich Completion",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.34212",
+  "title": "X-MoD: Practical Scaling Laws for Sparse-Depth Routing Beyond Mixture-of-Depths",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.12472",
+  "title": "Quantum-like architecture of the social atom: mental marker coherence and the triple-resonance mechanism of cognitive activation",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.14982",
+  "title": "Fitting Every Hint Is Not Enough: Premature Floods in Recurrent Algorithmic Reasoners",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2602.11451",
+  "title": "LoopFormer: Elastic-Depth Looped Transformers for Latent Reasoning via Shortcut Modulation",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 87
+ },
+ {
+  "arxiv": "2509.03646",
+  "title": "Emergent Hierarchical Reasoning in LLMs through Reinforcement Learning",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 44
+ },
+ {
+  "arxiv": "2604.11791",
+  "title": "A Mechanistic Analysis of Looped Reasoning Language Models",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 39
+ },
+ {
+  "arxiv": "2508.12587",
+  "title": "Multimodal Chain of Continuous Thought for Latent-Space Reasoning in Vision-Language Models",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 27
+ },
+ {
+  "arxiv": "2509.04439",
+  "title": "ArcMemo: Abstract Reasoning Composition with Lifelong LLM Memory",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 26
+ },
+ {
+  "arxiv": "2602.07845",
+  "title": "Recurrent-Depth VLA: Implicit Test-Time Compute Scaling of Vision-Language-Action Models via Latent Iterative Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 21
+ },
+ {
+  "arxiv": "2605.11011",
+  "title": "LoopUS: Recasting Pretrained LLMs into Looped Latent Refinement Models",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 19
+ },
+ {
+  "arxiv": "2602.02156",
+  "title": "LoopViT: Scaling Visual ARC with Looped Transformers",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 18
+ },
+ {
+  "arxiv": "2605.20613",
+  "title": "HRM-Text: Efficient Pretraining Beyond Scaling",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 15
+ },
+ {
+  "arxiv": "2602.16490",
+  "title": "From Growing to Looping: A Unified View of Iterative Computation in LLMs",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 11
+ },
+ {
+  "arxiv": "2601.15160",
+  "title": "Knowledge Graphs are Implicit Reward Models: Path-Derived Signals Enable Compositional Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2609.19107",
+  "title": "How Model Growth, Recursion, and Boundary Operators Influence Scaling Exponents",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2510.06261",
+  "title": "AlphaApollo: A System for Deep Agentic Reasoning",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 6
+ },
+ {
+  "arxiv": "2511.15703",
+  "title": "Think Visually, Reason Textually: Vision-Language Synergy in ARC",
+  "year": 2025,
+  "total": 13,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2601.07675",
+  "title": "Tab-TRM: Tiny Recursive Model for Insurance Pricing on Tabular Data",
+  "year": 2026,
+  "total": 13,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2603.02193",
+  "title": "Symbol-Equivariant Recurrent Reasoning Models",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2608.30692",
+  "title": "Can Video World Models Track Unobserved World States?",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2511.23262",
+  "title": "Adapting Like Humans: A Metacognitive Agent with Test-time Reasoning",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2603.25414",
+  "title": "Decidable By Construction: Design-Time Verification for Truly Fearless Systems",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2603.09221",
+  "title": "Beyond Test-Time Memory: State-Space Optimal Control for LLM Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2603.20219",
+  "title": "Thinking into the Future: Latent Lookahead Training for Transformers",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2604.01610",
+  "title": "GraphWalk: Enabling Reasoning in Large Language Models through Tool-Based Graph Navigation",
+  "year": 2026,
+  "total": 13,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.20784",
+  "title": "Interaction Locality in Hierarchical Recursive Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.28919",
+  "title": "CosmicFish-HRM: Adaptive Reasoning via Hierarchical Recurrent Mechanisms in Compact Language Models",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.30343",
+  "title": "Unlocking the Working Memory of Large Language Models for Latent Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2606.03741",
+  "title": "When to Re-Plan: Subgoal Persistence in Hierarchical Latent Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2608.08113",
+  "title": "Think Deep, Speak Once: Relit, A Recursive Latent Implicit Transformer Framework",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2507.18868",
+  "title": "A Neuroscience-Inspired Dual-Process Model of Compositional Generalization",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2509.19742",
+  "title": "HiCoLoRA: Addressing Context-Prompt Misalignment via Hierarchical Collaborative LoRA for Zero-Shot DST",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2510.03598",
+  "title": "Exploring the Hierarchical Reasoning Model for Small Natural-Image Classification Without Augmentation",
+  "year": 2025,
+  "total": 13,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2510.04871",
+  "title": "Less is More: Recursive Reasoning with Tiny Networks",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2510.22832",
+  "title": "HRM-Agent: Training a recurrent reasoning model in dynamic environments using reinforcement learning",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2511.07884",
+  "title": "Meta\u2013cognitive Multi\u2013scale Hierarchical Reasoning for Motor Imagery Decoding",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2601.13562",
+  "title": "RoSeViT: Role-Separated Vision Transformers for ARC Visual Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2605.00847",
+  "title": "H-Probes: Extracting Hierarchical Structures From Latent Representations of Language Models",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2605.10537",
+  "title": "Mela: Test-Time Memory Consolidation based on Transformation Hypothesis",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2607.11116",
+  "title": "The Equilibrium Is the Initialization: Lazy Identity Collapse in Physics-Structured Deep Equilibrium Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.06666",
+  "title": "What Matters for Latent Reasoning with Flow Matching",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.09876",
+  "title": "Think Before You Paint: Recursive Latent Reasoning for Diffusion Models",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.11472",
+  "title": "From Chain-of-Thought to Loops: Non-Autoregressive Latent Reasoning via Looped Transformers",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.26666",
+  "title": "Nested Shared-Operator Recursion on ARC-AGI-1: An Empirical Study of HRM, TRM and URM",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.31421",
+  "title": "How Depth Growth and Looping Shape In-Context Learning in Language Models",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2511.07384",
+  "title": "Teaching Pretrained Language Models to Think Deeper with Retrofitted Recurrence",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 71
+ },
+ {
+  "arxiv": "2509.11131",
+  "title": "Neural cellular automata: applications to biology and beyond classical AI",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 21
+ },
+ {
+  "arxiv": "2510.01098",
+  "title": "Theory of Scaling Laws for In-Context Regression: Depth, Width, Context and Time",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 20
+ },
+ {
+  "arxiv": "2605.07721",
+  "title": "Memory-Efficient Looped Transformer: Decoupling Compute from Memory in Looped Language Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 20
+ },
+ {
+  "arxiv": "2509.25239",
+  "title": "A Formal Comparison Between Chain-of-Thought and Latent Thought",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 18
+ },
+ {
+  "arxiv": "2508.10824",
+  "title": "Memory-Augmented Transformers: A Systematic Review from Neuroscience Principles to Enhanced Model Architectures",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 13
+ },
+ {
+  "arxiv": "2508.16817",
+  "title": "Predictability Enables Parallelization of Nonlinear State Space Models",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 13
+ },
+ {
+  "arxiv": "2510.25939",
+  "title": "SoK: Honeypots & LLMs, More Than the Sum of Their Parts?",
+  "year": 2025,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 12
+ },
+ {
+  "arxiv": "2509.07604",
+  "title": "K2-Think: A Parameter-Efficient Reasoning System",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 11
+ },
+ {
+  "arxiv": "2604.25917",
+  "title": "Recursive Multi-Agent Systems",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 11
+ },
+ {
+  "arxiv": "2607.20064",
+  "title": "PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 11
+ },
+ {
+  "arxiv": "2610.02200",
+  "title": "VISTA: A Visual Harness for Reasoning in an Interactive World",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 11
+ },
+ {
+  "arxiv": "2607.16051",
+  "title": "Loop the Loopies!",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 9
+ },
+ {
+  "arxiv": "2608.11233",
+  "title": "Retrofitting Recurrent Depth into a Pretrained Language Model: Installation, Extrapolation, Transfer, and Retention at Two Parameter Budgets",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 9
+ },
+ {
+  "arxiv": "2606.06479",
+  "title": "Pretraining Recurrent Networks without Recurrence",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2606.29983",
+  "title": "Stabilizing Extrapolation in Looped Transformers via Learned Stochastic Stopping",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 6
+ },
+ {
+  "arxiv": "2601.10904",
+  "title": "ARC Prize 2025: Technical Report",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2604.05164",
+  "title": "Not All Turns Are Equally Hard: Adaptive Thinking Budgets For Efficient Multi-Turn Reasoning",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2605.10661",
+  "title": "bViT: Investigating Single-Block Recurrence in Vision Transformers for Image Recognition",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2606.18022",
+  "title": "Recursive Scaling in Masked Diffusion Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2610.06833",
+  "title": "Towards Looped Models Done Right, Part II: Rethinking at Fixed Points",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2610.10381",
+  "title": "ResidualQuant: KV Cache Quantization for Looped Transformers with 2-Bit Residuals",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2602.18308",
+  "title": "JPmHC Dynamical Isometry via Orthogonal Hyper-Connections",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2509.17621",
+  "title": "SeqBattNet: A Discrete-State Physics-Informed Neural Network with Aging Adaptation for Battery Modeling",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2604.01577",
+  "title": "Exploration of Fast-Slow Latent Recurrence for Train-Short, Test-Long Generalization",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2604.07904",
+  "title": "Kuramoto Oscillatory Phase Encoding: Neuro-inspired Synchronization for Improved Learning Efficiency",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2605.22967",
+  "title": "Learned Relay Representations for Forward-Thinking Discrete Diffusion Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2605.29123",
+  "title": "The Confidence Shortcut: A Reasoning Failure Mode of Masked Diffusion Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2609.01449",
+  "title": "Diffusion as a Training Curriculum for Timestep-Free Iterative Reasoning",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2610.09013",
+  "title": "Enabling Dynamic Computation in Looped LMs",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2511.08747",
+  "title": "Vector symbolic algebras for the Abstraction and Reasoning Corpus",
+  "year": 2025,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2511.22751",
+  "title": "Exact Learning of Arithmetic with Differentiable Agents",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2603.22570",
+  "title": "CanViT: Toward Active-Vision Foundation Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2604.25299",
+  "title": "The Thinking Pixel: Recursive Sparse Reasoning in Multimodal Diffusion Latents",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2605.18387",
+  "title": "Graph Hierarchical Recurrence for Long-Range Generalization",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2606.04678",
+  "title": "Test-Time Compute Scaling for ASR with Depth-Conditioned Looped Transformers",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2512.14531",
+  "title": "VersatileFFN: Achieving Parameter Efficiency in LLMs via Adaptive Wide-and-Deep Reuse",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.25949",
+  "title": "Small Models, Strong Priors: Architectural Inductive Bias for Parameter-Efficient Neural PDE Solvers",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2607.05482",
+  "title": "TypeGo: An OS Runtime for Embodied Agents",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2607.10128",
+  "title": "Energy-guided Recursive Model",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2608.06834",
+  "title": "Graph Machine: Exploring Edge Mechanisms as an Inductive Bias",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2609.38426",
+  "title": "LoopVL: Recurrent Visual Intelligence",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2610.26030",
+  "title": "Truncate or Not? A Scaling Study of Looped Transformers with Truncated Backpropagation",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2604.00243",
+  "title": "UCell: rethinking generalizability and scaling of bio-medical vision models",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2604.12874",
+  "title": "LIFE - an energy efficient advanced continual learning agentic AI framework for frontier systems",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2605.07277",
+  "title": "Bifurcation Models: Learning Set-Valued Solution Maps with Weight-Tied Dynamics",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2606.16620",
+  "title": "Entropy-Gated Latent Recursion",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2607.14937",
+  "title": "A Minimal Interpretable Architecture for Zero-Shot Reconstruction of Dynamical Systems",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2607.15693",
+  "title": "Toward a mechanistic understanding of inference in visual cortex and diffusion models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2608.06014",
+  "title": "Iterate or Widen? When Test-Time Refinement Helps LiDAR Scene Completion: A Controlled Study of Evidence Geometry, Training Coverage, and Compute",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2608.09888",
+  "title": "BDH-CQ: In-Context Learning with Recurrent Latent Reasoning",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2608.12325",
+  "title": "Position: Reasoning is a Learnable Rule-Based Process",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2608.14019",
+  "title": "Emergent Models: Intelligence from Tiny Substrates",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.18623",
+  "title": "FIVE-VLA: Fast and EffectIVE Autonomous Driving with Recurrent Action Memory",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.19717",
+  "title": "Learn Your Own Thoughts: Abstract Token Curriculum",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.25131",
+  "title": "Entropy Can Flow, or It Can Guide. Be Entropy. LEDFlow: Introducing Entropy-guided Generation Order into Uniform Discrete Flow",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.32619",
+  "title": "Intuition vectors",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.33149",
+  "title": "Not Too Hard, Not Too Easy: Learning from Intermediate States for LLM Structured Reasoning",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.34585",
+  "title": "Compute Time Scaling with Recursive Models for Combinatorial Optimization",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.38348",
+  "title": "Function-Space Transformer with Adaptive Anchors",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.00820",
+  "title": "On-the-fly Weight Generation: A Hypernetwork Proof of Concept on ARC-1D",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.09416",
+  "title": "Efficient Reasoning with Flow Language Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.15081",
+  "title": "Knowledge transfer between simple discrete worlds",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.21323",
+  "title": "AdaLoop: Thinking with the Vision Encoder",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.23353",
+  "title": "RTSM: Adapting Recursive Models to Multivariate Time-Series Classification",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.24135",
+  "title": "Inside the Loop: A Mechanistic Study of Weight-Tied Transformers on Depth-Bound Algorithmic Tasks",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.28011",
+  "title": "Knowing When to Stop Thinking: A Dissection of Expected Free Energy as a Test-Time Compute Controller for Latent World-Model Planning",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.30744",
+  "title": "Random Remasking Scales Masked Diffusion Inference",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.31633",
+  "title": "BeNice! Closing Looping's Inference-Memory Gap via KV-Sharing",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.34157",
+  "title": "LoopGR: Parameter-Efficient Scaling for Generative Recommendation via Recurrent Depth",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.37833",
+  "title": "Depth through Recurrence: Towards Ultra-Efficient On-Device ASR",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2611.04663",
+  "title": "Best-of-Depth: Learning Exploratory Dynamics in Looped Transformers",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2509.23314",
+  "title": "Two-Scale Latent Dynamics for Recurrent-Depth Transformers",
+  "year": 2025,
+  "total": 11,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 15
+ },
+ {
+  "arxiv": "2605.05629",
+  "title": "Spherical Flows for Sampling Categorical Data",
+  "year": 2026,
+  "total": 11,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 9
+ },
+ {
+  "arxiv": "2511.02886",
+  "title": "Test-time Adaptation of Tiny Recursive Models",
+  "year": 2025,
+  "total": 11,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 6
+ },
+ {
+  "arxiv": "2512.06104",
+  "title": "ARC-AGI Without Pretraining",
+  "year": 2025,
+  "total": 11,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2502.17437",
+  "title": "Fractal Generative Models",
+  "year": 2025,
+  "total": 10,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 60
+ },
+ {
+  "arxiv": "2507.12549",
+  "title": "The Serial Scaling Hypothesis",
+  "year": 2025,
+  "total": 10,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 16
+ },
+ {
+  "arxiv": "2507.23170",
+  "title": "BAR Conjecture: the Feasibility of Inference Budget-Constrained LLM Services with Authenticity and Reasoning",
+  "year": 2025,
+  "total": 10,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2508.17099",
+  "title": "Challenges in Statistics: A Dozen Challenges in Causality and Causal Inference",
+  "year": 2025,
+  "total": 9,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 20
+ }
+]

@@ -1,0 +1,242 @@
+{
+  "anchor": "hrm",
+  "papers": [
+    {
+      "id": "00_anchor",
+      "role": "anchor",
+      "urls": [
+        "https://arxiv.org/pdf/2506.21734v4"
+      ],
+      "sha256": "3c9f7bf4484c8ca1d3cbac5af117afc87cca07e958361cf46904cfa58e2ad19f",
+      "pages": 24,
+      "title": "Hierarchical Reasoning Model",
+      "authors": "Wang et al.",
+      "year": 2025,
+      "category": "Anchor"
+    },
+    {
+      "id": "2605_19943",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2605.19943v1"
+      ],
+      "sha256": "828869a729c488655c3aa67cda9b235d8c65a58b59bf4f39fa06e719a62cea67",
+      "pages": 14,
+      "title": "Probabilistic Tiny Recursive Model",
+      "authors": "Amin Sghaier, Alipanah Parviz, Alexia Jolicoeur-Martineau",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 15,
+      "influential": true,
+      "reason": "The paper builds upon the concepts of the Hierarchical Reasoning Model by introducing a probabilistic approach to enhance its performance."
+    },
+    {
+      "id": "2601_10679",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2601.10679v2"
+      ],
+      "sha256": "91a5f399814c0bafc90cc29ad8e2485d23b2aae86fb49de4ce850c4faafdb1b1",
+      "pages": 13,
+      "title": "Are Your Reasoning Models Reasoning or Guessing? A Mechanistic Analysis of Hierarchical Reasoning Models",
+      "authors": "Zi-Rui Ren, Zi-Ming Liu",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 15,
+      "influential": true,
+      "reason": "The paper provides a detailed mechanistic analysis of the Hierarchical Reasoning Model, identifying its strengths and weaknesses while proposing enhancements."
+    },
+    {
+      "id": "2603_22871",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2603.22871v1"
+      ],
+      "sha256": "ff657996388e3483c7e130575042e6818da0e797a926919724dd349d4aabe8e6",
+      "pages": 22,
+      "title": "Dynamical Systems Theory Behind a Hierarchical Reasoning Model",
+      "authors": "V. A. Es'kin, Mikhail E. Smorkalov",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 15,
+      "influential": true,
+      "reason": "The paper builds upon the Hierarchical Reasoning Model by proposing a new architecture that addresses its limitations."
+    },
+    {
+      "id": "2610_11570",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2610.11570v2"
+      ],
+      "sha256": "a4bb12f7b5c0abaefcaf9daf44836937954e8734e0f3504239479a78afbfa46e",
+      "pages": 16,
+      "title": "Scaling to Tens of Thousands of Test-Time Iterations with Loop-Native Attention Residuals",
+      "authors": "Peng-Xiang Li, Dilxat Muhtar, Di He, Gui-Nan Su, Lu Yin, Shi-Wei Liu",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 15,
+      "influential": true,
+      "reason": "The paper builds on the concepts of hierarchical reasoning by introducing a novel mechanism for improving iterative reasoning in transformers."
+    },
+    {
+      "id": "2610_18174",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2610.18174v1"
+      ],
+      "sha256": "c7708e99d27c0d7cf03e35e53608187aedd8a2efc37ca5a8b3c8fcd74f8065bc",
+      "pages": 25,
+      "title": "Looped Reasoning Finishes Earlier Than You Think",
+      "authors": "Sumin Park, T. Konstantin Rusch",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 15,
+      "influential": true,
+      "reason": "The paper builds on the concepts of reasoning dynamics and introduces a new architecture that addresses limitations in the anchor paper's model."
+    },
+    {
+      "id": "2610_25646",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2610.25646v1"
+      ],
+      "sha256": "df88d779d37f11e9c7c4074c35b8c41fb006e992685ee911f709710e1c48aa12",
+      "pages": 37,
+      "title": "Spherical Fixed-Point Reasoners: Adaptive Loop Halting on the Hypersphere",
+      "authors": "A. Zela, A. Maranjyan, Pol Puigdemont, D. Berghaus, Valentyn Boreiko, V. Cevher",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 15,
+      "influential": true,
+      "reason": "The paper builds on the concepts of fixed-point reasoning and adaptive computation introduced in the anchor paper, presenting a novel approach with significant technical advancements."
+    },
+    {
+      "id": "2610_26542",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2610.26542v1"
+      ],
+      "sha256": "16d25272611ad7c45c6972139f835a93659361d210b2b6a67692290d1929f6f6",
+      "pages": 25,
+      "title": "Breaking Diffusion: Parallel Reasoning with Draft Refinement",
+      "authors": "Jaesang Yu, Seoyeon Byun, Yun Wang, Yan Lu, Juho Kim",
+      "year": 2026,
+      "category": "Core Extension",
+      "total": 15,
+      "influential": true,
+      "reason": "The paper builds on hierarchical reasoning by introducing a novel approach to parallel reasoning and draft refinement."
+    },
+    {
+      "id": "2604_13521",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2604.13521v1"
+      ],
+      "sha256": "98685e1bef4dc37ce5866df9d28b450db86c8efd05012c5ffe5ba0bfc31802a4",
+      "pages": 17,
+      "title": "C-voting: Confidence-Based Test-Time Voting without Explicit Energy Functions",
+      "authors": "Kenji Kubo, Shunsuke Kamiya, Masanori Koyama, Kohei Hayashi, Yusuke Iwasawa, Yutaka Matsuo",
+      "year": 2026,
+      "category": "Application",
+      "total": 13,
+      "influential": true,
+      "reason": "The paper builds on the concepts of the Hierarchical Reasoning Model by introducing a new test-time scaling strategy that enhances performance in reasoning tasks."
+    },
+    {
+      "id": "2604_15259",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2604.15259v2"
+      ],
+      "sha256": "800642a2b9ac1c686940bbcf8ac577c81c6fc7adbae57ef84583c32ccb2184b4",
+      "pages": 27,
+      "title": "Stability and Generalization in Looped Transformers",
+      "authors": "Asher Labovich",
+      "year": 2026,
+      "category": "Related Theory",
+      "total": 12,
+      "influential": true,
+      "reason": "The paper analyzes architectural choices in looped transformers, which relates to hierarchical reasoning concepts."
+    },
+    {
+      "id": "2605_20922",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2605.20922v1"
+      ],
+      "sha256": "e4ed858f4518ae18a360f537a6b686856f7a56f5ecbef35ee08cfd38bd860d04",
+      "pages": 31,
+      "title": "Winfree Oscillatory Neural Network",
+      "authors": "Jiawen Dai, Yue Song",
+      "year": 2026,
+      "category": "Application",
+      "total": 12,
+      "influential": true,
+      "reason": "The paper applies hierarchical reasoning concepts through a novel oscillatory neural network architecture."
+    },
+    {
+      "id": "2609_36126",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2609.36126v1"
+      ],
+      "sha256": "25f8f81eacf251ce03523bcbe0bb59f6193266d952600e793213c9162c2fb0ae",
+      "pages": 29,
+      "title": "Reasoning with Neural Cellular Automata",
+      "authors": "Mayalen Etcheverry, Pietro Miotti, Aidan Sirbu, Konstantin Sch\u00fcrholt, M. Drozdova, Arna Ghosh",
+      "year": 2026,
+      "category": "Application",
+      "total": 12,
+      "influential": true,
+      "reason": "The paper explores decentralized reasoning in NCAs, which relates to hierarchical reasoning concepts."
+    },
+    {
+      "id": "2608_29376",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2608.29376v1"
+      ],
+      "sha256": "06777dc95f07e63958938f0030f356a2c7627969c98e87536519b15674cb3ca2",
+      "pages": 10,
+      "title": "Evaluating Tiny Recursive Models Across Training for Code Generation",
+      "authors": "Anjani Sirivella, Aanisha Newaz, Glaucia Melo",
+      "year": 2026,
+      "category": "Application",
+      "total": 12,
+      "influential": true,
+      "reason": "The paper applies hierarchical reasoning concepts to evaluate recursive models in code generation."
+    },
+    {
+      "id": "2607_11116",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2607.11116v1"
+      ],
+      "sha256": "478982b2e3fea3a4d6f36fce75285f553dd6632a360fba169c77366dd2cf0081",
+      "pages": 14,
+      "title": "The Equilibrium Is the Initialization: Lazy Identity Collapse in Physics-Structured Deep Equilibrium Reasoning",
+      "authors": "Joyjeet Singh",
+      "year": 2026,
+      "category": "Related Theory",
+      "total": 13,
+      "influential": false,
+      "reason": "The paper critically examines the implicit computation in deep equilibrium models, building on concepts from the anchor paper."
+    },
+    {
+      "id": "2510_01098",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2510.01098v1"
+      ],
+      "sha256": "d1e34905c287661bf8a66ba2315272a7b072b4494ce8eae236a77ab142313fb0",
+      "pages": 29,
+      "title": "Theory of Scaling Laws for In-Context Regression: Depth, Width, Context and Time",
+      "authors": "Blake Bordelon, Mary I. Letey, Cengiz Pehlevan",
+      "year": 2025,
+      "category": "Related Theory",
+      "total": 12,
+      "influential": false,
+      "reason": "The paper explores in-context learning and scaling laws, which relate to hierarchical reasoning in deep models."
+    }
+  ]
+}

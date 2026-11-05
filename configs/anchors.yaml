@@ -1,0 +1,26 @@
+# The four predefined anchor papers. Each anchor has its own corpus and index.
+anchors:
+  nested_learning:
+    title: "Nested Learning: The Illusion of Deep Learning Architectures"
+    authors: "Behrouz, Razaviyayn, Zhong, Mirrokni"
+    year: 2025
+    arxiv: "2512.24695"
+    citing_papers: 14
+  titans:
+    title: "Titans: Learning to Memorize at Test Time"
+    authors: "Behrouz, Zhong, Mirrokni"
+    year: 2025
+    arxiv: "2501.00663"
+    citing_papers: 14
+  ttt_rnn:
+    title: "Learning to (Learn at Test Time): RNNs with Expressive Hidden States"
+    authors: "Sun et al."
+    year: 2024
+    arxiv: "2407.04620"
+    citing_papers: 14
+  hrm:
+    title: "Hierarchical Reasoning Model"
+    authors: "Wang et al."
+    year: 2025
+    arxiv: "2506.21734"
+    citing_papers: 14

@@ -1,0 +1,3161 @@
+[
+ {
+  "arxiv": "2508.10824",
+  "title": "Memory-Augmented Transformers: A Systematic Review from Neuroscience Principles to Enhanced Model Architectures",
+  "year": 2025,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 13
+ },
+ {
+  "arxiv": "2607.25380",
+  "title": "Memory for Large Language Models",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2608.21308",
+  "title": "Rethinking Expressivity and Efficiency in Test-Time Training",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2610.38255",
+  "title": "ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2603.06642",
+  "title": "SR-TTT Does Not Learn Retrieval: A Correction and Mechanistic Post-Mortem of Surprisal-Aware Residual Test-Time Training",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2603.09221",
+  "title": "Beyond Test-Time Memory: State-Space Optimal Control for LLM Reasoning",
+  "year": 2026,
+  "total": 14,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2501.12352",
+  "title": "Test-time regression: a unifying framework for designing sequence models with associative memory",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 79
+ },
+ {
+  "arxiv": "2505.23735",
+  "title": "ATLAS: Learning to Optimally Memorize the Context at Test Time",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 78
+ },
+ {
+  "arxiv": "2512.23675",
+  "title": "End-to-End Test-Time Training for Long Context",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 71
+ },
+ {
+  "arxiv": "2604.06169",
+  "title": "In-Place Test-Time Training",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 25
+ },
+ {
+  "arxiv": "2511.07343",
+  "title": "TNT: Improving Chunkwise Training for Test-Time Memorization",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2601.22766",
+  "title": "Sparse Attention as Compact Kernel Regression",
+  "year": 2026,
+  "total": 13,
+  "category": "Related Theory",
+  "influential": true,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2607.00368",
+  "title": "Beyond Perplexity: A Behavioral Evaluation Framework for Deployment-Memory Claims in LLM Test-Time Training",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2506.17671",
+  "title": "TPTT: Transforming Pretrained Transformers into Titans",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2606.08573",
+  "title": "Titans-as-a-Layer: Test-Time Memory for Conversational Speech Emotion Recognition",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2608.17616",
+  "title": "MoNe: Modular Neural Memory for Efficient Long Context Inference",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.33268",
+  "title": "LSTMem: Hierarchical Long Short-Term Online Memory for Large Language Models",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.39800",
+  "title": "Finite-Horizon Fisher Memory in Two-Sided Power-Bounded Recurrent Systems",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.17686",
+  "title": "Encoding Context into LLM Weights: What Makes It Context?",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.19210",
+  "title": "Titan-Llama: Retrofitting Pre-trained LLMs with External Neural Memory Modules",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.28882",
+  "title": "inr2action: Encoding Robot Episodes as Neural Implicit Representations for Recall and Action",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.29357",
+  "title": "Memory-Centric Continual Learning for AI Agents",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2512.24695",
+  "title": "Nested Learning: The Illusion of Deep Learning Architectures",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 103
+ },
+ {
+  "arxiv": "2507.06203",
+  "title": "A Survey on Latent Reasoning",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": true,
+  "citation_count": 58
+ },
+ {
+  "arxiv": "2506.02475",
+  "title": "Comba: Improving Bilinear RNNs with Closed-loop Control",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 17
+ },
+ {
+  "arxiv": "2602.21204",
+  "title": "Test-Time Training with KV Binding Is Secretly Linear Attention",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": true,
+  "citation_count": 16
+ },
+ {
+  "arxiv": "2603.14360",
+  "title": "M2RNN: Non-Linear RNNs with Matrix-Valued States for Scalable Language Modeling",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 9
+ },
+ {
+  "arxiv": "2512.23852",
+  "title": "Trellis: Learning to Compress Key-Value Memory in Attention Models",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2511.07328",
+  "title": "Q-RAG: Long Context Multi-step Retrieval via Value-based Embedder Training",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2605.05838",
+  "title": "MDN: Parallelizing Stepwise Momentum for Delta Linear Attention",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2601.00919",
+  "title": "Attention Needs to Focus: A Unified Perspective on Attention Allocation",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": true,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2603.19567",
+  "title": "Efficiency Follows Global-Local Decoupling",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2509.07963",
+  "title": "Customizing the Inductive Biases of Softmax Attention using Structured Matrices",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2510.27258",
+  "title": "Higher-order Linear Attention",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2606.23670",
+  "title": "Tapered Language Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2605.22223",
+  "title": "How Many Different Outputs Can a Transformer Generate?",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2606.25342",
+  "title": "Lifelong In-Context Learning with Transformers Requires Parametric Forms of Attention",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2606.31830",
+  "title": "PriorEye: Geospatial Visual Priors for End-to-End Autonomous Driving",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2607.22562",
+  "title": "SF-AMS: Strategic Forgetting for Structured Memory in LLM Agent",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2609.39765",
+  "title": "MemCodex: Self-Programming Hierarchical Memory for Language Agents",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2610.08630",
+  "title": "Towards In-Parameter Memory Augmentation for Large Language Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2602.10796",
+  "title": "PRISM: Parallel Residual Iterative Sequence Model",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2603.29002",
+  "title": "Understand and Accelerate Memory Processing Pipeline for Large Language Model Inference",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2605.19403",
+  "title": "TIDE: Asymmetric Neural Circuits for Stabilized Temporal Inhibitory-Excitatory Dynamics",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2607.18899",
+  "title": "Black-Mamba: Biologically-Inspired Leaky Accumulation for Conceptual Knowledge under Distribution Drift",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2608.06216",
+  "title": "Continual Learning in Transition",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.18842",
+  "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": true,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2505.23884",
+  "title": "Test-Time Training Done Right",
+  "year": 2025,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 149
+ },
+ {
+  "arxiv": "2504.13173",
+  "title": "It's All Connected: A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization",
+  "year": 2025,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 68
+ },
+ {
+  "arxiv": "2505.23666",
+  "title": "LoLA: Low-Rank Linear Attention With Sparse Caching",
+  "year": 2025,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 13
+ },
+ {
+  "arxiv": "2510.07318",
+  "title": "Artificial Hippocampus Networks for Efficient Long-Context Modeling",
+  "year": 2025,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 10
+ },
+ {
+  "arxiv": "2510.07151",
+  "title": "ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL",
+  "year": 2025,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 9
+ },
+ {
+  "arxiv": "2512.22716",
+  "title": "Memento 2: Learning by Stateful Reflective Memory",
+  "year": 2025,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2603.23516",
+  "title": "MSA: Memory Sparse Attention for Efficient End-to-End Memory Model Scaling to 100M Tokens",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2606.25161",
+  "title": "TRUSTMEM: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2603.17781",
+  "title": "Facts as First Class Objects: Knowledge Objects for Persistent LLM Memory",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2605.23603",
+  "title": "Preisach Attention: A Hysteretic Model of Sequential Memory",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2604.24512",
+  "title": "Beyond the Attention Stability Boundary: Agentic Self-Synthesizing Reasoning Protocols",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2607.17419",
+  "title": "Kernelized Linear Attention: Breaking the Capacity Wall with Symmetric Cones",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2605.26678",
+  "title": "NestedKV: Nested Memory Routing for Long-Context KV Cache Compression",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2508.08289",
+  "title": "Attention as Conditioning: What Classical Learning Theory Predicts About Linear Transformers",
+  "year": 2025,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2601.15313",
+  "title": "Attention Is Not Retention: The Orthogonality Constraint in Infinite-Context Architectures",
+  "year": 2026,
+  "total": 15,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2602.13680",
+  "title": "AllMem: A Memory-centric Recipe for Efficient Long-context Modeling",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.05066",
+  "title": "The Impossibility Triangle of Long-Context Modeling",
+  "year": 2026,
+  "total": 15,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2606.29778",
+  "title": "Mandol: An Agglomerative Agent Memory System for Long-Term Conversations",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2607.09889",
+  "title": "Remembering Distinct Items, Not Tokens: A Learnable Dirichlet-Process Cache Between State-Space Models and Attention",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2610.04701",
+  "title": "Test-Time Training as Residual Memory for Robot Policies",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2603.15994",
+  "title": "Selective Memory for Artificial Intelligence: Write-Time Gating with Hierarchical Archiving",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2603.18676",
+  "title": "MANAR: Memory-augmented Attention with Navigational Abstract Conceptual Representation",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2603.29023",
+  "title": "Human-Like Lifelong Memory: A Neuroscience-Grounded Architecture for Infinite Interaction",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2605.10537",
+  "title": "Mela: Test-Time Memory Consolidation based on Transformation Hypothesis",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2605.13438",
+  "title": "CogniFold: Always-On Proactive Memory via Cognitive Folding",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2606.20737",
+  "title": "Repeated Shared Access Enables Grokking, but Edit Propagation Depends on an Addressable Memory",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2608.30376",
+  "title": "Kathleen Remembers: Length-Invariant One-Shot Recall Without Attention",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.33485",
+  "title": "DISCO: Distributed Long Context Scaling with Grounding-Reasoning Disaggregation",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.05076",
+  "title": "Self-Generated Feedback Destabilizes Test-Time Training: A Causal Decomposition of Long-Horizon Adaptation",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.13073",
+  "title": "Double-Take: Improving Capacity, Binding, and Selectivity In Long-Context Within Bidirectional Memory",
+  "year": 2026,
+  "total": 15,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2602.09075",
+  "title": "Learning to Remember, Learn, and Forget in Attention-Based Models",
+  "year": 2026,
+  "total": 14,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2608.11654",
+  "title": "Towards a Formal Definition of Agent Memory: Basis, Span, Optimality, and the Sequential Memory Problem",
+  "year": 2026,
+  "total": 14,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2608.11701",
+  "title": "Consolidator: Learning Persistent Routed Memory Across Context Boundaries",
+  "year": 2026,
+  "total": 14,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.16268",
+  "title": "Error Correction in Trained TTT Layers",
+  "year": 2026,
+  "total": 14,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.30478",
+  "title": "Externalise the Memory: A Pre-Registered Study of Where an Embodied Agent's Experience Should Live",
+  "year": 2026,
+  "total": 14,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2406.06484",
+  "title": "Parallelizing Linear Transformers with the Delta Rule over Sequence Length",
+  "year": 2024,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 466
+ },
+ {
+  "arxiv": "2510.18866",
+  "title": "LightMem: Lightweight and Efficient Memory-Augmented Generation",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 207
+ },
+ {
+  "arxiv": "2507.03724",
+  "title": "MemOS: A Memory OS for AI System",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 155
+ },
+ {
+  "arxiv": "2411.07279",
+  "title": "The Surprising Effectiveness of Test-Time Training for Few-Shot Learning",
+  "year": 2024,
+  "total": 13,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 104
+ },
+ {
+  "arxiv": "2506.06266",
+  "title": "Cartridges: Lightweight and general-purpose long context representations via self-study",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 95
+ },
+ {
+  "arxiv": "2506.05233",
+  "title": "MesaNet: Sequence Modeling by Locally Optimal Test-Time Training",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 60
+ },
+ {
+  "arxiv": "2502.13685",
+  "title": "MoM: Linear Sequence Modeling with Mixture-of-Memories",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 49
+ },
+ {
+  "arxiv": "2509.25911",
+  "title": "Mem-\u03b1: Learning Memory Construction via Reinforcement Learning",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 41
+ },
+ {
+  "arxiv": "2505.19488",
+  "title": "Understanding Transformer from the Perspective of Associative Memory",
+  "year": 2025,
+  "total": 13,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 32
+ },
+ {
+  "arxiv": "2512.01643",
+  "title": "ViT3: Unlocking Test-Time Training in Vision",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 22
+ },
+ {
+  "arxiv": "2512.03324",
+  "title": "Cache What Lasts: Token Retention for Memory-Bounded KV Cache in LLMs",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 20
+ },
+ {
+  "arxiv": "2502.15957",
+  "title": "R3Mem: Bridging Memory Retention and Retrieval via Reversible Compression",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 16
+ },
+ {
+  "arxiv": "2603.12255",
+  "title": "Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 15
+ },
+ {
+  "arxiv": "2607.15178",
+  "title": "T^2MLR: Transformer with Temporal Middle-Layer Recurrence",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 15
+ },
+ {
+  "arxiv": "2502.03358",
+  "title": "Minerva: A Programmable Memory Test Benchmark for Language Models",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 14
+ },
+ {
+  "arxiv": "2511.17938",
+  "title": "SPINE: Token-Selective Test-Time Reinforcement Learning with Entropy-Band Regularization",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 14
+ },
+ {
+  "arxiv": "2602.15313",
+  "title": "Mnemis: Dual-Route Retrieval on Hierarchical Graphs for Long-Term LLM Memory",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 14
+ },
+ {
+  "arxiv": "2601.00671",
+  "title": "Fast-weight Product Key Memory",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 13
+ },
+ {
+  "arxiv": "2603.13875",
+  "title": "GradMem: Learning to Write Context into Memory with Test-Time Gradient Descent",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 12
+ },
+ {
+  "arxiv": "2605.25475",
+  "title": "IndexMem: Learned KV-Cache Eviction with Latent Memory for Long-Context LLM Inference",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2511.22367",
+  "title": "SuRe: Surprise-Driven Prioritised Replay for Continual LLM Learning",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2512.17220",
+  "title": "Mindscape-Aware Retrieval Augmented Generation for Improved Long Context Understanding",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2604.21999",
+  "title": "Universal Transformers Need Memory: Depth-State Trade-offs in Adaptive Recursive Reasoning",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2506.01153",
+  "title": "Weight-Space Linear Recurrent Neural Networks",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 6
+ },
+ {
+  "arxiv": "2507.06415",
+  "title": "PERK: Long-Context Reasoning as Test-Time Learning",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 6
+ },
+ {
+  "arxiv": "2608.13416",
+  "title": "StreamTTT: Reconciling Real-Time Perception and Long-Term Memory in Streaming VLMs",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 6
+ },
+ {
+  "arxiv": "2603.01241",
+  "title": "TARSE: Test-Time Adaptation via Retrieval of Skills and Experience for Reasoning Agents",
+  "year": 2026,
+  "total": 13,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2607.25614",
+  "title": "MemSFT: Mitigating Alignment Tax with an External Parametric Memory",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2607.26760",
+  "title": "Metis: Memory Foundation Model",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2605.30349",
+  "title": "AdaState: Self-Evolving Anchors for Streaming Video Generation",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2606.24893",
+  "title": "AgentOdyssey: Open-Ended Long-Horizon Text Game Generation for Test-Time Continual Learning Agents",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2607.08032",
+  "title": "What to Keep, What to Forget: A Rate-Distortion View of Memory Compaction in LLMs and Agents",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2604.07350",
+  "title": "Fast Spatial Memory with Elastic Test-Time Training",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2608.01672",
+  "title": "Learning What to Remember: Test-Time Training via Context Distillation",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2608.07110",
+  "title": "Modular TTT: Rethinking Test-Time Training as Composable Modules",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2609.36720",
+  "title": "T$^2$Mem: Learning Test-Time Memory for Robotics",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2511.05313",
+  "title": "Controllably Efficient Language Models",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2603.22325",
+  "title": "Hybrid Associative Memories",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2606.21803",
+  "title": "Test-Time Training with Next-Token Prediction",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2608.12435",
+  "title": "MARCH: Scaling Recurrent Memory with Content-Routed State Anchors",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2609.06872",
+  "title": "Exact Record Omission in Delta Attention: A Transport Criterion, Its Cost, and a Replay Certificate",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2511.14823",
+  "title": "Dynamic Nested Hierarchies: Pioneering Self-Evolution in Machine Learning Architectures for Lifelong Intelligence",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2602.10491",
+  "title": "Towards Remote Sensing Change Detection with Neural Memory",
+  "year": 2026,
+  "total": 13,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2603.21096",
+  "title": "Mixture of Chapters: Scaling Learnt Memory in Transformers",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.09877",
+  "title": "Key-Value Means: Transformers with Expandable Block-Recurrent Compressed Memory",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.28773",
+  "title": "Rethinking Memory as Continuously Evolving Connectivity",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2606.06787",
+  "title": "AdMem: Advanced Memory for Task-solving Agents",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2608.02515",
+  "title": "LiveMem: Maintaining Memory State Continuity in Long-Running LLM Inference",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2608.16844",
+  "title": "Proteus: Incremental Memory Activation for Long-Context Sequence Modeling",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2609.23466",
+  "title": "RPMem: Learning Long-Term Recurrent Parametric Memory Across Sessions for LLM Agents",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2609.39740",
+  "title": "LatentHarness: Learning Latent Actions for Memory and Reasoning via Counterfactual Policy Distillation",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2610.05484",
+  "title": "Universal Test-Time Training",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2610.17434",
+  "title": "World-T3: Test-Time Training as Persistent Memory for Real-Time Video World Models",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2510.09551",
+  "title": "Titans Revisited: A Lightweight Reimplementation and Critical Analysis of a Test-Time Memory Model",
+  "year": 2025,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2603.27188",
+  "title": "Persistent Memory Through Triple-Loop Consolidation Under Stochastic Unit Turnover",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2605.16350",
+  "title": "Federated Nested Learning: Collaborative Training of Self-Referential Memories for Test-Time Adaptation",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2607.24667",
+  "title": "Eviction as Estimation: A Fixed-Lag Smoothing View of Test-Time Memory, and When Measuring Beats Accumulating",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2607.26429",
+  "title": "NMKFR: A Robust Framework for Time-Aware Cold-Start Recommendation",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2608.25729",
+  "title": "LongVU-TTT: Causal Test-Time Training for Visual Resampling in Long Video Understanding",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2608.29093",
+  "title": "Titans-QFWP: A Regime-Aware Hybrid Quantum Fast Weight Programmer for Portfolio Optimization",
+  "year": 2026,
+  "total": 13,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.32564",
+  "title": "ProTTT: Learning to Learn Semantic User Memory with Test-Time Training",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.34174",
+  "title": "GradLev: Token-Parallel Test-Time Training Via Costate Prediction",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.35109",
+  "title": "Using Context Is Not Enough: Test-Time Training for Personalized Reward Modeling",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.06516",
+  "title": "Test-Time Adaptation of Reasoning Strategies with Bayesian Nonparametric Memory",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.15882",
+  "title": "Engram Injection: A Study of Temporal Validity in Parametric Language-Model Memory",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.21165",
+  "title": "From Long Context to Selective Memory:A Survey of Memory-Centric Compression for Large Language Models",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.21375",
+  "title": "Memorilla: Latent Semantic Memory for LLMs",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.24107",
+  "title": "Cache2LoRA: Understanding and Improving Context Internalization",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.36109",
+  "title": "Beyond Update Counts: A Control Map for Evaluating Test-Time Model Updates",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.36794",
+  "title": "Select-TTT: Query-Conditioned Selective Fast Weight Updates for In-Place Test-Time Training",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2611.00450",
+  "title": "From Lookups to Lessons: Turning Retrieved Knowledge into Parametric Memory",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2611.04327",
+  "title": "Anchor: Augmented Cross-Layer Recurrent State for Long-Context Retrieval in Test-Time Training",
+  "year": 2026,
+  "total": 13,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2412.06464",
+  "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule",
+  "year": 2024,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 667
+ },
+ {
+  "arxiv": "2601.20802",
+  "title": "Reinforcement Learning via Self-Distillation",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 367
+ },
+ {
+  "arxiv": "2504.16084",
+  "title": "TTRL: Test-Time Reinforcement Learning",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 275
+ },
+ {
+  "arxiv": "2507.02259",
+  "title": "MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 257
+ },
+ {
+  "arxiv": "2506.13585",
+  "title": "MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 251
+ },
+ {
+  "arxiv": "2509.26645",
+  "title": "TTT3R: 3D Reconstruction as Test-Time Training",
+  "year": 2025,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 156
+ },
+ {
+  "arxiv": "2503.21614",
+  "title": "A Survey of Efficient Reasoning for Large Reasoning Models: Language, Multimodality, and Beyond",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 149
+ },
+ {
+  "arxiv": "2504.15965",
+  "title": "From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 141
+ },
+ {
+  "arxiv": "2504.05298",
+  "title": "One-Minute Video Generation with Test-Time Training",
+  "year": 2025,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 127
+ },
+ {
+  "arxiv": "2502.10297",
+  "title": "DeltaProduct: Improving State-Tracking in Linear RNNs via Householder Products",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 88
+ },
+ {
+  "arxiv": "2505.20171",
+  "title": "Long-Context State-Space Video World Models",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 79
+ },
+ {
+  "arxiv": "2411.19379",
+  "title": "Marconi: Prefix Caching for the Era of Hybrid LLMs",
+  "year": 2024,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 61
+ },
+ {
+  "arxiv": "2512.17351",
+  "title": "Physics of Language Models: Part 4.1, Architecture Design and the Magic of Canon Layers",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 48
+ },
+ {
+  "arxiv": "2601.14724",
+  "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 46
+ },
+ {
+  "arxiv": "2605.06716",
+  "title": "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 45
+ },
+ {
+  "arxiv": "2508.15884",
+  "title": "Jet-Nemotron: Efficient Language Model with Post Neural Architecture Search",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 40
+ },
+ {
+  "arxiv": "2411.17116",
+  "title": "Star Attention: Efficient LLM Inference over Long Sequences",
+  "year": 2024,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 37
+ },
+ {
+  "arxiv": "2503.01496",
+  "title": "Liger: Linearizing Large Language Models to Gated Recurrent Structures",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 34
+ },
+ {
+  "arxiv": "2604.08542",
+  "title": "Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 34
+ },
+ {
+  "arxiv": "2502.13063",
+  "title": "Cramming 1568 Tokens into a Single Vector and Back Again: Exploring the Limits of Embedding Space Capacity",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 33
+ },
+ {
+  "arxiv": "2502.18845",
+  "title": "Sliding Window Attention Training for Efficient Large Language Models",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 30
+ },
+ {
+  "arxiv": "2603.04385",
+  "title": "ZipMap: Linear-Time Stateful 3D Reconstruction via Test-Time Training",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 30
+ },
+ {
+  "arxiv": "2505.17761",
+  "title": "Structured Linear CDEs: Maximally Expressive and Parallel-in-Time Sequence Models",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 22
+ },
+ {
+  "arxiv": "2601.06803",
+  "title": "Forest Before Trees: Latent Superposition for Efficient Visual Reasoning",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 22
+ },
+ {
+  "arxiv": "2504.05646",
+  "title": "Lattice: Learning to Efficiently Compress the Memory",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 21
+ },
+ {
+  "arxiv": "2602.23361",
+  "title": "VGG-T3: Offline Feed-Forward 3D Reconstruction at Scale",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 21
+ },
+ {
+  "arxiv": "2510.25502",
+  "title": "TempoPFN: Synthetic Pre-training of Linear RNNs for Zero-shot Time Series Forecasting",
+  "year": 2025,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 20
+ },
+ {
+  "arxiv": "2605.11011",
+  "title": "LoopUS: Recasting Pretrained LLMs into Looped Latent Refinement Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 19
+ },
+ {
+  "arxiv": "2602.00359",
+  "title": "Position: Agentic Evolution is the Path to Evolving LLMs",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 18
+ },
+ {
+  "arxiv": "2602.24281",
+  "title": "Memory Caching: RNNs with Growing Memory",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 17
+ },
+ {
+  "arxiv": "2603.01097",
+  "title": "Understanding LoRA as Knowledge Memory: An Empirical Analysis",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 17
+ },
+ {
+  "arxiv": "2504.12959",
+  "title": "Rethinking Temporal Fusion with a Unified Gradient Descent View for 3D Semantic Occupancy Prediction",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 15
+ },
+ {
+  "arxiv": "2507.16577",
+  "title": "Scaling Linear Attention with Sparse State Expansion",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 15
+ },
+ {
+  "arxiv": "2510.04800",
+  "title": "Hybrid Architectures for Language Models: Systematic Analysis and Design Insights",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 15
+ },
+ {
+  "arxiv": "2605.12357",
+  "title": "\u03b4-mem: Efficient Online Memory for Large Language Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 15
+ },
+ {
+  "arxiv": "2607.06988",
+  "title": "WAM-TTT: Steering World-Action Models by Watching Human Play at Test Time",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 15
+ },
+ {
+  "arxiv": "2410.13846",
+  "title": "LightTransfer: Your Long-Context LLM is Secretly a Hybrid Model with Effortless Adaptation",
+  "year": 2024,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 14
+ },
+ {
+  "arxiv": "2602.20160",
+  "title": "tttLRM: Test-Time Training for Long Context and Autoregressive 3D Reconstruction",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 14
+ },
+ {
+  "arxiv": "2512.21627",
+  "title": "AstraNav-Memory: Contexts Compression for Long Memory",
+  "year": 2025,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 13
+ },
+ {
+  "arxiv": "2604.21100",
+  "title": "Preconditioned DeltaNet: Curvature-aware Sequence Modeling for Linear Recurrences",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 13
+ },
+ {
+  "arxiv": "2411.00489",
+  "title": "Human-Inspired Perspectives: A Survey on AI Long-Term Memory",
+  "year": 2024,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 11
+ },
+ {
+  "arxiv": "2503.03588",
+  "title": "PowerAttention: Exponentially Scaling of Receptive Fields for Effective Sparse Attention",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 11
+ },
+ {
+  "arxiv": "2506.13324",
+  "title": "Towards Pervasive Distributed Agentic Generative AI\u2013A State of The Art",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 11
+ },
+ {
+  "arxiv": "2502.07244",
+  "title": "Linear Transformers as VAR Models: Aligning Autoregressive Attention Mechanisms with Autoregressive Forecasting",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 10
+ },
+ {
+  "arxiv": "2603.01761",
+  "title": "Modular Memory is the Key to Continual Learning Agents",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 9
+ },
+ {
+  "arxiv": "2603.15330",
+  "title": "MeMix: Writing Less, Remembering More for Streaming 3D Reconstruction",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 9
+ },
+ {
+  "arxiv": "2606.03979",
+  "title": "Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 9
+ },
+ {
+  "arxiv": "2503.02303",
+  "title": "Flexible Prefrontal Control over Hippocampal Episodic Memory for Goal-Directed Generalization",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2503.05447",
+  "title": "Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2503.24067",
+  "title": "TransMamba: A Sequence-Level Hybrid Transformer-Mamba Language Model",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2508.08435",
+  "title": "Fast weight programming and linear transformers: from machine learning to neurobiology",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2510.05364",
+  "title": "The End of Transformers? On Challenging Attention and the Rise of Sub-Quadratic Architectures",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2510.26912",
+  "title": "Understanding and Enhancing Mamba-Transformer Hybrids for Memory Recall and Language Modeling",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2601.17067",
+  "title": "A Mechanistic View on Video Generation as World Models: State and Dynamics",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2601.19895",
+  "title": "Post-LayerNorm Is Back: Stable, ExpressivE, and Deep",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2603.02203",
+  "title": "Tool Verification for Test-Time Reinforcement Learning",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2605.23559",
+  "title": "PathNavigate: A Training-Free Pathology Agent with Surprise-Guided Scan and Shared Slide Memory for Whole-Slide Image VQA",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2605.26797",
+  "title": "Latent Recurrent Transformer: Architecture Exploration, Training Strategies, and Scaling Behavior",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 8
+ },
+ {
+  "arxiv": "2502.14644",
+  "title": "LIFT: A Novel Framework for Enhancing Long-Context Understanding of LLMs via Long Input Fine-Tuning",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2503.22196",
+  "title": "EdgeInfinite: A Memory-Efficient Infinite-Context Transformer for Edge Devices",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2504.06581",
+  "title": "Right Prediction, Wrong Reasoning: Uncovering LLM Misalignment in RA Disease Diagnosis",
+  "year": 2025,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2507.23632",
+  "title": "On the Expressiveness of Softmax Attention: A Recurrent Neural Network Perspective",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2512.04515",
+  "title": "EgoLCD: Egocentric Video Generation with Long Context Diffusion",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2512.05354",
+  "title": "SplatPainter: Interactive Authoring of 3D Gaussians from 2D Edits via Test-Time Training",
+  "year": 2025,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2602.02331",
+  "title": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2604.07279",
+  "title": "Mem3R: Streaming 3D Reconstruction with Hybrid Memory via Test-Time Training",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 7
+ },
+ {
+  "arxiv": "2506.12312",
+  "title": "Perspective on utilizing foundation models for laboratory automation in materials research",
+  "year": 2025,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 6
+ },
+ {
+  "arxiv": "2602.14814",
+  "title": "Learning State-Tracking from Code Using Linear RNNs",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 6
+ },
+ {
+  "arxiv": "2603.02540",
+  "title": "A Neuropsychologically Grounded Evaluation of LLM Cognitive Abilities",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 6
+ },
+ {
+  "arxiv": "2608.18066",
+  "title": "On the Fragility of Self-Improving Agents: Variance, Task Order, and Underspecification",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 6
+ },
+ {
+  "arxiv": "2508.05305",
+  "title": "SONAR-LLM: Autoregressive Transformer that Thinks in Sentence Embeddings and Speaks in Tokens",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2511.00907",
+  "title": "Transformers as Intrinsic Optimizers: Forward Inference through the Energy Principle",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2605.18813",
+  "title": "Composition of Memory Experts for Diffusion World Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2605.25869",
+  "title": "Mitigating Provenance-Role Collapse in Long-Term Agents via Typed Memory Representation",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2512.12802",
+  "title": "A Disproof of Large Language Model Consciousness: The Necessity of Continual Learning for Consciousness",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2512.23824",
+  "title": "MS-SSM: A Multi-Scale State Space Model for Efficient Sequence Modeling",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2603.18330",
+  "title": "MemArchitect: A Policy Driven Memory Governance Layer",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2608.17050",
+  "title": "Frozen Memory Is Not Enough: Rethinking External Memory as Extraction",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2608.30692",
+  "title": "Can Video World Models Track Unobserved World States?",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2502.15457",
+  "title": "Memory Helps, but Confabulation Misleads: Understanding Streaming Events in Videos with MLLMs",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2503.10632",
+  "title": "Kolmogorov-Arnold Attention: Is Learnable Attention Better For Vision Transformers?",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2504.20109",
+  "title": "Personalized Artificial General Intelligence (AGI) via Neuroscience-Inspired Continuous Learning Systems",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2505.20836",
+  "title": "HAD: Hybrid Architecture Distillation Outperforms Teacher in Genomic Sequence Modeling",
+  "year": 2025,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2510.05901",
+  "title": "Untangling Component Imbalance in Hybrid Linear Attention Conversion Methods",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2511.03092",
+  "title": "SnapStream: Efficient Long Sequence Decoding on Dataflow Accelerators",
+  "year": 2025,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2512.06983",
+  "title": "On Memory: A comparison of memory mechanisms in world models",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2602.01219",
+  "title": "Mixture-of-Top-k Attention: Efficient Attention via Scalable Fast Weights",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2603.21436",
+  "title": "PAS3R: Pose-Adaptive Streaming 3D Reconstruction for Long Video Sequences",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2604.18131",
+  "title": "Training LLM Agents for Spontaneous, Reward-Free Self-Evolution via World Knowledge Exploration",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2606.02775",
+  "title": "AURA: Action-Gated Memory for Robot Policies at Constant VRAM",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2606.07464",
+  "title": "Planning-Aligned Token Compression for Long-Context Autonomous Driving",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2606.30461",
+  "title": "MuonSSM: Orthogonalizing State Space Models for Sequence Modeling",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2608.02870",
+  "title": "Maglev: Sliding Recurrent Memory",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 3
+ },
+ {
+  "arxiv": "2410.11687",
+  "title": "Learning in the Recurrent State: Gradient Descent with Linear Recurrent Networks",
+  "year": 2024,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2504.06823",
+  "title": "Open Problems and a Hypothetical Path Forward in LLM Knowledge Paradigms",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2506.11997",
+  "title": "pLSTM: parallelizable Linear Source Transition Mark networks",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2506.13001",
+  "title": "Adaptable Symbolic Music Infilling with MIDI-RWKV",
+  "year": 2025,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2510.11602",
+  "title": "Deconstructing Attention: Investigating Design Principles for Effective Language Modeling",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2601.22887",
+  "title": "MoVE: Mixture of Value Embeddings - A New Axis for Scaling Parametric Memory in Autoregressive Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2602.13967",
+  "title": "Neuromem: A Granular Decomposition of the Streaming Lifecycle in External Memory for LLMs",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2602.16704",
+  "title": "Reinforced Fast Weights via Next-Sequence Prediction",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2603.20578",
+  "title": "Context Cartography: Toward Structured Governance of Contextual Space in Large Language Model Systems",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2604.16484",
+  "title": "DexWorldModel: Causal Latent World Modeling towards Automated Learning of Embodied Tasks",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2604.17399",
+  "title": "Beyond Meta-Reasoning: Metacognitive Consolidation for Self-Improving LLM Reasoning",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2604.19021",
+  "title": "FG2-GDN: Enhancing Long-Context Gated Delta Networks with Doubly Fine-Grained Control",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2605.05806",
+  "title": "Retrieval from Within: An Intrinsic Capability of Attention-Based Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2605.10117",
+  "title": "Think as Needed: Geometry-Driven Adaptive Perception for Autonomous Driving",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2605.29157",
+  "title": "Parallax: Parameterized Local Linear Attention for Language Modeling",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2412.00776",
+  "title": "Learning Mamba as a Continual Learner: Meta-Learning Selective State Space Models for Continual Learning",
+  "year": 2024,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2507.12442",
+  "title": "Characterizing State Space Model and Hybrid Language Model Performance with Long Context",
+  "year": 2025,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2510.14386",
+  "title": "ASecond-Order SpikingSSM for Wearables",
+  "year": 2025,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2510.26083",
+  "title": "Nirvana: A Specialized Generalist Model With Task-Aware Memory Mechanism",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2512.03704",
+  "title": "Overcoming State Inertia: Minimally Invasive Temporal Alignment for Evolving Contexts",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2601.15324",
+  "title": "Prometheus Mind: Retrofitting Memory to Frozen Language Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2602.03922",
+  "title": "Online Vector Quantized Attention",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2602.08686",
+  "title": "CompilerKV: Risk-Adaptive KV Compression via Offline Experience Compilation",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2602.14200",
+  "title": "TS-Haystack: A Multi-Task Retrieval Benchmark for Long-Context Time-Series Reasoning",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.05097",
+  "title": "Continual Knowledge Updating in LLM Systems: Learning Through Multi-Timescale Memory Dynamics",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.13473",
+  "title": "OSDN: Improving Delta Rule with Provable Online Preconditioning in Linear Attention",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.24330",
+  "title": "Interdomain Attention: Beyond Token-Level Key-Value Memory",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.28769",
+  "title": "Multi-Mixer Models: Flexible Sequence Modeling with Shared Representations",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2606.01294",
+  "title": "Don't Read Everything: A Curvature-Conditioned Query for Linear Attention",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2606.25156",
+  "title": "ATMA: Long-Context Language Modeling via Polar Attention and Gated-Delta Compression Memory",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2607.27600",
+  "title": "Back from the Future: Key-Value Cache Management by Counter-Causal Surprise",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2609.12814",
+  "title": "RunningTensor: Generalizing Linear Attention to Higher-Order Recurrent States",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2609.40063",
+  "title": "LARC: Low-Rank Adaptive Residual Connections for Learning in Frozen Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2405.04620",
+  "title": "Folded Context Condensation in Path Integral Formalism for Infinite Context Transformers",
+  "year": 2024,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2501.14846",
+  "title": "Wormhole Memory: A Rubik's Cube for Cross-Dialogue Retrieval",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2509.25223",
+  "title": "Enhancing Linear Attention with Residual Learning",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2511.00315",
+  "title": "Language Modeling With Factorization Memory",
+  "year": 2025,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2601.03417",
+  "title": "Implicit Graph, Explicit Retrieval: Towards Efficient and Interpretable Long-horizon Memory for Large Language Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2601.16863",
+  "title": "Mixture-of-Models: Distributed Inference over Heterogeneous LLMs as Model-Level Mixture-of-Experts",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2602.15811",
+  "title": "CARL-CXR: Continual Adapter-Based Routing for Task-Unknown Chest Radiograph Classification",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2602.18508",
+  "title": "Parallelizable Neural Turing Machines",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2603.05873",
+  "title": "Shifting Adaptation from Weight Space to Memory Space: A Memory-Augmented Agent for Medical Image Segmentation",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2603.16500",
+  "title": "From the Inside Out: Progressive Distribution Refinement for Confidence Calibration",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2604.03263",
+  "title": "LPC-SM: Local Predictive Coding and Sparse Memory for Long-Context Language Modeling",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2605.10643",
+  "title": "A Single-Layer Model Can Do Language Modeling",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2606.08804",
+  "title": "Q-Delta: Beyond Key-Value Associative State Evolution",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2606.11245",
+  "title": "Position: Hippocampal Explicit Memory Is the Cornerstone for AGI",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2606.31495",
+  "title": "Surprise as a Signal for Plasticity and Metacognition",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2607.00457",
+  "title": "Multi-scale Mixture of World Models for Embodied Agents in Evolving Environments",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2607.15271",
+  "title": "Online Neural Space Time Memory for Dynamic Novel View Synthesis",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2607.20792",
+  "title": "Memoir: Should a Model Write to Its Memory While It Thinks?",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2608.17896",
+  "title": "Dynamic Compression in Recurrent Networks",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2608.22354",
+  "title": "SANE: State Anomaly Neutralization for Stable Extreme-Context Delta-Rule Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.00103",
+  "title": "Good Memory Has ECC: Evaluating the Memory of Vision-Language Models Beyond Accuracy",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.03797",
+  "title": "Transfiver: Human-AI Co-Inference through a Shared Editable State",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.04971",
+  "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.12436",
+  "title": "LifeFuse-Mem: Lifecycle-Aware State Fusion Against Temporary Overwriting for Long-Term Memory",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.14803",
+  "title": "Another Blueprint In The Wall: How to Ask Frontier AI Like a Kid?",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.20463",
+  "title": "Beyond the Stability--Plasticity Frontier in Streaming Target Speaker Extraction",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.21139",
+  "title": "TinyCeNN-LM: Quality-Gated Conversion of Pretrained Attention with CeNN-Inspired Cellular-Recurrent Layers",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.23601",
+  "title": "PREM: Prefix-Steered Recurrent Memory for Long-Video Understanding",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.27470",
+  "title": "DeltaS: Reading the Gated Linear Attention State for KV Cache Eviction in Streaming Video",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.28250",
+  "title": "Complementary Roles of Activation and Parametric Memory in Few-Shot Learning",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.31351",
+  "title": "Progressive Memory Transformer: Memory-Aware Attention for Time-Series",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.32312",
+  "title": "Delayed Supervision for Test-Time Language Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.33325",
+  "title": "VisionHOPE: Visual Backbones as Self-Modifying Learning Systems",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.34562",
+  "title": "Single-Layer MeMo as a Randomized Hamming-Kernel Classifier",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.35333",
+  "title": "Scalable In-Context Reinforcement Learning with Recurrent Algorithm Distillation",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.35551",
+  "title": "BaRe-Mem: Bayesian Reliability Memory for Robust and Adaptive Agent Consultation",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.36337",
+  "title": "Adapting Linear-Time Architectures for Tabular In-Context Learning",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.36529",
+  "title": "Triadic Linear Attention: Three-Dimensional Recurrent States for Long-Context Sequence Modeling",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2609.39034",
+  "title": "Switching Linear Attention",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.02404",
+  "title": "Trained Agentic Context Management",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.03713",
+  "title": "What Should World Models Forget? Stratified Retention for Continual Adaptation",
+  "year": 2026,
+  "total": 12,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.03858",
+  "title": "Retrieval-Centric Deep Learning in Growing Nonparametric Neural Networks",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.07713",
+  "title": "Neuromotor Hierarchy Network: Physiological Inductive Biases for Robust Generalization in sEMG Decoding",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.08553",
+  "title": "DeltaTTT: Layerwise Optimization for Nonlinear Recurrent Memory",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.11776",
+  "title": "DPPM: Dual-Path Parametric Memory for Personalized Language Models",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.15813",
+  "title": "ChangeT$^3$: Evaluating Vision Test-Time Training for Remote Sensing Change Detection",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.17355",
+  "title": "WIRE: Weight Space Implicit Representation Encoding of Frozen Video LLMs",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.19687",
+  "title": "Function-Space Temporal Self-Distillation for Policy Optimization",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.19890",
+  "title": "Frustratingly Easy Majority Voting Using Length Conditioning",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.19997",
+  "title": "Empirical Boundaries of Reservoir Computing for Few-Shot Sequence Pattern Tasks",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.21392",
+  "title": "Learning to Reason with Selective Internal Feedback",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.31574",
+  "title": "Rethinking Sequence Compression with Test-time Regression",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.31656",
+  "title": "METTA: Memory-Enhanced Test-Time Adaptation for Meta-Reinforcement Learning",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.32094",
+  "title": "TTT in VLA Models: Exploring Training with Human Demonstrations",
+  "year": 2026,
+  "total": 12,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2610.33025",
+  "title": "Can Language Models Learn While They Think? Testing Gradient Adaptation Across Architectures",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2611.00756",
+  "title": "SceneBound: How Much Should a Streaming 3D Reconstruction Model Remember?",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2611.02104",
+  "title": "Consolidating Reasoning with Test-Time Training",
+  "year": 2026,
+  "total": 12,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2506.05443",
+  "title": "UniPTMs: The First Unified Multi-type PTM Site Prediction Model via Master-Slave Architecture-Based Multi-Stage Fusion Strategy and Hierarchical Contrastive Loss",
+  "year": 2025,
+  "total": 11,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 5
+ },
+ {
+  "arxiv": "2602.16192",
+  "title": "Revolutionizing Long-Term Memory in AI: New Horizons with High-Capacity and High-Speed Storage",
+  "year": 2026,
+  "total": 11,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2607.05356",
+  "title": "ReCal3R: Reliability-Calibrated Learning Rates for Streaming 3D Reconstruction",
+  "year": 2026,
+  "total": 11,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2605.28507",
+  "title": "Universal Time Series Generation with Neural Controlled Differential Equations",
+  "year": 2026,
+  "total": 11,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2505.23590",
+  "title": "Jigsaw-R1: A Study of Rule-based Visual Reinforcement Learning with Jigsaw Puzzles",
+  "year": 2025,
+  "total": 10,
+  "category": "Application",
+  "influential": false,
+  "citation_count": 36
+ },
+ {
+  "arxiv": "2507.19595",
+  "title": "Efficient attention mechanisms for large language models",
+  "year": 2025,
+  "total": 10,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 33
+ },
+ {
+  "arxiv": "2604.00835",
+  "title": "Agentic Tool Use in Large Language Models",
+  "year": 2026,
+  "total": 10,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 4
+ },
+ {
+  "arxiv": "2510.22052",
+  "title": "A Vision Toward Energy-Efficient Domain-Specific Artificial Intelligence Models and Agents",
+  "year": 2025,
+  "total": 10,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2607.12204",
+  "title": "What a Deletion Certificate Covers, and Where It Expires: Auditable Removal from a Support-Vector Memory",
+  "year": 2026,
+  "total": 10,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 2
+ },
+ {
+  "arxiv": "2605.01621",
+  "title": "Bilevel learning",
+  "year": 2026,
+  "total": 10,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 1
+ },
+ {
+  "arxiv": "2610.12495",
+  "title": "Kairos: Toward a Byte-Level Foundation Model for Every Modality",
+  "year": 2026,
+  "total": 10,
+  "category": "Core Extension",
+  "influential": false,
+  "citation_count": 0
+ },
+ {
+  "arxiv": "2505.01458",
+  "title": "A Survey of Robotic Navigation and Manipulation with Physics Simulators in the Era of Embodied AI",
+  "year": 2025,
+  "total": 8,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 23
+ },
+ {
+  "arxiv": "2508.10286",
+  "title": "Artificial Emotion: A Survey of Theories and Debates on Realising Emotion in Artificial Intelligence",
+  "year": 2025,
+  "total": 8,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 9
+ },
+ {
+  "arxiv": "2610.41809",
+  "title": "Continual Reinforcement Learning Is an Integration Problem",
+  "year": 2026,
+  "total": 8,
+  "category": "Related Theory",
+  "influential": false,
+  "citation_count": 0
+ }
+]
