@@ -34,7 +34,7 @@ Anchor 1 keeps the earlier project's hand-chosen papers. For the other three, a 
 
 **Questions.** We wrote 30 new questions per anchor, drawn from across each paper, with about 1 in 5 comparing two papers. 15 per anchor were used to choose settings and 15 were held back. The team removed 13 questions that did not stand alone.
 
-**Staged runs.** Testing every combination would need about 38,000 runs, so each stage tries a few settings on one anchor and passes its winners on. All chosen settings are then checked on the held-back questions of all four anchors.
+**Staged runs.** Testing every combination would need 9,600 runs before counting judges, so each stage tries a few settings on one anchor and passes its winners on. All chosen settings are then checked on the held-back questions of all four anchors.
 
 **Choosing a winner.** Highest faithfulness wins. Near ties within 0.01 go to higher relevancy, then lower latency. Runs that refuse more than 34% of questions, or answer fewer than 80%, cannot win.
 
