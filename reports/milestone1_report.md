@@ -68,7 +68,7 @@ Setups D and E were added after seeing the first results for A, B and C, once we
 
 - It searches by meaning as well as keywords, as our proposal described. Keyword-only retrieval never queries Pinecone when answering.
 - The test questions favour keyword search, because our question rules told the generator to name the method being asked about. Real users paraphrase.
-- It refuses least and is the most consistent. It refuses 5% of questions against 10% for C, and its faithfulness ranges from 0.976 to 0.979 across anchors, against 0.964 to 0.993 for C.
+- It refuses least and is the most consistent. It refuses 5% of questions against 10% for C, and its faithfulness ranges from 0.976 to 0.979 across anchors, against 0.967 to 0.993 for C.
 
 **Trade-offs.** Compared with the earlier project's setup, D is more faithful and refuses much less, but its relevancy is lower (0.702 against 0.755 on answered questions). It is also slower, at about 10 seconds against 3.6, mostly because the free model responds slowly. Setup E is the alternative if speed matters more: it takes 3.9 seconds and scores 0.962.
 

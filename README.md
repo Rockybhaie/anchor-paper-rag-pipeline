@@ -148,7 +148,7 @@ All setups except B use recursive 800/120 chunks, 8 passages, prompt P1 and temp
 
 1. **It searches by meaning as well as keywords,** as the project proposal describes. Keyword-only retrieval never queries Pinecone when answering.
 2. **The test questions favour keyword search.** Our question rules told the generator to name the method being asked about, so exact-word matching has an easy job. Real users paraphrase.
-3. **It refuses least and is the most consistent.** It refuses 5% of questions against 10% for C, and its faithfulness ranges from 0.976 to 0.979 across anchors, against 0.964 to 0.993 for C.
+3. **It refuses least and is the most consistent.** It refuses 5% of questions against 10% for C, and its faithfulness ranges from 0.976 to 0.979 across anchors, against 0.967 to 0.993 for C.
 
 D scores 0.05 higher on faithfulness than the earlier project's setup, and refuses far less often (5% against 18%). It costs some relevancy (0.702 against 0.755 on questions it answers) and is slower, about 10 seconds against 3.6, mostly because the free model responds slowly.
 
