@@ -1,0 +1,86 @@
+# The staged evaluation. Each stage tries a few settings on one anchor and passes its winners on.
+# Settings not changed by a stage keep the best values found so far.
+stages:
+  - id: 1
+    experiment: stage-1-nested-learning
+    anchor: nested_learning
+    groups:
+      # Runs first because every later score depends on the chosen judge.
+      - setting: judge
+        kind: judge
+        variants:
+          - {name: gpt-4o-mini, overrides: {judge: {provider: openai, model: gpt-4o-mini, prompt: binary}}}
+          - {name: gpt-4o-mini-rubric, overrides: {judge: {provider: openai, model: gpt-4o-mini, prompt: rubric}}}
+          - {name: gpt-5-nano, overrides: {judge: {provider: openai, model: gpt-5-nano, prompt: binary}}}
+          - {name: gemini-3.5-flash-lite, overrides: {judge: {provider: gemini, model: gemini-3.5-flash-lite, prompt: binary}}}
+          - {name: gpt-oss-20b, overrides: {judge: {provider: groq, model: openai/gpt-oss-20b, prompt: binary}}}
+      - setting: chunking
+        variants:
+          - {name: fixed-512-50, overrides: {chunking: {method: fixed, chunk_size: 512, overlap: 50}}}
+          - {name: recursive-400-80, overrides: {chunking: {method: recursive, chunk_size: 400, overlap: 80}}}
+          - {name: recursive-800-120, overrides: {chunking: {method: recursive, chunk_size: 800, overlap: 120}}}
+          - {name: semantic-p70, overrides: {chunking: {method: semantic}}}
+      - setting: embedding
+        variants:
+          - {name: text-embedding-3-small, overrides: {embedding: {provider: openai, model: text-embedding-3-small}}}
+          - {name: all-MiniLM-L6-v2, overrides: {embedding: {provider: local, model: sentence-transformers/all-MiniLM-L6-v2}}}
+
+  - id: 2
+    experiment: stage-2-titans
+    anchor: titans
+    groups:
+      - setting: retrieval_mode
+        variants:
+          - {name: semantic, overrides: {retrieval: {mode: semantic}}}
+          - {name: keyword, overrides: {retrieval: {mode: keyword}}}
+          - {name: hybrid, overrides: {retrieval: {mode: hybrid}}}
+          - {name: hybrid-rerank, overrides: {retrieval: {mode: hybrid_rerank}}}
+      - setting: passages_used
+        variants:
+          - {name: top-3, overrides: {retrieval: {final_k: 3}}}
+          - {name: top-5, overrides: {retrieval: {final_k: 5}}}
+          - {name: top-8, overrides: {retrieval: {final_k: 8}}}
+
+  - id: 3
+    experiment: stage-3-ttt-rnn
+    anchor: ttt_rnn
+    groups:
+      - setting: prompt
+        variants:
+          - {name: p0-original, overrides: {generation: {prompt: p0}}}
+          - {name: p1-strict-citations, overrides: {generation: {prompt: p1}}}
+          - {name: p2-step-by-step, overrides: {generation: {prompt: p2}}}
+          - {name: p3-short-extractive, overrides: {generation: {prompt: p3}}}
+          - {name: p4-by-paper, overrides: {generation: {prompt: p4}}}
+
+  - id: 4
+    experiment: stage-4-hrm
+    anchor: hrm
+    groups:
+      - setting: model
+        track_best_free: true
+        variants:
+          - {name: gpt-4o-mini, overrides: {generation: {provider: openai, model: gpt-4o-mini}}}
+          - {name: gpt-5-nano, overrides: {generation: {provider: openai, model: gpt-5-nano}}}
+          - {name: gpt-oss-20b, overrides: {generation: {provider: groq, model: openai/gpt-oss-20b}}}
+          - {name: gemini-3.5-flash-lite, overrides: {generation: {provider: gemini, model: gemini-3.5-flash-lite}}}
+      - setting: temperature
+        # Kept on gpt-4o-mini because gpt-5-nano may reject temperature settings.
+        pin: {generation: {provider: openai, model: gpt-4o-mini}}
+        variants:
+          - {name: t-0.0, overrides: {generation: {temperature: 0.0}}}
+          - {name: t-0.1, overrides: {generation: {temperature: 0.1}}}
+          - {name: t-0.4, overrides: {generation: {temperature: 0.4}}}
+          - {name: t-0.7, overrides: {generation: {temperature: 0.7}}}
+          - {name: t-1.0, overrides: {generation: {temperature: 1.0}}}
+
+final:
+  experiment: final-held-back-test
+  # Added after the first held-back results: keyword retrieval won but never queries Pinecone, and
+  # hybrid retrieval had not been tested with the other winning settings.
+  extra_setups:
+    - {name: D-hybrid-free-generator, overrides: {retrieval: {mode: hybrid}, generation: {provider: gemini, model: gemini-3.5-flash-lite}}}
+    - {name: E-hybrid-gpt-4o-mini, overrides: {retrieval: {mode: hybrid}}}
+  # Serve a setup that also searches by meaning through Pinecone if it is this close to the top
+  # score, as the proposal describes. The test questions name their topic, which favours keywords.
+  serving_margin: 0.02

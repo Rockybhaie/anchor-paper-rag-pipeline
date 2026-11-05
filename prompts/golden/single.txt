@@ -1,0 +1,17 @@
+You are an expert machine learning researcher writing a test question for a question-answering system that searches many academic papers.
+
+Excerpt from one paper:
+{excerpt}
+
+Write one technical question and its answer, using only this excerpt.
+
+Rules:
+- The question must require understanding, not copying one sentence. Ask how a method works, why a design choice was made, what a limitation is, or what a result shows.
+- The question must make sense to someone who has not seen the excerpt. Name the method, model or idea it asks about.
+- Never write "the excerpt", "the passage", "the text", "this paper", "the paper", "the study" or "the authors" in the question.
+- Do not ask about author names, affiliations, funding, or what a paper is about in general.
+- The answer must be specific and supported by the excerpt.
+- If the excerpt is too fragmentary for a good question, return an empty list.
+
+Return ONLY a JSON list with one item, and no other text:
+[{"question": "...", "answer": "..."}]

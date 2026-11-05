@@ -1,0 +1,4 @@
+Generate exactly 3 questions that this answer is responding to.
+Return ONLY a JSON list of 3 strings, with no other text.
+
+Answer: {answer}

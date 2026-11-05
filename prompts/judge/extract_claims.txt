@@ -1,0 +1,6 @@
+Extract all distinct factual claims from this answer.
+Ignore citation markers such as (Source 1).
+If the answer only says that it cannot answer, return an empty list.
+Return ONLY a JSON list of strings, with no other text.
+
+Answer: {answer}

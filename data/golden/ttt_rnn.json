@@ -1,0 +1,430 @@
+[
+  {
+    "question": "How does the Modular TTT method enable the composition of a full graph-level TTT computation without needing to derive a new global update rule for each variant?",
+    "reference_answer": "Modular TTT represents a TTT module as a directed acyclic graph, where each node corresponds to a primitive operation and each edge represents a tensor dependency. By defining the train-view forward, train-view backward, and query-view forward rules for each primitive, it allows for the automatic composition of the full graph-level TTT computation, eliminating the need for hand-deriving new global update rules for every specific variant.",
+    "type": "single",
+    "source_papers": [
+      "2608_07110"
+    ],
+    "source_titles": [
+      "Modular TTT: Rethinking Test-Time Training as Composable Modules"
+    ],
+    "split": "dev",
+    "id": "q01"
+  },
+  {
+    "question": "How does the fast weight update mechanism in the tttLRM model help in online 3D Gaussian reconstruction?",
+    "reference_answer": "The fast weight update mechanism allows the model to evolve its internal state as new observations arrive, enabling it to predict 3D Gaussian parameters for new query views in real-time. This approach effectively transforms the model into an RNN-like inference process, which helps in adapting to incoming data and mitigating issues such as drifting by considering historical gradients and fast weights.",
+    "type": "single",
+    "source_papers": [
+      "2602_20160"
+    ],
+    "source_titles": [
+      "tttLRM: Test-Time Training for Long Context and Autoregressive 3D Reconstruction"
+    ],
+    "split": "test",
+    "id": "q02"
+  },
+  {
+    "question": "What is the significance of applying LayerNorm before a squared-error loss in the context of TTT systems?",
+    "reference_answer": "Applying LayerNorm before a squared-error loss alters both the prediction-derived term and the term driven by the target, which affects the relationship between the objective and the update applied at inference. This distinction is important for interpreting gradient ablation as a test of error correction.",
+    "type": "single",
+    "source_papers": [
+      "2610_16268"
+    ],
+    "source_titles": [
+      "Error Correction in Trained TTT Layers"
+    ],
+    "split": "dev",
+    "id": "q03"
+  },
+  {
+    "question": "How does the adaptive correction mechanism in the PRISM model ensure that updates are suppressed in saturated memory regions?",
+    "reference_answer": "The adaptive correction mechanism in the PRISM model uses the element-wise derivative \u03d5\u2032 to modulate the correction \u03b4(1)t = \u03d5\u2032(S(0)t kt) \u2299 r(1)t. In saturated memory regions where \u03d5\u2032 is small, the correction is automatically suppressed, resulting in smaller updates. Conversely, in sensitive regions where the memory response is within the linear range of \u03d5, the correction is larger, allowing for more significant updates.",
+    "type": "single",
+    "source_papers": [
+      "2602_10796"
+    ],
+    "source_titles": [
+      "PRISM: Parallel Residual Iterative Sequence Model"
+    ],
+    "split": "dev",
+    "id": "q05"
+  },
+  {
+    "question": "What limitation does TTT3R face when processing long sequences, and how does it attempt to address this issue?",
+    "reference_answer": "TTT3R struggles on long sequences due to limited memory capacity, but it attempts to improve performance over CUT3R by introducing online learning for better memory updates.",
+    "type": "single",
+    "source_papers": [
+      "2604_08542"
+    ],
+    "source_titles": [
+      "Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction"
+    ],
+    "split": "test",
+    "id": "q06"
+  },
+  {
+    "question": "What challenge does the end-to-end chunk-wise processing method introduce when managing long sequences for 3D reconstruction?",
+    "reference_answer": "The end-to-end chunk-wise processing method introduces a critical new challenge of managing memory and coherence across chunk boundaries, which is essential for achieving high-fidelity dense 3D reconstruction over long sequences.",
+    "type": "single",
+    "source_papers": [
+      "2603_03269"
+    ],
+    "source_titles": [
+      "LoGeR: Long-Context Geometric Reconstruction with Hybrid Memory"
+    ],
+    "split": "dev",
+    "id": "q07"
+  },
+  {
+    "question": "What limitation of the transformer model is highlighted in relation to state tracking, and what alternative approach is suggested to address this limitation?",
+    "reference_answer": "The transformer model's topological structure is fundamentally at odds with the iterative nature of state tracking, leading to inefficiencies in maintaining long-term coherence and multihop inference. The suggested alternative approach is to transition toward implicit, recurrent activation dynamics to overcome these depth-limited constraints.",
+    "type": "single",
+    "source_papers": [
+      "2604_17121"
+    ],
+    "source_titles": [
+      "The Topological Trouble With Transformers"
+    ],
+    "split": "test",
+    "id": "q08"
+  },
+  {
+    "question": "What limitation do full-attention methods like VGGT and StreamVGGT face compared to online methods in the context of camera pose estimation?",
+    "reference_answer": "Full-attention methods, including VGGT and StreamVGGT, suffer from high latency and memory exhaustion, which limits their efficiency, especially when processing a large number of input views.",
+    "type": "single",
+    "source_papers": [
+      "2509_26645"
+    ],
+    "source_titles": [
+      "TTT3R: 3D Reconstruction as Test-Time Training"
+    ],
+    "split": "test",
+    "id": "q09"
+  },
+  {
+    "question": "What is the significance of conflict-aware knowledge integration in large language models, and what challenge does it address?",
+    "reference_answer": "Conflict-aware knowledge integration enriches contextual knowledge with metadata like timestamps and source information, allowing the model to discern and summarize conflicting knowledge. This approach addresses the challenge of conflicting knowledge overwriting each other during pre-training, thereby improving the utilization of existing data and potentially alleviating the issue of limited high-quality data.",
+    "type": "single",
+    "source_papers": [
+      "2504_06823"
+    ],
+    "source_titles": [
+      "Open Problems and a Hypothetical Path Forward in LLM Knowledge Paradigms"
+    ],
+    "split": "test",
+    "id": "q10"
+  },
+  {
+    "question": "What is the purpose of Test-Time Adaptation (TTA) in continual learning?",
+    "reference_answer": "Test-Time Adaptation (TTA) enables models to perform on-the-fly adjustments at inference time when confronted with novel samples and distribution shifts, allowing for writable state or parameter updates.",
+    "type": "single",
+    "source_papers": [
+      "2608_06216"
+    ],
+    "source_titles": [
+      "Continual Learning in Transition"
+    ],
+    "split": "dev",
+    "id": "q11"
+  },
+  {
+    "question": "What is the open-loop bottleneck in current transformer models, and what are its implications for long-form generation and reasoning tasks?",
+    "reference_answer": "The open-loop bottleneck refers to the architectural constraint in current transformer models where, at each generation step, the model computes a hidden representation that is irrevocably committed to and not revised thereafter. This leads to errors in early representations propagating uncorrected through the sequence, resulting in hallucinations during long-form generation, brittleness in multi-step reasoning, and systematic failures in tasks that require belief revision or backtracking.",
+    "type": "single",
+    "source_papers": [
+      "2511_21882"
+    ],
+    "source_titles": [
+      "Closed-Loop Transformers: Autoregressive Modeling as Iterative Latent Equilibrium"
+    ],
+    "split": "dev",
+    "id": "q12"
+  },
+  {
+    "question": "What is the significance of adapting 'frame consistency' to 'temporal consistency' in the context of TTT-MLP's performance?",
+    "reference_answer": "Adapting 'frame consistency' to 'temporal consistency' is significant because it allows for the evaluation of consistency not only within individual scenes but also across different scenes. This is important for TTT-MLP, which aims to preserve smooth, high-quality actions throughout the video, especially during scene changes.",
+    "type": "single",
+    "source_papers": [
+      "2504_05298"
+    ],
+    "source_titles": [
+      "One-Minute Video Generation with Test-Time Training"
+    ],
+    "split": "test",
+    "id": "q13"
+  },
+  {
+    "question": "What limitation is observed when using standard backbones like bidirectional and autoregressive Transformers for tracking hidden states in video models?",
+    "reference_answer": "Standard backbones fail to accurately track hidden states because they learn only shortcuts, which means that visual fidelity does not guarantee state accuracy. This is evidenced by the degradation of outputs at longer lengths when unrestricted context is used, particularly for the bidirectional DiT, which is evaluated with full context.",
+    "type": "single",
+    "source_papers": [
+      "2608_30692"
+    ],
+    "source_titles": [
+      "Can Video World Models Track Unobserved World States?"
+    ],
+    "split": "dev",
+    "id": "q14"
+  },
+  {
+    "question": "How does the TTCD method encourage a model to store useful distant information for future predictions?",
+    "reference_answer": "TTCD uses the hidden-state discrepancy between a long-window teacher and a short-window student as a dense self-supervised signal. This approach encourages the limited parametric state of the model to focus on storing distant information that is most useful for future predictions, rather than trying to retain all past information.",
+    "type": "single",
+    "source_papers": [
+      "2608_01672"
+    ],
+    "source_titles": [
+      "Learning What to Remember: Test-Time Training via Context Distillation"
+    ],
+    "split": "test",
+    "id": "q15"
+  },
+  {
+    "question": "How does Modular TTT address the challenge of determining the contributions of different design choices in test-time training?",
+    "reference_answer": "Modular TTT addresses this challenge by factorizing test-time training into explicit, controllable design dimensions, treating components like the fast-weight network, loss function, learning rate, weight decay, and normalization as modular elements that can be specified and varied independently. This modular approach allows for clearer analysis of each component's contribution to the overall performance.",
+    "type": "single",
+    "source_papers": [
+      "2608_07110"
+    ],
+    "source_titles": [
+      "Modular TTT: Rethinking Test-Time Training as Composable Modules"
+    ],
+    "split": "test",
+    "id": "q16"
+  },
+  {
+    "question": "How does pretrained initialization impact the training of the GS model in terms of convergence speed and final quality?",
+    "reference_answer": "Pretrained initialization significantly accelerates convergence, particularly in the early training stage, allowing models to quickly reach a high PSNR compared to those trained from scratch. Additionally, it not only improves convergence speed but also leads to higher final quality after full training, with these gains persisting even when adapting the pretrained weights to different 3D representations.",
+    "type": "single",
+    "source_papers": [
+      "2602_20160"
+    ],
+    "source_titles": [
+      "tttLRM: Test-Time Training for Long Context and Autoregressive 3D Reconstruction"
+    ],
+    "split": "dev",
+    "id": "q17"
+  },
+  {
+    "question": "How does the classical delta rule facilitate the updating of associations in a linear fast-weight memory when a new observation is made?",
+    "reference_answer": "The classical delta rule facilitates updating associations by employing a prediction-dependent subtraction mechanism. When a new value is assigned to an existing key, the rule subtracts the memory's current prediction before writing the new value, which helps suppress stale associations under repeated writes to the same key.",
+    "type": "single",
+    "source_papers": [
+      "2610_16268"
+    ],
+    "source_titles": [
+      "Error Correction in Trained TTT Layers"
+    ],
+    "split": "dev",
+    "id": "q18"
+  },
+  {
+    "question": "How does PRISM achieve both Rank-L and parallel scan compatibility in its optimization process?",
+    "reference_answer": "PRISM achieves both Rank-L and parallel scan compatibility by amortizing the multi-step solution through the use of input-anchored proxies, which allows it to optimize a proximal objective effectively.",
+    "type": "single",
+    "source_papers": [
+      "2602_10796"
+    ],
+    "source_titles": [
+      "PRISM: Parallel Residual Iterative Sequence Model"
+    ],
+    "split": "spare",
+    "id": "q20"
+  },
+  {
+    "question": "What is the purpose of introducing fast weights in Test-Time Training, and how do they address the limitations of traditional recurrent neural networks?",
+    "reference_answer": "Fast weights in Test-Time Training are introduced to dynamically store contextual information during inference through self-supervised updates. This approach addresses the limitation of traditional recurrent neural networks, which compress sequence context into a fixed-size hidden state, leading to information degradation, especially in long sequences. Fast weights allow for a more flexible representation that can adapt rapidly, mitigating the constraints of the fixed hidden state.",
+    "type": "single",
+    "source_papers": [
+      "2604_08542"
+    ],
+    "source_titles": [
+      "Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction"
+    ],
+    "split": "test",
+    "id": "q21"
+  },
+  {
+    "question": "How does the progressive curriculum strategy improve the training of the LoGeR model?",
+    "reference_answer": "The progressive curriculum strategy improves training by starting with easier sequences and gradually increasing complexity, which helps the model transition from relying on local Sliding Window Attention to utilizing the global TTT hidden state. This approach not only enhances training efficiency by reducing train-time rollout overhead but also boosts final performance.",
+    "type": "single",
+    "source_papers": [
+      "2603_03269"
+    ],
+    "source_titles": [
+      "LoGeR: Long-Context Geometric Reconstruction with Hybrid Memory"
+    ],
+    "split": "test",
+    "id": "q22"
+  },
+  {
+    "question": "What is the advantage of using causal attention in the StreamVGGT method for processing streaming input, and what limitation does it share with full attention?",
+    "reference_answer": "Causal attention in the StreamVGGT method allows for incremental processing of streaming input by enabling each frame to attend only to itself and preceding tokens, which reduces the computational cost to O(t). However, it shares a limitation with full attention in that the state is represented as a key\u2013value list that grows redundantly at O(t), leading to increasing memory consumption as the number of views increases.",
+    "type": "single",
+    "source_papers": [
+      "2509_26645"
+    ],
+    "source_titles": [
+      "TTT3R: 3D Reconstruction as Test-Time Training"
+    ],
+    "split": "test",
+    "id": "q24"
+  },
+  {
+    "question": "What are the three critical open problems that limit the capabilities of Large Language Models according to the discussed knowledge paradigms?",
+    "reference_answer": "The three critical open problems are: (1) challenges in knowledge updating for LLMs, (2) the failure of reverse knowledge generalization (reversal curse), and (3) conflicts in internal knowledge.",
+    "type": "single",
+    "source_papers": [
+      "2504_06823"
+    ],
+    "source_titles": [
+      "Open Problems and a Hypothetical Path Forward in LLM Knowledge Paradigms"
+    ],
+    "split": "dev",
+    "id": "q25"
+  },
+  {
+    "question": "How does the SKILL0 method accumulate and internalize skills in its learning process?",
+    "reference_answer": "SKILL0 first accumulates reusable capability in a harness-based skill library and subsequently internalizes selected skills into model parameters through a curriculum.",
+    "type": "single",
+    "source_papers": [
+      "2608_06216"
+    ],
+    "source_titles": [
+      "Continual Learning in Transition"
+    ],
+    "split": "spare",
+    "id": "q26"
+  },
+  {
+    "question": "What is the significance of using the binary cumulative parity task for evaluating autoregressive models in the context of Closed-Loop Transformers?",
+    "reference_answer": "The binary cumulative parity task is significant because it tests long-range dependency modeling, requiring the model to have perfect memory of all previous bits. A single forgotten bit leads to systematic errors, and since there are no local patterns or shortcuts, it challenges the model's ability to maintain accuracy over time. Additionally, errors at any position propagate to all subsequent positions, making it an ideal testbed for evaluating error-correction mechanisms.",
+    "type": "single",
+    "source_papers": [
+      "2511_21882"
+    ],
+    "source_titles": [
+      "Closed-Loop Transformers: Autoregressive Modeling as Iterative Latent Equilibrium"
+    ],
+    "split": "test",
+    "id": "q27"
+  },
+  {
+    "question": "How does the TATS method improve video generation compared to traditional approaches?",
+    "reference_answer": "TATS proposes the sliding window attention on the Transformer, which allows it to generate videos longer than the training length, thereby enhancing the capability to model long video sequences.",
+    "type": "single",
+    "source_papers": [
+      "2504_05298"
+    ],
+    "source_titles": [
+      "One-Minute Video Generation with Test-Time Training"
+    ],
+    "split": "dev",
+    "id": "q28"
+  },
+  {
+    "question": "What limitation do standard backbones face when trained on action-conditioned video tasks like the Shell Game, and how does this affect their ability to generalize to longer swap chains?",
+    "reference_answer": "Standard backbones, such as bidirectional and autoregressive Transformers, fail to learn the underlying rule of the task and do not generalize to longer swap chains. This limitation arises because the pixel-based diffusion loss does not ensure that the generated frames maintain the unseen ball position, leading to the output tokens being unable to carry this information. Consequently, the model must re-compose the swaps at every chunk, which is inefficient and limits its ability to track the state effectively.",
+    "type": "single",
+    "source_papers": [
+      "2608_30692"
+    ],
+    "source_titles": [
+      "Can Video World Models Track Unobserved World States?"
+    ],
+    "split": "dev",
+    "id": "q29"
+  },
+  {
+    "question": "How do TTT3R and Scal3R compare in terms of accuracy and runtime efficiency for 3D reconstruction on long sequences?",
+    "reference_answer": "TTT3R achieves lower Chamfer Distance than Point3R and outperforms CUT3R significantly, while Scal3R provides substantially stronger accuracy on long sequences and is over 20\u00d7 faster than COLMAP, indicating that Scal3R is more efficient for longer sequences compared to TTT3R.",
+    "type": "cross",
+    "source_papers": [
+      "2509_26645",
+      "2604_08542"
+    ],
+    "source_titles": [
+      "TTT3R: 3D Reconstruction as Test-Time Training",
+      "Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction"
+    ],
+    "split": "test",
+    "id": "q30"
+  },
+  {
+    "question": "How do the Long-LRM and TTT3R approaches address the challenges of scalability and memory usage in 3D reconstruction from multiple input views?",
+    "reference_answer": "Long-LRM extends the number of input views to 32 but is hindered by bidirectional attention layers that limit scalability and efficient processing of longer contexts. In contrast, TTT3R, while also dealing with the challenge of memory consumption due to the quadratic growth of computational costs with sequence length, incorporates optimizations like KV-cache compression and flash attention, and notably, CUT3R achieves constant memory usage, making it more efficient for handling an arbitrary number of images.",
+    "type": "cross",
+    "source_papers": [
+      "2602_20160",
+      "2509_26645"
+    ],
+    "source_titles": [
+      "tttLRM: Test-Time Training for Long Context and Autoregressive 3D Reconstruction",
+      "TTT3R: 3D Reconstruction as Test-Time Training"
+    ],
+    "split": "dev",
+    "id": "q31"
+  },
+  {
+    "question": "How does the computational complexity of the PRISM model compare to that of the TTT model when processing input sequences, and what implications does this have for their respective throughput performance?",
+    "reference_answer": "PRISM achieves a throughput advantage due to its Input-Anchored design, which avoids serial dependencies and operates with a complexity that allows for higher throughput, while TTT suffers from O(N^2) complexity, resulting in a significantly lower throughput of 0.34K tokens/s and a 174\u00d7 slowdown compared to PRISM.",
+    "type": "cross",
+    "source_papers": [
+      "2602_10796",
+      "2509_26645"
+    ],
+    "source_titles": [
+      "PRISM: Parallel Residual Iterative Sequence Model",
+      "TTT3R: 3D Reconstruction as Test-Time Training"
+    ],
+    "split": "dev",
+    "id": "q33"
+  },
+  {
+    "question": "How do the training throughput and latency characteristics of Modular TTT compare to those of the RNN models discussed in the context of learning at test time, particularly in relation to the TTT-Linear and TTT-MLP implementations?",
+    "reference_answer": "Modular TTT achieves about 2.2\u00d7\u20133.3\u00d7 the training throughput of the official TTT implementation, with TTT-Linear having a throughput of 93,366.9 and TTT-MLP 71,101.1. In contrast, the RNN models exhibit a constant latency per token during inference, although the forward latency of TTT-Linear and TTT-MLP increases slightly with longer context lengths due to GPU throttling.",
+    "type": "cross",
+    "source_papers": [
+      "2608_07110",
+      "00_anchor"
+    ],
+    "source_titles": [
+      "Modular TTT: Rethinking Test-Time Training as Composable Modules",
+      "Learning to (Learn at Test Time): RNNs with Expressive Hidden States"
+    ],
+    "split": "test",
+    "id": "q34"
+  },
+  {
+    "question": "How do the probabilistic knowledge acquisition methods in language models relate to the iterative reasoning process proposed in Closed-Loop Transformers?",
+    "reference_answer": "The first excerpt discusses how language models (LLMs) learn factual information through a probabilistic approach, capturing statistical relationships between tokens and enabling them to answer factual questions based on learned patterns. In contrast, the second excerpt introduces Closed-Loop Transformers, which emphasize an iterative refinement process for reasoning, allowing the model to verify self-consistency before producing outputs. While LLMs rely on probabilistic predictions for knowledge acquisition, Closed-Loop Transformers propose a more deliberative approach that internalizes reasoning, suggesting that robust reasoning may require moving beyond simple probabilistic frameworks.",
+    "type": "cross",
+    "source_papers": [
+      "2504_06823",
+      "2511_21882"
+    ],
+    "source_titles": [
+      "Open Problems and a Hypothetical Path Forward in LLM Knowledge Paradigms",
+      "Closed-Loop Transformers: Autoregressive Modeling as Iterative Latent Equilibrium"
+    ],
+    "split": "test",
+    "id": "q35"
+  },
+  {
+    "question": "How do the closed-loop principle in Equilibrium Transformers and the proposed hidden state model in future architectures address the challenges of multi-step reasoning and knowledge accommodation in language models?",
+    "reference_answer": "The closed-loop principle in Equilibrium Transformers improves multi-step reasoning by allowing for iterative refinement and detection of inconsistencies through gradient descent on energy functions, which helps in achieving coherence in representations. In contrast, the proposed hidden state model emphasizes the ability to scale complexity and accommodate knowledge, suggesting that future architectures could enhance reasoning capabilities by increasing parameter count and architectural complexity, potentially leading to superior performance in handling long-context information.",
+    "type": "cross",
+    "source_papers": [
+      "2511_21882",
+      "2504_06823"
+    ],
+    "source_titles": [
+      "Closed-Loop Transformers: Autoregressive Modeling as Iterative Latent Equilibrium",
+      "Open Problems and a Hypothetical Path Forward in LLM Knowledge Paradigms"
+    ],
+    "split": "dev",
+    "id": "q36"
+  }
+]

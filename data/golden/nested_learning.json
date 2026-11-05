@@ -1,0 +1,443 @@
+[
+  {
+    "question": "What is the purpose of separating the storage of Routing Keys and Content KVs in the Memory Sparse Attention method, and how does this design choice impact the model's capacity requirements?",
+    "reference_answer": "The separation of storage for Routing Keys and Content KVs is designed to decouple the capacity requirement from VRAM limits, enabling the model to scale to 100M tokens on standard hardware. By keeping the Routing Keys in GPU memory for low-latency retrieval and offloading the larger Content KVs to host DRAM, the method ensures efficient memory usage while maintaining performance.",
+    "type": "single",
+    "source_papers": [
+      "15_msa_memory_sparse_attention"
+    ],
+    "source_titles": [
+      "MSA: Memory Sparse Attention for Efficient End-to-End Memory Model Scaling"
+    ],
+    "split": "test",
+    "id": "q01"
+  },
+  {
+    "question": "What is a limitation of inter-layer hybrid architectures in long-context modeling?",
+    "reference_answer": "Inter-layer hybrid architectures rely on partial global attention mechanisms, which results in a computational complexity of O(L2), imposing a bound on potential efficiency gains.",
+    "type": "single",
+    "source_papers": [
+      "13_allmem_long_context"
+    ],
+    "source_titles": [
+      "AllMem: A Memory-centric Recipe for Efficient Long-context Modeling"
+    ],
+    "split": "dev",
+    "id": "q02"
+  },
+  {
+    "question": "How do recurrent models differ from traditional MLP blocks according to the nested learning perspective?",
+    "reference_answer": "From the nested learning perspective, recurrent models are viewed as MLP blocks with an additional level of computation added to their internal structure, distinguishing them from traditional MLP blocks.",
+    "type": "single",
+    "source_papers": [
+      "00_nested_learning_original"
+    ],
+    "source_titles": [
+      "Nested Learning: The Illusion of Deep Learning Architectures"
+    ],
+    "split": "dev",
+    "id": "q03"
+  },
+  {
+    "question": "How does the memory unit M_t utilize the sequence of token embeddings to predict the next token in an auto-regressive language model?",
+    "reference_answer": "The memory unit M_t functions as a sequence-to-sequence mapping that encodes patterns from the sequence of token embeddings X\u2264t and retrieves relevant information for predicting the next token. It does this by minimizing an energy function that involves a self-supervised regression objective, which optimizes the prediction of the output v_\u03c4 based on the query k_\u03c4 derived from the token embedding x_\u03c4. This process allows M_t to learn and update its memory online, effectively synthesizing the next token s_{t+1} based on the context provided by the previous tokens.",
+    "type": "single",
+    "source_papers": [
+      "11_beyond_ttt_optimal_control"
+    ],
+    "source_titles": [
+      "Beyond Test-Time Training: Learning to Reason via Hardware-Efficient Optimal Control"
+    ],
+    "split": "test",
+    "id": "q04"
+  },
+  {
+    "question": "What is the trade-off associated with logarithmic segmentation in memory caching, and how does it affect recall performance?",
+    "reference_answer": "Logarithmic segmentation provides a trade-off between the level of compression (recall performance) and computational cost. While it is more efficient in terms of computational complexity (O(L log(L))), it offers significantly less resolution for long past tokens, which limits its ability in recall-intensive tasks.",
+    "type": "single",
+    "source_papers": [
+      "17_memory_caching_rnns"
+    ],
+    "source_titles": [
+      "Memory Caching: RNNs with Growing Memory"
+    ],
+    "split": "dev",
+    "id": "q05"
+  },
+  {
+    "question": "How does the feature refinement mechanism in CRAD-HOPE combine different similarity measures to improve anomaly detection?",
+    "reference_answer": "The feature refinement mechanism in CRAD-HOPE combines Mean Squared Error (MSE) and Cosine Similarity to compute a final similarity score, which is given by the equation s = \u03bbmse \u00b7 MSE(X, \u02c6X) + \u03bbcos \u00b7 CosSim(X, \u02c6X). The weighting coefficients are set to \u03bbmse = 0.3 and \u03bbcos = 0.7, indicating a greater emphasis on Cosine Similarity. This refined similarity score is then used to compute the refined feature \u02c6Xrefined, which is a weighted combination of the original feature map X and the reconstructed feature map \u02c6X. This approach aims to enhance the quality of the reconstructed features, thereby improving the final anomaly score calculation.",
+    "type": "single",
+    "source_papers": [
+      "06_crad_hope_anomaly_detection"
+    ],
+    "source_titles": [
+      "CRAD-HOPE: Brain-inspired Nested Learning Framework for Few-Shot Anomaly Detection"
+    ],
+    "split": "dev",
+    "id": "q06"
+  },
+  {
+    "question": "How does the Dual UT method improve learning dynamics compared to single-stream tying in autoregressive models?",
+    "reference_answer": "Dual UT accelerates learning earlier and is able to cross the final-dependency barrier under matched compute, whereas single-stream tying often stalls and fails to learn effectively.",
+    "type": "single",
+    "source_papers": [
+      "08_tiny_autoregressive_recursive"
+    ],
+    "source_titles": [
+      "Tiny Autoregressive Recursive Models"
+    ],
+    "split": "dev",
+    "id": "q07"
+  },
+  {
+    "question": "What is the role of the geometry-aware optimizer ARROW in addressing plasticity loss in Vision Transformers?",
+    "reference_answer": "ARROW preserves plasticity by adaptively reshaping gradient directions using an online curvature estimate for the attention module, which is more effective than methods based on parameter re-initialization.",
+    "type": "single",
+    "source_papers": [
+      "14_vision_transformers_never_stop"
+    ],
+    "source_titles": [
+      "Vision Transformers That Never Stop Learning"
+    ],
+    "split": "test",
+    "id": "q08"
+  },
+  {
+    "question": "What is the purpose of incorporating sparsity in the memory weights of the EGD-MEMORY model?",
+    "reference_answer": "The sparsity in the memory weights is particularly important for time series data as it helps mitigate overfitting to the training set distribution.",
+    "type": "single",
+    "source_papers": [
+      "10_hydra_dual_exponentiated_memory"
+    ],
+    "source_titles": [
+      "HYDRA: Dual Exponentiated Memory for Multivariate Time Series Analysis"
+    ],
+    "split": "spare",
+    "id": "q09"
+  },
+  {
+    "question": "What is the significance of the state transition matrices At and Bt in the context of DeltaNet's expressivity?",
+    "reference_answer": "The state transition matrices At and Bt dictate the type of state transition the model can perform, which directly influences the expressive power of DeltaNet. When both matrices are reduced to an identity matrix or a diagonal matrix, the model's expressivity is limited, as seen in vanilla FWP where At = Bt = I, or in models like RetNet and mLSTM where At = \u03bbI. This limitation affects the model's ability to recognize certain regular languages, such as parity.",
+    "type": "single",
+    "source_papers": [
+      "03_fast_weight_programming"
+    ],
+    "source_titles": [
+      "Fast Weight Programming and Linear Transformers: From ML to Neurobiology"
+    ],
+    "split": "dev",
+    "id": "q10"
+  },
+  {
+    "question": "What is the role of the meta-optimization process in the Dynamic Nested Hierarchy model, and how does it address the limitations of long-context reasoning?",
+    "reference_answer": "The meta-optimization process in the Dynamic Nested Hierarchy model governs the state of the hierarchy at time t by minimizing a meta-loss function Lmeta, which measures adaptation efficacy based on the current input xt and the distribution shift \u2206t. This process aims to improve the model's performance in long-context reasoning, which is limited by rigid level definitions, by allowing the hierarchy to adapt dynamically to changes in input and context.",
+    "type": "single",
+    "source_papers": [
+      "05_dynamic_nested_hierarchies"
+    ],
+    "source_titles": [
+      "Dynamic Nested Hierarchies: Self-Evolution in ML for Lifelong Intelligence"
+    ],
+    "split": "test",
+    "id": "q11"
+  },
+  {
+    "question": "What limitation does the RAG system have in terms of updating facts, and how does the KO method address this limitation?",
+    "reference_answer": "The RAG system lacks key-based identity and version semantics needed for deterministic overwrite, meaning that both old and new values coexist in the index with similar embeddings. The KO method addresses this limitation by providing deterministic overwrite semantics, allowing for individual facts to be updated without affecting other stored facts.",
+    "type": "single",
+    "source_papers": [
+      "26_attention_not_retention"
+    ],
+    "source_titles": [
+      "Attention Is Not Retention: The Orthogonality Constraint in Infinite-Context Architectures"
+    ],
+    "split": "test",
+    "id": "q12"
+  },
+  {
+    "question": "What is the key mechanism proposed for improving language modeling performance with longer context while maintaining constant cost per token?",
+    "reference_answer": "The key mechanism proposed is compression, which allows the model to preserve important information while leaving out many details. This is achieved by continuing to train the language model at test time via next-token prediction on the given context.",
+    "type": "single",
+    "source_papers": [
+      "04_end_to_end_ttt_long_context"
+    ],
+    "source_titles": [
+      "End-to-End Test-Time Training for Long Context"
+    ],
+    "split": "spare",
+    "id": "q13"
+  },
+  {
+    "question": "What is the purpose of the Observability Score Ratio (OSR) in evaluating agent outputs, and how is it calculated?",
+    "reference_answer": "The Observability Score Ratio (OSR) quantifies the transparency and forensic value of agent outputs by measuring the richness of security-relevant reasoning exposed. It is calculated based on three dimensions: Explicit Reasoning (0.4 weight), which assesses the presence of step-by-step security analysis; Metadata Exposure (0.3 weight), which evaluates the inclusion of structured annotations like injection marker flags and confidence scores; and Compliance Justification (0.3 weight), which looks at explanations of policy decisions. The formal calculation of OSR for a response R is given by the formula: OSR(R) = w1 \u00b7 |Treasoning| / |TR| + w2 \u00b7 \u22aemetadata(R) + w3 \u00b7 \u22aejustification(R), where |Treasoning| is the number of tokens related to security reasoning, and \u22aemetadata(R) and \u22aejustification(R) represent the contributions from metadata and justification, respectively.",
+    "type": "single",
+    "source_papers": [
+      "16_prompt_injection_nested_learning"
+    ],
+    "source_titles": [
+      "Prompt Injection Mitigation with Agentic AI, Nested Learning, and AI Sustainability"
+    ],
+    "split": "dev",
+    "id": "q14"
+  },
+  {
+    "question": "What limitation is identified regarding Learning-to-Learn (L2L) methods in terms of task scope and scale?",
+    "reference_answer": "L2L research has stagnated due to limitations in the scale and scope of artificially designed tasks, which have confined L2L to fixed training and testing tasks involving a relatively small number of training tasks, thus limiting their practical applicability.",
+    "type": "single",
+    "source_papers": [
+      "22_learning_to_learn_at_scale"
+    ],
+    "source_titles": [
+      "Learning-to-Learn at Scale: Promises and Challenges"
+    ],
+    "split": "test",
+    "id": "q15"
+  },
+  {
+    "question": "How does the Memory Sparse Attention method reduce memory footprint and retrieval complexity during the processing of documents?",
+    "reference_answer": "The Memory Sparse Attention method reduces memory footprint and retrieval complexity by segmenting each document into multiple fixed-length chunks and performing chunk-wise mean pooling on the hidden state representations. This process compresses the states into latent representations, yielding compressed matrices for keys, values, and routing keys, which allows for more efficient handling of the memory bank during inference.",
+    "type": "single",
+    "source_papers": [
+      "15_msa_memory_sparse_attention"
+    ],
+    "source_titles": [
+      "MSA: Memory Sparse Attention for Efficient End-to-End Memory Model Scaling"
+    ],
+    "split": "test",
+    "id": "q16"
+  },
+  {
+    "question": "What advantages does the ALLMEM architecture provide for long-sequence modeling compared to the full-attention mechanism?",
+    "reference_answer": "The ALLMEM architecture achieves significant advantages in computational efficiency and storage scalability for long-sequence modeling by maintaining a constant cache capacity regardless of sequence length, while the cache demand of the full-attention layer grows linearly with sequence length, leading to increased memory overhead in long-sequence scenarios.",
+    "type": "single",
+    "source_papers": [
+      "13_allmem_long_context"
+    ],
+    "source_titles": [
+      "AllMem: A Memory-centric Recipe for Efficient Long-context Modeling"
+    ],
+    "split": "dev",
+    "id": "q17"
+  },
+  {
+    "question": "How does Delta Gradient Descent (DGD) differ from traditional gradient descent in terms of its update mechanism?",
+    "reference_answer": "Delta Gradient Descent (DGD) updates not only depend on the current input but also on the state of the weights of the neural network. This design choice allows DGD to capture dependencies of data samples without the assumption of independent and identically distributed (i.i.d.) data, which is a limitation in traditional gradient descent.",
+    "type": "single",
+    "source_papers": [
+      "00_nested_learning_original"
+    ],
+    "source_titles": [
+      "Nested Learning: The Illusion of Deep Learning Architectures"
+    ],
+    "split": "test",
+    "id": "q18"
+  },
+  {
+    "question": "What limitation does the Residual Memory formulation have in relation to cached memories, and how does the introduction of input-dependent gating address this limitation?",
+    "reference_answer": "The limitation of the Residual Memory formulation is that it treats all cached memories equally, ignoring their relevance to the query. The introduction of input-dependent gating allows for selective retrieval by defining parameters that modulate the contribution of each segment to the output, enabling the model to weigh the relevance of different cached memories based on the input.",
+    "type": "single",
+    "source_papers": [
+      "17_memory_caching_rnns"
+    ],
+    "source_titles": [
+      "Memory Caching: RNNs with Growing Memory"
+    ],
+    "split": "dev",
+    "id": "q20"
+  },
+  {
+    "question": "How does the CRAD-HOPE framework prevent catastrophic forgetting during the learning process?",
+    "reference_answer": "CRAD-HOPE implements a periodic knowledge distillation mechanism that allows information to flow hierarchically from Fast to Mid to Slow grids, ensuring that rapidly learned patterns are gradually stabilized into long-term memory.",
+    "type": "single",
+    "source_papers": [
+      "06_crad_hope_anomaly_detection"
+    ],
+    "source_titles": [
+      "CRAD-HOPE: Brain-inspired Nested Learning Framework for Few-Shot Anomaly Detection"
+    ],
+    "split": "test",
+    "id": "q21"
+  },
+  {
+    "question": "What limitation does the autoregressive TRM exhibit in relation to the tasks of Copy and Reverse, and what does this suggest about its learning capability?",
+    "reference_answer": "The autoregressive TRM fails even on Copy and Reverse, which suggests that its difficulty is more basic: in this setting, it does not learn a robust input-output mapping for any of the three tasks.",
+    "type": "single",
+    "source_papers": [
+      "08_tiny_autoregressive_recursive"
+    ],
+    "source_titles": [
+      "Tiny Autoregressive Recursive Models"
+    ],
+    "split": "dev",
+    "id": "q22"
+  },
+  {
+    "question": "What limitation is observed in Vision Transformers during long-term continual learning, despite their structural advantages over MLPs?",
+    "reference_answer": "Vision Transformers exhibit significant plasticity loss during long-term continual learning, which leads to a progressive deterioration of learning capacity, despite their heterogeneous architecture offering greater resilience compared to homogeneous networks like MLPs.",
+    "type": "single",
+    "source_papers": [
+      "14_vision_transformers_never_stop"
+    ],
+    "source_titles": [
+      "Vision Transformers That Never Stop Learning"
+    ],
+    "split": "test",
+    "id": "q23"
+  },
+  {
+    "question": "What challenges do Transformer-based architectures face when modeling multivariate time series data?",
+    "reference_answer": "Transformer-based architectures face challenges in modeling multivariate time series data due to the complex and diverse patterns present in such data, including seasonal and trend components, its non-stationary nature, and the inter-dependencies among the variates.",
+    "type": "single",
+    "source_papers": [
+      "10_hydra_dual_exponentiated_memory"
+    ],
+    "source_titles": [
+      "HYDRA: Dual Exponentiated Memory for Multivariate Time Series Analysis"
+    ],
+    "split": "dev",
+    "id": "q24"
+  },
+  {
+    "question": "How does the concept of Fast Weight Programming (FWP) relate to local online learning and metalearning in the context of neural networks?",
+    "reference_answer": "Fast Weight Programming (FWP) captures the learning dynamics by expressing the process of training a network within the model's sequential dynamics. This approach allows a slow network to 'train' a fast network as part of sequence processing, which is particularly relevant in local online learning and metalearning. The structure of FWPs provides insights into learning mechanisms that are compatible with biological constraints, highlighting the interaction between different learning rates in neural networks.",
+    "type": "single",
+    "source_papers": [
+      "03_fast_weight_programming"
+    ],
+    "source_titles": [
+      "Fast Weight Programming and Linear Transformers: From ML to Neurobiology"
+    ],
+    "split": "test",
+    "id": "q25"
+  },
+  {
+    "question": "What advantage does the Dynamic Nested Hierarchies (DNH) method have over static Nested Learning (NL) in terms of adaptation efficiency, particularly in non-stationary settings?",
+    "reference_answer": "Dynamic Nested Hierarchies (DNH) demonstrates superior adaptation efficiency by achieving sublinear regret in non-stationary settings, as indicated by the cumulative regret bound RT \u2264 O(\u221aT(L + \u03b4)). In contrast, static Nested Learning (NL) incurs linear regret in \u03b4 due to its lack of adaptation, which limits its effectiveness in tasks requiring long-context reasoning.",
+    "type": "single",
+    "source_papers": [
+      "05_dynamic_nested_hierarchies"
+    ],
+    "source_titles": [
+      "Dynamic Nested Hierarchies: Self-Evolution in ML for Lifelong Intelligence"
+    ],
+    "split": "spare",
+    "id": "q26"
+  },
+  {
+    "question": "What advantages does the Knowledge Objects system provide for handling patient data compared to pure neural systems or pure RAG systems?",
+    "reference_answer": "The Knowledge Objects system allows for zero-latency writes, enabling immediate availability of facts without reindexing, records tumor size changes through surgical updates without corrupting other patient information, supports temporal queries that can traverse the version chain for historical states, and utilizes hybrid routing to differentiate between factual queries and more complex requests like treatment explanations. In contrast, a pure neural system would suffer from interference as patient facts accumulate, while a pure RAG system would require re-indexing to update tumor size.",
+    "type": "single",
+    "source_papers": [
+      "26_attention_not_retention"
+    ],
+    "source_titles": [
+      "Attention Is Not Retention: The Orthogonality Constraint in Infinite-Context Architectures"
+    ],
+    "split": "test",
+    "id": "q27"
+  },
+  {
+    "question": "How does the TTT-KVB method update its weights during training, and what role do the outer-loop parameters play in this process?",
+    "reference_answer": "In the TTT-KVB method, weights are updated at each timestep t through a gradient step on a specified loss function. The outer-loop parameters, denoted as \u03b8(l)K, \u03b8(l)V, and \u03b8(l)Q, are used in conjunction with the weights of the model to produce output embeddings. Specifically, after the gradient step, the updated weights are utilized by the function g to generate the output embedding z(l)t, indicating that the outer-loop parameters are crucial for optimizing the performance of the TTT layers during training.",
+    "type": "single",
+    "source_papers": [
+      "04_end_to_end_ttt_long_context"
+    ],
+    "source_titles": [
+      "End-to-End Test-Time Training for Long Context"
+    ],
+    "split": "dev",
+    "id": "q28"
+  },
+  {
+    "question": "How do the optimization objectives differ between the dual exponentiated memory approach and the memory caching framework in their respective methods for learning mappings between keys and values?",
+    "reference_answer": "The dual exponentiated memory approach uses the objective \u2113(Mt; kt; vt) = \u2225Mt(kt) \u2212 vt\u22252 to measure the predicted mappings, focusing on minimizing the L2 loss between the predicted and actual values. In contrast, the memory caching framework employs an objective L(M(kt); vt) that measures the quality of mapping along with an additional term Ret(M; Mt) that ensures the new memory state is close to the previous state, thus incorporating a regularization aspect to maintain continuity in memory states.",
+    "type": "cross",
+    "source_papers": [
+      "10_hydra_dual_exponentiated_memory",
+      "17_memory_caching_rnns"
+    ],
+    "source_titles": [
+      "HYDRA: Dual Exponentiated Memory for Multivariate Time Series Analysis",
+      "Memory Caching: RNNs with Growing Memory"
+    ],
+    "split": "dev",
+    "id": "q30"
+  },
+  {
+    "question": "How do the Memory Sparse Attention (MSA) and Memory Caching (MC) approaches differ in their handling of memory capacity and computational complexity for long-context tasks?",
+    "reference_answer": "Memory Sparse Attention (MSA) introduces a trade-off between capacity and efficiency, with KV-centric methods maintaining strong precision but incurring prohibitive computational costs, while linear-attention-based variants achieve efficient O(L) complexity but suffer from catastrophic forgetting. In contrast, Memory Caching (MC) enhances recurrent models by allowing their effective memory capacity to grow with sequence length, offering a flexible trade-off that interpolates between the fixed memory of RNNs (O(L) complexity) and the growing memory of Transformers (O(L2) complexity).",
+    "type": "cross",
+    "source_papers": [
+      "15_msa_memory_sparse_attention",
+      "17_memory_caching_rnns"
+    ],
+    "source_titles": [
+      "MSA: Memory Sparse Attention for Efficient End-to-End Memory Model Scaling",
+      "Memory Caching: RNNs with Growing Memory"
+    ],
+    "split": "test",
+    "id": "q31"
+  },
+  {
+    "question": "How do self-evolving DNH models differ from traditional deep learning architectures in terms of adaptability to changing data distributions?",
+    "reference_answer": "Self-evolving DNH models incorporate mechanisms for autonomous structural and parametric evolution, allowing them to adapt hierarchically in response to evolving data distributions without external intervention. In contrast, traditional deep learning architectures, while providing better expressive power through stacking multiple layers, are described as not universally effective for all challenges, particularly in adapting to changing data distributions, as their computational depth may not change with more layers and their capacity might show marginal improvement with increased depth or width.",
+    "type": "cross",
+    "source_papers": [
+      "05_dynamic_nested_hierarchies",
+      "00_nested_learning_original"
+    ],
+    "source_titles": [
+      "Dynamic Nested Hierarchies: Self-Evolution in ML for Lifelong Intelligence",
+      "Nested Learning: The Illusion of Deep Learning Architectures"
+    ],
+    "split": "dev",
+    "id": "q33"
+  },
+  {
+    "question": "How do the approaches to addressing plasticity loss in continual learning differ between the Vision Transformer method and the Tiny Autoregressive Recursive Model?",
+    "reference_answer": "The Vision Transformer method addresses plasticity loss by highlighting the importance of gradient direction concentration and suggests that second-order optimization methods can mitigate this issue by incorporating local curvature of the loss landscape. In contrast, the Tiny Autoregressive Recursive Model does not focus on plasticity loss but instead explores a controlled transformation of the Transformer architecture, finding that two-level refinement baselines perform well without relying on the autoregressive TRM architecture, indicating a different approach to model performance rather than addressing plasticity directly.",
+    "type": "cross",
+    "source_papers": [
+      "14_vision_transformers_never_stop",
+      "08_tiny_autoregressive_recursive"
+    ],
+    "source_titles": [
+      "Vision Transformers That Never Stop Learning",
+      "Tiny Autoregressive Recursive Models"
+    ],
+    "split": "test",
+    "id": "q34"
+  },
+  {
+    "question": "How do the memory processing mechanisms of AllMem and MSA differ in terms of computational complexity during inference?",
+    "reference_answer": "AllMem's approach incurs O(L2) computational complexity due to the necessity of maintaining a KV cache that grows linearly with sequence length, while MSA separates computation into offline pre-processing with O(LG) complexity and online query handling with O(ML/P), making MSA more efficient in extreme-long memory scenarios.",
+    "type": "cross",
+    "source_papers": [
+      "13_allmem_long_context",
+      "15_msa_memory_sparse_attention"
+    ],
+    "source_titles": [
+      "AllMem: A Memory-centric Recipe for Efficient Long-context Modeling",
+      "MSA: Memory Sparse Attention for Efficient End-to-End Memory Model Scaling"
+    ],
+    "split": "dev",
+    "id": "q35"
+  },
+  {
+    "question": "How do the concepts of fast weights in Fast Weight Programming (FWP) and test-time training (TTT) relate in terms of their approach to updating model parameters?",
+    "reference_answer": "Both Fast Weight Programming (FWP) and test-time training (TTT) involve the idea of updating model parameters based on relevant data. FWP focuses on the dynamics of synaptic modulation to learn fast and slow weights, while TTT emphasizes updating fast weights specifically at test time, using only the most relevant data, which can include the test instance itself. Thus, TTT can be viewed as a specific application of the fast weights concept, highlighting the importance of relevant data in model updates.",
+    "type": "cross",
+    "source_papers": [
+      "03_fast_weight_programming",
+      "04_end_to_end_ttt_long_context"
+    ],
+    "source_titles": [
+      "Fast Weight Programming and Linear Transformers: From ML to Neurobiology",
+      "End-to-End Test-Time Training for Long Context"
+    ],
+    "split": "test",
+    "id": "q36"
+  }
+]

@@ -1,0 +1,11 @@
+Context from academic papers:
+{context}
+
+For each numbered claim below, decide whether the context above directly supports it.
+Use SUPPORTED if it does and NOT_SUPPORTED if it does not.
+
+Claims:
+{claims}
+
+Return ONLY a JSON list with one item per claim, with no other text:
+[{"id": 1, "verdict": "SUPPORTED"}]
