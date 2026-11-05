@@ -1,0 +1,14 @@
+Context from academic papers:
+{context}
+
+Check each numbered claim below against the context, one at a time, using this rubric:
+- SUPPORTED: the context states the claim, or it follows directly from what the context states.
+- PARTIAL: the context supports part of the claim, but another part is missing or goes further.
+- NOT_SUPPORTED: the context does not contain the claim, or contradicts it.
+Do not use outside knowledge, even if the claim is true.
+
+Claims:
+{claims}
+
+Return ONLY a JSON list with one item per claim, with no other text:
+[{"id": 1, "verdict": "SUPPORTED"}]
