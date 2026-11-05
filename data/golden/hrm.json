@@ -1,0 +1,432 @@
+[
+  {
+    "question": "What is the purpose of the InfiLoop method in looped Transformers, and how does it address the issue of latent overthinking?",
+    "reference_answer": "InfiLoop introduces a loop-native residual connection that replaces the carry-last rule with learned attention over recurrent outputs. This method aims to mitigate the problem of latent overthinking, where additional loops can degrade accuracy by overwriting useful intermediate states. By using a shared pseudo-query to score each candidate output and applying learned exponential decay to discount earlier contributions, InfiLoop allows for a normalized aggregation that forms the input for the next iteration, enabling further computation to build on useful intermediate states.",
+    "type": "single",
+    "source_papers": [
+      "2610_11570"
+    ],
+    "source_titles": [
+      "Scaling to Tens of Thousands of Test-Time Iterations with Loop-Native Attention Residuals"
+    ],
+    "split": "dev",
+    "id": "q01"
+  },
+  {
+    "question": "What limitation does the use of truncated backpropagation through time introduce in the training of Neural Cellular Automata, and what future research directions are suggested to address this limitation?",
+    "reference_answer": "The use of truncated backpropagation through time introduces a limitation because it requires global loss aggregation and error propagation, making the training process non-local. Future research directions suggested to address this limitation include exploring training over shorter truncated horizons by decomposing tasks into local denoising objectives and investigating local learning rules that eliminate global gradient backpropagation altogether.",
+    "type": "single",
+    "source_papers": [
+      "2609_36126"
+    ],
+    "source_titles": [
+      "Reasoning with Neural Cellular Automata"
+    ],
+    "split": "test",
+    "id": "q02"
+  },
+  {
+    "question": "How does the hierarchical reasoning model utilize temporal separation to enhance computational efficiency?",
+    "reference_answer": "The hierarchical reasoning model employs temporal separation by operating at distinct intrinsic timescales, which are reflected in neural rhythms such as slow theta waves (4\u20138 Hz) and fast gamma waves (30\u2013100 Hz). This separation allows for stable, high-level guidance of rapid, low-level computations, thereby enhancing computational efficiency.",
+    "type": "single",
+    "source_papers": [
+      "00_anchor"
+    ],
+    "source_titles": [
+      "Hierarchical Reasoning Model"
+    ],
+    "split": "test",
+    "id": "q03"
+  },
+  {
+    "question": "What is the significance of using matched controls when testing the claim that a shallow block looped can replace stacked layers in recursive models?",
+    "reference_answer": "Matched controls are significant because they allow for a fair comparison between a recursive model and a plain transformer by isolating the effects of parameter count and effective depth. This ensures that any observed differences in performance can be attributed to the architectural choices rather than variations in model size or computational resources.",
+    "type": "single",
+    "source_papers": [
+      "2608_29376"
+    ],
+    "source_titles": [
+      "Evaluating Tiny Recursive Models Across Training for Code Generation"
+    ],
+    "split": "dev",
+    "id": "q05"
+  },
+  {
+    "question": "What is the significance of the scaling law L(t, N, L, P) in the context of model performance for in-context learning tasks, particularly regarding the effects of depth and width?",
+    "reference_answer": "The scaling law L(t, N, L, P) indicates that for the RRS setting, increasing depth is beneficial for any distribution, while width and depth contribute separate terms to the scaling law. This suggests that optimizing both width and depth can lead to improved model performance, and the relationship between them is influenced by the properties of the data, as indicated by the scaling of L \u223c N \u03bd.",
+    "type": "single",
+    "source_papers": [
+      "2510_01098"
+    ],
+    "source_titles": [
+      "Theory of Scaling Laws for In-Context Regression: Depth, Width, Context and Time"
+    ],
+    "split": "dev",
+    "id": "q07"
+  },
+  {
+    "question": "What is the significance of the contraction mapping property in the Contraction Mapping Model (CMM) and how does it contribute to the model's convergence to a unique fixed point?",
+    "reference_answer": "The contraction mapping property in the Contraction Mapping Model (CMM) is significant because it enforces specific architectural modifications and introduces auxiliary loss terms associated with equilibrium points. This design choice provides a mathematically rigorous foundation for the model's convergence to a unique fixed point, ensuring that the model behaves predictably and reliably when solving the NODEs.",
+    "type": "single",
+    "source_papers": [
+      "2603_22871"
+    ],
+    "source_titles": [
+      "Dynamical Systems Theory Behind a Hierarchical Reasoning Model"
+    ],
+    "split": "dev",
+    "id": "q08"
+  },
+  {
+    "question": "What is the significance of using an ensemble of checkpoints from the training phase in improving model accuracy, and what unexpected result was observed from this approach?",
+    "reference_answer": "The ensemble of checkpoints from the later half of the training phase was used to improve model accuracy because these checkpoints are approximately equally strong and their parameters are diversified by the optimizer. The unexpected result observed was a 9.2% improvement in accuracy with this model bootstrapping method, which contradicts the intuition that the final strongest checkpoint would cover the capabilities of all its predecessors, indicating that the mutually dependent models differ significantly in their performance on test samples.",
+    "type": "single",
+    "source_papers": [
+      "2601_10679"
+    ],
+    "source_titles": [
+      "Are Your Reasoning Models Reasoning or Guessing? A Mechanistic Analysis of Hierarchical Reasoning Models"
+    ],
+    "split": "test",
+    "id": "q09"
+  },
+  {
+    "question": "What is the significance of the condition \u03c1(Mext) < 1 in the context of attracting fixed points in the Mext model?",
+    "reference_answer": "The condition \u03c1(Mext) < 1 indicates that x\u2217 is an attracting fixed point, which implies that it is practically reachable. This condition is crucial for ensuring stability in the model, as it determines the behavior of the system in relation to its fixed points.",
+    "type": "single",
+    "source_papers": [
+      "2604_15259"
+    ],
+    "source_titles": [
+      "Stability and Generalization in Looped Transformers"
+    ],
+    "split": "test",
+    "id": "q10"
+  },
+  {
+    "question": "What is the purpose of the boundedness theorem in Fixed-Point Reasoners, and how does it relate to the challenges faced by Euclidean formulations?",
+    "reference_answer": "The boundedness theorem in Fixed-Point Reasoners (FPRM) is designed to keep the recurrent state from diverging during the iterative process. It addresses the challenge posed by Euclidean formulations, where the residual stream can grow without bounds. This necessitates coupling four residual-rescaling coefficients and requires a normalization factor for the halting residual to ensure scale invariance.",
+    "type": "single",
+    "source_papers": [
+      "2610_25646"
+    ],
+    "source_titles": [
+      "Spherical Fixed-Point Reasoners: Adaptive Loop Halting on the Hypersphere"
+    ],
+    "split": "test",
+    "id": "q11"
+  },
+  {
+    "question": "How do looped reasoning models increase computational depth without increasing the parameter count?",
+    "reference_answer": "Looped reasoning models increase effective computational depth by repeatedly applying shared neural blocks to a latent state, allowing additional test-time computation without increasing the parameter count.",
+    "type": "single",
+    "source_papers": [
+      "2610_18174"
+    ],
+    "source_titles": [
+      "Looped Reasoning Finishes Earlier Than You Think"
+    ],
+    "split": "test",
+    "id": "q13"
+  },
+  {
+    "question": "How does the width scaling method in the Probabilistic Tiny Recursive Model (PTRM) enhance performance during test-time computation?",
+    "reference_answer": "Width scaling allows for independent and parallelizable rollouts, which are more practical compared to extra depth that is sequential. This method enables PTRM to substantially boost the performance of each pretrained TRM using only inference compute, as demonstrated by improved accuracy across various benchmarks.",
+    "type": "single",
+    "source_papers": [
+      "2605_19943"
+    ],
+    "source_titles": [
+      "Probabilistic Tiny Recursive Model"
+    ],
+    "split": "dev",
+    "id": "q14"
+  },
+  {
+    "question": "How does the dual phase\u2013frequency state design in Winfree Oscillatory Neural Networks contribute to its performance in reasoning tasks?",
+    "reference_answer": "The dual phase\u2013frequency state design separates fast synchronization dynamics from slower frequency evolution, which enables stable iterative refinement of representations. This design choice allows WONN to achieve competitive performance on reasoning tasks while using substantially fewer parameters.",
+    "type": "single",
+    "source_papers": [
+      "2605_20922"
+    ],
+    "source_titles": [
+      "Winfree Oscillatory Neural Network"
+    ],
+    "split": "test",
+    "id": "q15"
+  },
+  {
+    "question": "What advantage does the InfiLoop method provide over the carry-last model in terms of maintaining solution stability during deep reasoning processes?",
+    "reference_answer": "InfiLoop preserves solutions indefinitely, while the carry-last method destabilizes solved states at large depth, indicating that InfiLoop is more effective at maintaining reasoning stability as the depth of iterations increases.",
+    "type": "single",
+    "source_papers": [
+      "2610_11570"
+    ],
+    "source_titles": [
+      "Scaling to Tens of Thousands of Test-Time Iterations with Loop-Native Attention Residuals"
+    ],
+    "split": "dev",
+    "id": "q16"
+  },
+  {
+    "question": "How do Neural Cellular Automata (NCAs) demonstrate generalization capabilities to harder, out-of-distribution tasks?",
+    "reference_answer": "Neural Cellular Automata (NCAs) can generalize to harder, out-of-distribution tasks by expanding compute at test-time across either space or time, or through parallelization. Additionally, their generalization capabilities depend on training with sample replay and stochastic perturbations, with stochasticity remaining beneficial at test time.",
+    "type": "single",
+    "source_papers": [
+      "2609_36126"
+    ],
+    "source_titles": [
+      "Reasoning with Neural Cellular Automata"
+    ],
+    "split": "dev",
+    "id": "q17"
+  },
+  {
+    "question": "How does the Hierarchical Reasoning Model (HRM) achieve superior performance on inductive benchmarks compared to traditional chain-of-thought (CoT) models?",
+    "reference_answer": "The Hierarchical Reasoning Model (HRM) utilizes two recurrent networks operating at different timescales to collaboratively solve tasks, allowing it to effectively process information and make predictions directly from inputs. This design enables HRM to surpass state-of-the-art CoT models on challenging tasks like ARC-AGI and symbolic puzzles such as Sudoku-Extreme and Maze-Hard, where CoT models failed completely, even with a relatively small number of training examples.",
+    "type": "single",
+    "source_papers": [
+      "00_anchor"
+    ],
+    "source_titles": [
+      "Hierarchical Reasoning Model"
+    ],
+    "split": "dev",
+    "id": "q18"
+  },
+  {
+    "question": "What is the rationale behind selecting the best-validation epoch post hoc for the TRM-AR and vanilla-2L models, and how does this approach address potential limitations of early stopping methods?",
+    "reference_answer": "Selecting the best-validation epoch post hoc allows for avoiding the under-optimization that patience-based early stopping can induce. This method ensures that the reported checkpoint corresponds to the lowest validation loss, which is particularly important for TRM-AR and vanilla-2L, as their validation loss was still decreasing at epoch 40, indicating that they had not yet reached their optimal performance.",
+    "type": "single",
+    "source_papers": [
+      "2608_29376"
+    ],
+    "source_titles": [
+      "Evaluating Tiny Recursive Models Across Training for Code Generation"
+    ],
+    "split": "test",
+    "id": "q20"
+  },
+  {
+    "question": "What limitation is identified regarding the computation performed by deep equilibrium models, and how is this limitation demonstrated through testing?",
+    "reference_answer": "The limitation identified is that the equilibrium computation in deep equilibrium models (DEQs) can be a no-op, meaning it does not perform any meaningful computation despite training converging and showing respectable accuracy. This limitation is demonstrated through a substitution test, which isolates the computation by keeping the input pathway and bypassing only the solve, resulting in a return value of 0.00 pp with negligible variance in every collapsed run.",
+    "type": "single",
+    "source_papers": [
+      "2607_11116"
+    ],
+    "source_titles": [
+      "The Equilibrium Is the Initialization: Lazy Identity Collapse in Physics-Structured Deep Equilibrium Reasoning"
+    ],
+    "split": "dev",
+    "id": "q21"
+  },
+  {
+    "question": "What does the analysis of the model suggest about the necessity of depth in in-context learning when training on fixed covariance structures?",
+    "reference_answer": "The analysis suggests that large depth is not necessary at infinite context length when training on fixed covariance structures, as the model learns a preconditioner that whitens the data. However, this learned solution is described as brittle.",
+    "type": "single",
+    "source_papers": [
+      "2510_01098"
+    ],
+    "source_titles": [
+      "Theory of Scaling Laws for In-Context Regression: Depth, Width, Context and Time"
+    ],
+    "split": "test",
+    "id": "q22"
+  },
+  {
+    "question": "How does the application of the NSDE framework contribute to the recovery of predictive capability in the CMMNSDE model despite its small parameter space?",
+    "reference_answer": "The NSDE framework contributes to the recovery of predictive capability by allowing for a stabilization of noise estimation through an increased batch size (B = 1000), balancing the complex multi-component loss with AlgGradNorm, and freezing the input embeddings after 2500 epochs. These adjustments enable the model to perform competitively even with a reduced parameter count of 0.26M.",
+    "type": "single",
+    "source_papers": [
+      "2603_22871"
+    ],
+    "source_titles": [
+      "Dynamical Systems Theory Behind a Hierarchical Reasoning Model"
+    ],
+    "split": "dev",
+    "id": "q23"
+  },
+  {
+    "question": "What limitation does the hierarchical reasoning model (HRM) face when solving extremely simple puzzles, and what solution is proposed to address this limitation?",
+    "reference_answer": "The hierarchical reasoning model (HRM) faces a limitation in solving extremely simple puzzles, such as those with only one unknown cell, due to a violation of the fixed point property, which assumes stability after finding a solution. This property breaks down in practice, leading to failures. To address this limitation, a simple fix is proposed: data augmentation.",
+    "type": "single",
+    "source_papers": [
+      "2601_10679"
+    ],
+    "source_titles": [
+      "Are Your Reasoning Models Reasoning or Guessing? A Mechanistic Analysis of Hierarchical Reasoning Models"
+    ],
+    "split": "test",
+    "id": "q24"
+  },
+  {
+    "question": "What is the purpose of the KL-divergence regularization term introduced by Banino et al. in their method, and how does it differ from the goals of other models that reduce computation at inference time?",
+    "reference_answer": "The KL-divergence regularization term is introduced to incentivize a geometric distribution over loops, which improves hyperparameter stability while retaining the differentiability of the Adaptive Computation Time (ACT) mechanism. This differs from other models that aim to reduce unnecessary computation, as those models use the halting mechanism primarily for efficiency, whereas Banino et al.'s approach focuses on enhancing generalization by allowing for more iterations to tackle harder problems.",
+    "type": "single",
+    "source_papers": [
+      "2604_15259"
+    ],
+    "source_titles": [
+      "Stability and Generalization in Looped Transformers"
+    ],
+    "split": "dev",
+    "id": "q25"
+  },
+  {
+    "question": "How does the design choice of using tied residual coefficients in the Fixed-Point Reasoning Model (FPRM) contribute to the stability of the recurrent carry path?",
+    "reference_answer": "The use of tied residual coefficients (\u03b11, \u03b21) and iteration-level coefficients (\u03b12, \u03b22) ensures that the recurrent carry path's gain (\u03b12\u03b12D1) is balanced against the injected input. This is achieved through a boundedness theorem that couples the coefficients, which helps maintain stability and prevents the residual stream from growing indefinitely, thus allowing the model to converge effectively.",
+    "type": "single",
+    "source_papers": [
+      "2610_25646"
+    ],
+    "source_titles": [
+      "Spherical Fixed-Point Reasoners: Adaptive Loop Halting on the Hypersphere"
+    ],
+    "split": "test",
+    "id": "q26"
+  },
+  {
+    "question": "What is a limitation of C-voting when applied to the HRM model, and how does it affect performance?",
+    "reference_answer": "The effect of C-voting on HRM is limited under the modified setting, indicating that while C-voting shows improvements for other models like AKOrN and ItrSA++, it does not significantly enhance HRM's performance. This suggests a mismatch in the effectiveness of C-voting for HRM compared to other models.",
+    "type": "single",
+    "source_papers": [
+      "2604_13521"
+    ],
+    "source_titles": [
+      "C-voting: Confidence-Based Test-Time Voting without Explicit Energy Functions"
+    ],
+    "split": "spare",
+    "id": "q27"
+  },
+  {
+    "question": "How does the removal of the oscillatory coordinate affect the settling time in the context of the FPRM model?",
+    "reference_answer": "Removing the oscillatory coordinate accelerates settlement while preserving the decoded output, as indicated by the gains from the predicted and observed settling times, \u2206\u03c4pred and \u2206\u03c4obs, which show identity-line agreement confirming that the local prediction quantitatively matches the actual settling-time gain.",
+    "type": "single",
+    "source_papers": [
+      "2610_18174"
+    ],
+    "source_titles": [
+      "Looped Reasoning Finishes Earlier Than You Think"
+    ],
+    "split": "test",
+    "id": "q28"
+  },
+  {
+    "question": "How does the Probabilistic TRM (PTRM) improve accuracy during inference compared to standard methods?",
+    "reference_answer": "PTRM improves accuracy during inference by running K parallel rollouts per puzzle, each with Gaussian noise injected into the latent at every deep recursion step. This noise leads to different latent trajectories and allows the model to explore various basins of candidate answers. The Q head is then used to select the most likely correct answer from these candidates, leveraging information that is typically discarded in standard inference procedures.",
+    "type": "single",
+    "source_papers": [
+      "2605_19943"
+    ],
+    "source_titles": [
+      "Probabilistic Tiny Recursive Model"
+    ],
+    "split": "dev",
+    "id": "q29"
+  },
+  {
+    "question": "How do the state update mechanisms differ between the Spherical Fixed-Point Reasoners model and the Hierarchical Reasoning Model?",
+    "reference_answer": "In the Spherical Fixed-Point Reasoners model, the recurrent state is updated through a weight-tied network that couples tokens and acts on the product space of unit token vectors, with predictions read out as a learned scalar multiplied by a linear map. In contrast, the Hierarchical Reasoning Model updates its L-module state at each timestep based on its previous state, the fixed state of the H-module, and the input representation, while the H-module updates only once per cycle using the final state of the L-module.",
+    "type": "cross",
+    "source_papers": [
+      "2610_25646",
+      "00_anchor"
+    ],
+    "source_titles": [
+      "Spherical Fixed-Point Reasoners: Adaptive Loop Halting on the Hypersphere",
+      "Hierarchical Reasoning Model"
+    ],
+    "split": "dev",
+    "id": "q30"
+  },
+  {
+    "question": "How does the performance of the ItrSA++ model with C-voting compare to the FPRM model in terms of solving Sudoku-Extreme, and what are the implications of their respective parameter counts?",
+    "reference_answer": "ItrSA++ achieves a performance of 95.2% on Sudoku-Extreme, which is significantly higher than FPRM's performance of 90.4%. Additionally, ItrSA++ requires about 3 million parameters, which is approximately one-ninth the number of parameters in HRM, while FPRM's parameter count is not specified but is implied to be higher than that of ItrSA++. This suggests that ItrSA++ with C-voting provides a more efficient solution with fewer parameters while outperforming FPRM.",
+    "type": "cross",
+    "source_papers": [
+      "2610_18174",
+      "2604_13521"
+    ],
+    "source_titles": [
+      "Looped Reasoning Finishes Earlier Than You Think",
+      "C-voting: Confidence-Based Test-Time Voting without Explicit Energy Functions"
+    ],
+    "split": "dev",
+    "id": "q31"
+  },
+  {
+    "question": "How do the energy-controlled refinement method in Draft Refinement and the adaptive updates in Loop-Native Attention Residuals differ in their approach to improving solution quality during iterative processes?",
+    "reference_answer": "The energy-controlled refinement method in Draft Refinement focuses on minimizing energy through a series of passes and rounds, where each proposal strictly lowers the incumbent energy until a valid solution is found. In contrast, the adaptive updates in Loop-Native Attention Residuals adjust the step size based on milestones in the solution process, reflecting the correctness of the board and maintaining a suppressed step size during the search, which peaks upon completion of the puzzle.",
+    "type": "cross",
+    "source_papers": [
+      "2610_26542",
+      "2610_11570"
+    ],
+    "source_titles": [
+      "Breaking Diffusion: Parallel Reasoning with Draft Refinement",
+      "Scaling to Tens of Thousands of Test-Time Iterations with Loop-Native Attention Residuals"
+    ],
+    "split": "dev",
+    "id": "q32"
+  },
+  {
+    "question": "How does the concept of equilibrium points in the Dynamical Systems Theory relate to the training dynamics of the Hierarchical Reasoning Model, particularly in terms of the stability of the hidden states?",
+    "reference_answer": "The Dynamical Systems Theory introduces auxiliary loss terms, RH stable and RH unstable, that encourage the formation of stable and unstable equilibrium points, respectively. In contrast, the Hierarchical Reasoning Model (HRM) employs a recurrent structure where the hidden states of the low-level and high-level modules evolve over time. The stable equilibrium point in the dynamical system corresponds to the HRM's training dynamics, where the low-level module's state converges towards a stable output, influenced by the auxiliary loss terms that guide the system's behavior during training.",
+    "type": "cross",
+    "source_papers": [
+      "2603_22871",
+      "00_anchor"
+    ],
+    "source_titles": [
+      "Dynamical Systems Theory Behind a Hierarchical Reasoning Model",
+      "Hierarchical Reasoning Model"
+    ],
+    "split": "test",
+    "id": "q33"
+  },
+  {
+    "question": "How does the performance of the Probabilistic Tiny Recursive Model (PTRM) compare to the Hierarchical Reasoning Model (HRM) on Sudoku-Extreme, and what implications does this have for their respective approaches to solving complex reasoning tasks?",
+    "reference_answer": "PTRM achieves a state-of-the-art accuracy of 98.75% on Sudoku-Extreme, significantly outperforming HRM, which has not been shown to achieve similar results in the excerpts. This suggests that PTRM's probabilistic recursive prediction approach may be more effective for complex reasoning tasks compared to HRM's hierarchical processing and direct prediction method.",
+    "type": "cross",
+    "source_papers": [
+      "2605_19943",
+      "00_anchor"
+    ],
+    "source_titles": [
+      "Probabilistic Tiny Recursive Model",
+      "Hierarchical Reasoning Model"
+    ],
+    "split": "test",
+    "id": "q34"
+  },
+  {
+    "question": "How do the approaches of the Winfree Oscillatory Neural Network (WONN) and Neural Cellular Automata (NCA) differ in terms of task complexity and model scalability?",
+    "reference_answer": "WONN focuses on image classification tasks using standard benchmarks like CIFAR and ImageNet, demonstrating effectiveness and parameter efficiency with varying model sizes and fewer parameters compared to baselines. In contrast, NCA addresses a more complex reasoning task involving image-to-image transformation for Sudoku solving, requiring effective communication across multiple cells and the simultaneous solving of three tasks, indicating a higher level of task complexity.",
+    "type": "cross",
+    "source_papers": [
+      "2605_20922",
+      "2609_36126"
+    ],
+    "source_titles": [
+      "Winfree Oscillatory Neural Network",
+      "Reasoning with Neural Cellular Automata"
+    ],
+    "split": "test",
+    "id": "q35"
+  },
+  {
+    "question": "How do the stability conditions of the dynamics in Looped Transformers relate to the weight renormalization and trajectory stabilization methods used in the Hierarchical Reasoning Model?",
+    "reference_answer": "In Looped Transformers, the stability of the dynamics is influenced by the spectral radius of the Jacobian, where \u03c1(J) < 1 leads to vanishing gradients, \u03c1(J) > 1 results in failure to reach fixed points, and \u03c1(J) = 1 causes exploding gradients. In contrast, the Hierarchical Reasoning Model employs weight renormalization to prevent scale drift and applies an exponential moving average to stabilize the trajectories of the weights across iterations, indicating a focus on maintaining stability in the optimization process. Both approaches emphasize the importance of stability in their respective models, but they utilize different mechanisms to achieve it.",
+    "type": "cross",
+    "source_papers": [
+      "2604_15259",
+      "2603_22871"
+    ],
+    "source_titles": [
+      "Stability and Generalization in Looped Transformers",
+      "Dynamical Systems Theory Behind a Hierarchical Reasoning Model"
+    ],
+    "split": "spare",
+    "id": "q36"
+  }
+]

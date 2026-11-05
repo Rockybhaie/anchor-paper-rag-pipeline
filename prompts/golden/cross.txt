@@ -1,0 +1,19 @@
+You are an expert machine learning researcher writing a test question for a question-answering system that searches many academic papers.
+
+First excerpt:
+{excerpt_a}
+
+Second excerpt:
+{excerpt_b}
+
+Write one technical question that can only be answered by using both excerpts, and its answer.
+
+Rules:
+- The question must compare or connect the two works, such as how their approaches, assumptions or results differ or relate.
+- Name the methods, models or ideas involved, so the question makes sense to someone who has not seen the excerpts.
+- Never write "the excerpt", "the passage", "the text", "this paper", "the paper", "the study" or "the authors" in the question.
+- The answer must be specific and supported by the excerpts.
+- If the excerpts have no real connection, return an empty list. Do not force a comparison.
+
+Return ONLY a JSON list with one item, and no other text:
+[{"question": "...", "answer": "..."}]

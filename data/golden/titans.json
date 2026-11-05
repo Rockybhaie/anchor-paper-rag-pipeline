@@ -1,0 +1,458 @@
+[
+  {
+    "question": "What is the relationship between sparse attention mechanisms and kernel regression as established in the research?",
+    "reference_answer": "Sparse attention mechanisms are shown to correspond to compact (bounded support) kernels, with normalized ReLU and sparse-max attention arising from Epanechnikov kernel regression under fixed and adaptive normalizations, respectively.",
+    "type": "single",
+    "source_papers": [
+      "2601_22766"
+    ],
+    "source_titles": [
+      "Sparse Attention as Compact Kernel Regression"
+    ],
+    "split": "dev",
+    "id": "q01"
+  },
+  {
+    "question": "How does test-time training enhance the expressiveness of memory in the context of recurrent models?",
+    "reference_answer": "Test-time training enhances the expressiveness of memory by interpreting the recurrent state as the parameters Wt of a small model fW that is trained online. This approach allows the model to take a gradient step on the inner loss, which enables the layer output to be produced based on the updated parameters, thus making the memory more expressive than a single matrix.",
+    "type": "single",
+    "source_papers": [
+      "2610_38255"
+    ],
+    "source_titles": [
+      "ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories"
+    ],
+    "split": "dev",
+    "id": "q02"
+  },
+  {
+    "question": "How does MemGPT manage different types of memory to optimize performance?",
+    "reference_answer": "MemGPT coordinates working context (state-based memory) with archival storage (explicit memory) through learned paging policies, allowing it to effectively handle immediate processing needs while also managing session-persistent information.",
+    "type": "single",
+    "source_papers": [
+      "2508_10824"
+    ],
+    "source_titles": [
+      "Memory-Augmented Transformers: A Systematic Review from Neuroscience Principles to Enhanced Model Architectures"
+    ],
+    "split": "test",
+    "id": "q03"
+  },
+  {
+    "question": "What role do intermediate layers play in the reasoning performance of models like GPT-2?",
+    "reference_answer": "Intermediate layers are crucial for complex, multi-step reasoning tasks because they form specialized sub-circuits dedicated to reasoning functions, exhibit superior representational capabilities, and their activations significantly impact reasoning outcomes.",
+    "type": "single",
+    "source_papers": [
+      "2507_06203"
+    ],
+    "source_titles": [
+      "A Survey on Latent Reasoning"
+    ],
+    "split": "dev",
+    "id": "q04"
+  },
+  {
+    "question": "How does the TARSE method improve reasoning accuracy compared to other configurations in the evaluation settings?",
+    "reference_answer": "TARSE improves reasoning accuracy by retrieving experience to form a provisional chain and then retrieving step-aligned skills to verify and repair it before answering. This approach is evaluated in comparison to other configurations, and if gains appear primarily in Setting 3 (TARSE) and persist across domains against the other methods, it indicates that the improvements are attributed to the step-aligned skills verification rather than longer reasoning or question-level retrieval.",
+    "type": "single",
+    "source_papers": [
+      "2603_01241"
+    ],
+    "source_titles": [
+      "TARSE: Test-Time Adaptation via Retrieval of Skills and Experience for Reasoning Agents"
+    ],
+    "split": "test",
+    "id": "q05"
+  },
+  {
+    "question": "What is the significance of the data-dependent decay factor in the context of Test-Time Training, and how does it relate to in-context learning performance?",
+    "reference_answer": "The data-dependent decay factor, referred to as the selective mechanism in Mamba, is highlighted as crucial for strong in-context learning performance. It suggests that this mechanism plays a significant role in enhancing the model's ability to adapt and learn from the test data during inference, thereby addressing issues related to train-test distribution shift.",
+    "type": "single",
+    "source_papers": [
+      "2602_21204"
+    ],
+    "source_titles": [
+      "Test-Time Training with KV Binding Is Secretly Linear Attention"
+    ],
+    "split": "test",
+    "id": "q06"
+  },
+  {
+    "question": "What are the three components of the Titans architecture and their respective roles in processing data?",
+    "reference_answer": "The Titans architecture consists of three components: (1) Core, which includes short-term memory and is responsible for the main flow of processing the data using attention with a limited window size; (2) Long-term Memory, which is the neural long-term memory module responsible for storing and remembering long past information; and (3) Persistent Memory, which consists of learnable but date-independent parameters that encode knowledge about a task.",
+    "type": "single",
+    "source_papers": [
+      "00_anchor"
+    ],
+    "source_titles": [
+      "Titans: Learning to Memorize at Test Time"
+    ],
+    "split": "dev",
+    "id": "q07"
+  },
+  {
+    "question": "How does CommVQ address the memory bottleneck associated with KV cache in autoregressive Transformers?",
+    "reference_answer": "CommVQ addresses the memory bottleneck by proposing vector quantization of communication states, which significantly reduces KV storage and inter-device communication costs while maintaining retrieval fidelity with minimal performance degradation.",
+    "type": "single",
+    "source_papers": [
+      "2607_25380"
+    ],
+    "source_titles": [
+      "Memory for Large Language Models"
+    ],
+    "split": "dev",
+    "id": "q08"
+  },
+  {
+    "question": "How does E2-TTT improve upon traditional test-time training methods in terms of efficiency and expressivity?",
+    "reference_answer": "E2-TTT improves upon traditional test-time training methods by reconciling the hardware efficiency of chunk-wise processing with the per-token expressivity of the update rule. It introduces a formulation that allows for complex, token-wise update dynamics while maintaining the efficiency of chunking, thereby enabling superior results compared to prior methods that relied on simplified aggregation rules or standard linear attention.",
+    "type": "single",
+    "source_papers": [
+      "2608_21308"
+    ],
+    "source_titles": [
+      "Rethinking Expressivity and Efficiency in Test-Time Training"
+    ],
+    "split": "dev",
+    "id": "q09"
+  },
+  {
+    "question": "What is the purpose of Hierarchical Voting in the context of augmented inference, and how does it compare to Flattened Voting based on the results presented?",
+    "reference_answer": "Hierarchical Voting serves to combine augmented inference and structured voting to improve the accuracy of predictions. It outperforms Flattened Voting, which selects the top-2 predictions from a single voting round over all generated outputs. The results suggest that Hierarchical Voting effectively identifies the correct solution when it is present, closely approaching the accuracy of the Oracle.",
+    "type": "single",
+    "source_papers": [
+      "2411_07279"
+    ],
+    "source_titles": [
+      "The Surprising Effectiveness of Test-Time Training for Few-Shot Learning"
+    ],
+    "split": "test",
+    "id": "q10"
+  },
+  {
+    "question": "What is the main computational limitation of the softmax attention mechanism in sequence models, and how does it affect the generation of long sequences?",
+    "reference_answer": "The main computational limitation of the softmax attention mechanism is that it requires O(T^2) time to autoregressively compute the entire length T sequence, even after caching the keys and values. This quadratic time complexity can be prohibitively slow for generating long sequences.",
+    "type": "single",
+    "source_papers": [
+      "2501_12352"
+    ],
+    "source_titles": [
+      "Test-time regression: a unifying framework for designing sequence models with associative memory"
+    ],
+    "split": "dev",
+    "id": "q11"
+  },
+  {
+    "question": "What is the impact of using a uniform distribution for training horizons compared to a fixed horizon in terms of performance and computational cost?",
+    "reference_answer": "Using a uniform distribution for training horizons achieves accuracy on par with the full model, but it comes at a substantially higher training cost due to the increased computational time required for larger planning horizons.",
+    "type": "single",
+    "source_papers": [
+      "2603_09221"
+    ],
+    "source_titles": [
+      "Beyond Test-Time Memory: State-Space Optimal Control for LLM Reasoning"
+    ],
+    "split": "spare",
+    "id": "q12"
+  },
+  {
+    "question": "What impact does varying the chunk size have on the performance and memory usage of the ChangeTitans model?",
+    "reference_answer": "Varying the chunk size affects the performance and memory usage of the ChangeTitans model, with a chunk size of 64 providing the best trade-off, achieving 84.36% IoU and 91.52% F1-score. Larger chunk sizes, such as 128, lead to reduced performance, while finer segmentation results in only marginal gains but increases memory consumption.",
+    "type": "single",
+    "source_papers": [
+      "2602_10491"
+    ],
+    "source_titles": [
+      "Towards Remote Sensing Change Detection with Neural Memory"
+    ],
+    "split": "test",
+    "id": "q13"
+  },
+  {
+    "question": "What is the purpose of including persistent memory in the PriorEye model?",
+    "reference_answer": "The purpose of including persistent memory in the PriorEye model is to serve as a robust fallback against contextual corruption that can occur due to seasonal changes or geometric mismatches in street-level imagery. These learnable tokens are designed to absorb attention mass when informative features are missing, addressing the attention sink problem in Transformer architectures.",
+    "type": "single",
+    "source_papers": [
+      "2606_31830"
+    ],
+    "source_titles": [
+      "PriorEye: Geospatial Visual Priors for End-to-End Autonomous Driving"
+    ],
+    "split": "spare",
+    "id": "q14"
+  },
+  {
+    "question": "How does the ReLUmax method avoid the 0/0 degeneracy found in normalized ReLU, and what implications does this have for its performance?",
+    "reference_answer": "ReLUmax avoids the 0/0 degeneracy of normalized ReLU by ensuring that the denominator in its formulation cannot be zero. This is achieved because, with b > 0, even in the worst case where all attention scores equal m, at least one rectified score will be strictly positive. This design choice allows ReLUmax to maintain a stable performance while preserving compact support, enabling it to adaptively select keys based on their similarity to the maximum score without encountering undefined behavior.",
+    "type": "single",
+    "source_papers": [
+      "2601_22766"
+    ],
+    "source_titles": [
+      "Sparse Attention as Compact Kernel Regression"
+    ],
+    "split": "dev",
+    "id": "q15"
+  },
+  {
+    "question": "How does Test-time Training (TTT) enhance the expressivity of recurrent memory in models while maintaining parallel evaluation?",
+    "reference_answer": "Test-time Training enhances the expressivity of recurrent memory by treating the recurrent state as the weights of a small model that learns from the sequence through online gradient descent. This approach allows for a linear memory with a squared reconstruction loss, which recovers the delta rule, while also enabling a nonlinear memory that can adapt its features and readout, thus improving expressivity without sacrificing the parallel evaluation structure.",
+    "type": "single",
+    "source_papers": [
+      "2610_38255"
+    ],
+    "source_titles": [
+      "ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories"
+    ],
+    "split": "test",
+    "id": "q16"
+  },
+  {
+    "question": "What limitation is identified regarding the SR-TTT method in relation to early-context needles and relative-surprisal signals?",
+    "reference_answer": "The limitation identified is that storage fails for early-context needles because relative-surprisal signals need burn-in, indicating that the method does not effectively learn retrieval in these cases.",
+    "type": "single",
+    "source_papers": [
+      "2603_06642"
+    ],
+    "source_titles": [
+      "SR-TTT Does Not Learn Retrieval: A Correction and Mechanistic Post-Mortem of Surprisal-Aware Residual Test-Time Training"
+    ],
+    "split": "spare",
+    "id": "q17"
+  },
+  {
+    "question": "How do hybrid memory systems enhance the performance of Transformers in complex reasoning applications?",
+    "reference_answer": "Hybrid memory systems enhance the performance of Transformers by combining multiple memory types, such as parameter-encoded, state-based, and explicit storage, within unified architectures. This creates hierarchical memory organizations that leverage the complementary strengths of different memory mechanisms, allowing for flexible cognition and efficient retrieval of information, which is essential for complex reasoning tasks.",
+    "type": "single",
+    "source_papers": [
+      "2508_10824"
+    ],
+    "source_titles": [
+      "Memory-Augmented Transformers: A Systematic Review from Neuroscience Principles to Enhanced Model Architectures"
+    ],
+    "split": "test",
+    "id": "q18"
+  },
+  {
+    "question": "How do Masked Diffusion Models (MDMs) utilize bidirectional context in their token prediction process?",
+    "reference_answer": "Masked Diffusion Models operate on complete text sequences with tokens initially masked, allowing the model to predict all missing tokens simultaneously based on bidirectional context. This design choice enables MDMs to access the entire information landscape at each denoising step, facilitating a more informed and accurate prediction of the masked tokens.",
+    "type": "single",
+    "source_papers": [
+      "2507_06203"
+    ],
+    "source_titles": [
+      "A Survey on Latent Reasoning"
+    ],
+    "split": "test",
+    "id": "q19"
+  },
+  {
+    "question": "What does the relationship between inner-loop loss and downstream performance suggest about the effectiveness of memorization in test-time training (TTT)?",
+    "reference_answer": "The relationship indicates that despite lower inner-loop loss suggesting better memorization quality, downstream performance actually degrades as the number of inner-loop gradient steps increases. This contradicts the memorization-based interpretation of TTT, which would expect that more accurate key-value fitting should improve performance.",
+    "type": "single",
+    "source_papers": [
+      "2602_21204"
+    ],
+    "source_titles": [
+      "Test-Time Training with KV Binding Is Secretly Linear Attention"
+    ],
+    "split": "test",
+    "id": "q21"
+  },
+  {
+    "question": "What is a limitation of Transformers in sequence modeling, and how does Titans address this limitation?",
+    "reference_answer": "Transformers have a limitation of quadratic time and memory complexity in terms of context length, which affects their efficiency in complex real-world tasks. Titans address this limitation by incorporating memory into their architecture, allowing them to effectively scale to larger context window sizes (greater than 2M) while maintaining higher accuracy in tasks like needle-in-haystack compared to baselines.",
+    "type": "single",
+    "source_papers": [
+      "00_anchor"
+    ],
+    "source_titles": [
+      "Titans: Learning to Memorize at Test Time"
+    ],
+    "split": "test",
+    "id": "q22"
+  },
+  {
+    "question": "How does the dual-memory regime in memory architectures facilitate selective recall without increasing computational cost?",
+    "reference_answer": "The dual-memory regime separates transient activation-based memory from persistent parameterized explicit memory, allowing for the coexistence of explicit memory storage with dense Transformer computation. This design enables selective recall through scalable key-based retrieval mechanisms, which effectively route tokens through sparse memory slots, thus maintaining efficiency and avoiding a uniform increase in computational cost.",
+    "type": "single",
+    "source_papers": [
+      "2607_25380"
+    ],
+    "source_titles": [
+      "Memory for Large Language Models"
+    ],
+    "split": "dev",
+    "id": "q23"
+  },
+  {
+    "question": "How does the token-wise state recurrence method retain per-token momentum and multiplicative decay in its updates?",
+    "reference_answer": "The token-wise state recurrence method retains per-token momentum and multiplicative decay by defining the updates for momentum (Mt) and weights (Wt) in a way that incorporates previous states and gradients. Specifically, momentum is updated using the formula Mt = \u03b2t Mt\u22121 + \u03b7t Gt, where \u03b2t is the momentum factor and \u03b7t is the learning rate. The weights are then updated using Wt = \u03b3t Wt\u22121 + Mt, where \u03b3t is the decay factor. This design allows for independent parameterization of the decay and momentum factors based on the input, enabling the model to adaptively adjust its updates while maintaining the influence of past states.",
+    "type": "single",
+    "source_papers": [
+      "2608_21308"
+    ],
+    "source_titles": [
+      "Rethinking Expressivity and Efficiency in Test-Time Training"
+    ],
+    "split": "dev",
+    "id": "q24"
+  },
+  {
+    "question": "How does test-time training (TTT) enhance the performance of a model in few-shot learning tasks?",
+    "reference_answer": "Test-time training (TTT) offers task-specific adaptation, allowing the model to improve its performance on specific tasks by adjusting its parameters during the testing phase. This adaptation is particularly effective when the initial capabilities of the base model are strong, as TTT builds on the model's existing knowledge to better solve tasks that it may not have been explicitly trained on.",
+    "type": "single",
+    "source_papers": [
+      "2411_07279"
+    ],
+    "source_titles": [
+      "The Surprising Effectiveness of Test-Time Training for Few-Shot Learning"
+    ],
+    "split": "dev",
+    "id": "q25"
+  },
+  {
+    "question": "How does DeltaNet address the challenge of forgetting past information in sequence models?",
+    "reference_answer": "DeltaNet addresses the challenge of forgetting past information by selectively forgetting only the values whose keys are most similar to the new key kt, rather than attenuating all past information. This design choice allows DeltaNet to retain relevant historical information while updating the model with new inputs.",
+    "type": "single",
+    "source_papers": [
+      "2501_12352"
+    ],
+    "source_titles": [
+      "Test-time regression: a unifying framework for designing sequence models with associative memory"
+    ],
+    "split": "test",
+    "id": "q26"
+  },
+  {
+    "question": "What advantage does MSCANet provide in handling SAR change detection compared to existing methods?",
+    "reference_answer": "MSCANet yields cleaner change maps with more precise delineation of object contours, even in cluttered or low-contrast regions, which demonstrates its robustness and efficiency in addressing the challenges posed by speckle noise and radiometric variations in SAR imagery.",
+    "type": "single",
+    "source_papers": [
+      "2602_10491"
+    ],
+    "source_titles": [
+      "Towards Remote Sensing Change Detection with Neural Memory"
+    ],
+    "split": "test",
+    "id": "q28"
+  },
+  {
+    "question": "How does the method for querying geospatial visual priors ensure relevance to the current driving context?",
+    "reference_answer": "The method identifies the lane on which the vehicle is currently located and performs a depth-first search (DFS) over the lane connectivity graph to generate candidate lane sequences extending forward. It then selects the corresponding lane sequence based on the high-level navigational intention (Turn Left, Turn Right, and Straight) and retrieves the relevant visual embeddings stored along that lane sequence from the memory bank.",
+    "type": "single",
+    "source_papers": [
+      "2606_31830"
+    ],
+    "source_titles": [
+      "PriorEye: Geospatial Visual Priors for End-to-End Autonomous Driving"
+    ],
+    "split": "dev",
+    "id": "q29"
+  },
+  {
+    "question": "How do the concepts of vertical and horizontal recurrence in Latent CoT implementations relate to the improvements in inference throughput achieved by the parallel formulation in test-time training with KV binding?",
+    "reference_answer": "Vertical recurrence focuses on expanding computational depth through feedback loops on activation values, while horizontal recurrence enhances sequential capacity by propagating context across long sequences. In contrast, the parallel formulation in test-time training with KV binding improves inference throughput by up to 4.0\u00d7 by switching from a recurrent to a parallel implementation, suggesting that while both approaches aim to enhance reasoning and efficiency, they utilize different mechanisms\u2014recurrence versus parallelization\u2014to achieve their goals.",
+    "type": "cross",
+    "source_papers": [
+      "2507_06203",
+      "2602_21204"
+    ],
+    "source_titles": [
+      "A Survey on Latent Reasoning",
+      "Test-Time Training with KV Binding Is Secretly Linear Attention"
+    ],
+    "split": "spare",
+    "id": "q30"
+  },
+  {
+    "question": "How do the approaches to surprise and memory management differ between the methods described in SR-TTT and Titans, particularly in terms of handling context and relevance of tokens?",
+    "reference_answer": "SR-TTT emphasizes the failure of surprisal gating for early-context needles, indicating that reconstruction loss impacts surprise and retrieval effectiveness, especially when context is shallow. In contrast, Titans introduces a data-dependent surprise decay mechanism that allows for dynamic adjustment of surprise based on the relevance of past tokens, suggesting a more flexible approach to memory management that adapts to changing contexts.",
+    "type": "cross",
+    "source_papers": [
+      "2603_06642",
+      "00_anchor"
+    ],
+    "source_titles": [
+      "SR-TTT Does Not Learn Retrieval: A Correction and Mechanistic Post-Mortem of Surprisal-Aware Residual Test-Time Training",
+      "Titans: Learning to Memorize at Test Time"
+    ],
+    "split": "dev",
+    "id": "q31"
+  },
+  {
+    "question": "How do the kernel regression approaches in Memory Mosaics and local polynomial regression differ in their treatment of locality and the role of the query and key in the regression process?",
+    "reference_answer": "Memory Mosaics utilizes a Nadaraya-Watson estimator where the query and key are the same, aligning with kernel regression to determine the weighting of past stored values. In contrast, local polynomial regression employs a similarity function that depends solely on the distance to the query point, allowing for locally approximated polynomial functions around each point, which generalizes the concept of locality in regression.",
+    "type": "cross",
+    "source_papers": [
+      "2601_22766",
+      "2501_12352"
+    ],
+    "source_titles": [
+      "Sparse Attention as Compact Kernel Regression",
+      "Test-time regression: a unifying framework for designing sequence models with associative memory"
+    ],
+    "split": "test",
+    "id": "q32"
+  },
+  {
+    "question": "How does the VTitans framework for remote sensing change detection relate to the design tradeoffs in hybrid memory architectures discussed in the context of large language models?",
+    "reference_answer": "The VTitans framework integrates neural memory with segmented local attention to capture long-range dependencies while mitigating computational overhead, which aligns with the design tradeoff of achieving computational efficiency in hybrid memory architectures. Both approaches aim to balance high-resolution recall with global context, as VTitans uses a hierarchical adapter to refine multi-scale features, similar to how hybrid models utilize structured state or streaming layers to maintain scalability and efficiency.",
+    "type": "cross",
+    "source_papers": [
+      "2602_10491",
+      "2607_25380"
+    ],
+    "source_titles": [
+      "Towards Remote Sensing Change Detection with Neural Memory",
+      "Memory for Large Language Models"
+    ],
+    "split": "test",
+    "id": "q33"
+  },
+  {
+    "question": "How does the performance of the ParaTTT model compare to the linear attention approach in terms of perplexity and iteration counts?",
+    "reference_answer": "ParaTTT demonstrates the lowest perplexity at every token position and performs best near its training N, while the linear attention approach shows only minor performance degradation (+0.4 perplexity on LLM) when reduced to a basic linear attention operator. Additionally, ParaTTT's performance degrades with over-iteration, while the linear attention formulation suggests that many complex design choices may be unnecessary.",
+    "type": "cross",
+    "source_papers": [
+      "2610_38255",
+      "2602_21204"
+    ],
+    "source_titles": [
+      "ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories",
+      "Test-Time Training with KV Binding Is Secretly Linear Attention"
+    ],
+    "split": "test",
+    "id": "q34"
+  },
+  {
+    "question": "How do the concepts of explicit memory management and the architecture of memory systems in memory-augmented Transformers relate to each other in terms of their implications for model complexity and interpretability?",
+    "reference_answer": "Explicit memory management in large language models raises questions about memory lifecycle management, including the separation of long-term and short-term storage and the complexity of architectural components, which complicates interpretability. In contrast, memory-augmented Transformers are designed to mirror human memory systems by integrating embeddings, attention mechanisms, and advanced encoding and retrieval techniques, suggesting a structured approach to memory that could enhance interpretability. Both approaches highlight the challenges of managing memory in AI systems, but memory-augmented Transformers aim to provide a more organized framework inspired by biological memory, potentially addressing some of the interpretability issues raised by explicit memory in large language models.",
+    "type": "cross",
+    "source_papers": [
+      "2607_25380",
+      "2508_10824"
+    ],
+    "source_titles": [
+      "Memory for Large Language Models",
+      "Memory-Augmented Transformers: A Systematic Review from Neuroscience Principles to Enhanced Model Architectures"
+    ],
+    "split": "dev",
+    "id": "q35"
+  },
+  {
+    "question": "How does the Longhorn sequence layer's adaptive step size mechanism compare to the step size approach used in the Gated DeltaNet readout in terms of their underlying objectives and implementation?",
+    "reference_answer": "The Longhorn sequence layer implements a conservative adaptive step size derived from an online learning perspective, specifically using the formula \u03b2t = \u03b4t/(1 + \u03b4t\u2225kt\u22252), which aligns with a least squares regression objective. In contrast, the Gated DeltaNet readout employs a step size \u03b7(L)t that is part of its gated mechanism, focusing on correcting values based on fixed input features without a trajectory estimate. While both methods utilize adaptive step sizes, Longhorn's approach is rooted in least squares regression, whereas Gated DeltaNet's step size is integrated into a more complex gating mechanism for readout.",
+    "type": "cross",
+    "source_papers": [
+      "2501_12352",
+      "2610_38255"
+    ],
+    "source_titles": [
+      "Test-time regression: a unifying framework for designing sequence models with associative memory",
+      "ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories"
+    ],
+    "split": "dev",
+    "id": "q36"
+  }
+]
