@@ -1,0 +1,1838 @@
+[
+ {
+  "stage": 1,
+  "anchor": "nested_learning",
+  "setting": "judge",
+  "variant": "gpt-4o-mini",
+  "run_key": "d93cddaaa4",
+  "run_id": "9856572044be49fcb908779136e09ddb",
+  "split": "dev",
+  "answers_path": "runs/nested_learning/nested_learning-f14011230f.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-f14011230f.scores-53b87f4502.jsonl",
+  "metrics": {
+   "faithfulness": 0.8944384615384616,
+   "relevancy": 0.7938933333333333,
+   "relevancy_when_answered": 0.7853538461538462,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 1526.851446678241,
+   "generation_ms": 2042.8136733050148,
+   "cost_usd": 0.00906554,
+   "total_ms": 3569.665119983256,
+   "wrong_context_faithfulness": 0.08263076923076923,
+   "judge_gap": 0.8118076923076925
+  },
+  "overrides": {
+   "judge": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "prompt": "binary"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 1,
+  "anchor": "nested_learning",
+  "setting": "judge",
+  "variant": "gpt-5-nano",
+  "run_key": "9b66f8d7fd",
+  "run_id": "65979e26d1a04951b879181c4e506607",
+  "split": "dev",
+  "answers_path": "runs/nested_learning/nested_learning-f14011230f.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-f14011230f.scores-5d4e00b1cf.jsonl",
+  "metrics": {
+   "faithfulness": 0.86444,
+   "relevancy": 0.7711399999999997,
+   "relevancy_when_answered": 0.757230769230769,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 1526.851446678241,
+   "generation_ms": 2042.8136733050148,
+   "cost_usd": 0.005768480000000001,
+   "total_ms": 3569.665119983256,
+   "wrong_context_faithfulness": 0.06476,
+   "judge_gap": 0.79968
+  },
+  "overrides": {
+   "judge": {
+    "provider": "openai",
+    "model": "gpt-5-nano",
+    "prompt": "binary"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 1,
+  "anchor": "nested_learning",
+  "setting": "judge",
+  "variant": "gemini-3.5-flash-lite",
+  "run_key": "2630ceb288",
+  "run_id": "f78ab0466c834f6d8ccaecd7909851e4",
+  "split": "dev",
+  "answers_path": "runs/nested_learning/nested_learning-f14011230f.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-f14011230f.scores-e584819992.jsonl",
+  "metrics": {
+   "faithfulness": 0.7824153846153847,
+   "relevancy": 0.8115199999999999,
+   "relevancy_when_answered": 0.8073076923076923,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 1526.851446678241,
+   "generation_ms": 2042.8136733050148,
+   "cost_usd": 0.00241518,
+   "total_ms": 3569.665119983256,
+   "wrong_context_faithfulness": 0.023076923076923075,
+   "judge_gap": 0.7593384615384616
+  },
+  "overrides": {
+   "judge": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "prompt": "binary"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 1,
+  "anchor": "nested_learning",
+  "setting": "judge",
+  "variant": "gpt-oss-20b",
+  "run_key": "1f997d7a40",
+  "run_id": "e8dfef516ea741e586a933773f6e5089",
+  "split": "dev",
+  "answers_path": "runs/nested_learning/nested_learning-f14011230f.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-f14011230f.scores-00c46def72.jsonl",
+  "metrics": {
+   "faithfulness": 0.9642866666666666,
+   "relevancy": 0.7717866666666666,
+   "relevancy_when_answered": 0.7595076923076923,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 1526.851446678241,
+   "generation_ms": 2042.8136733050148,
+   "cost_usd": 0.00241298,
+   "total_ms": 3569.665119983256,
+   "wrong_context_faithfulness": 0.11745999999999998,
+   "judge_gap": 0.8468266666666666
+  },
+  "overrides": {
+   "judge": {
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "prompt": "binary"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 1,
+  "anchor": "nested_learning",
+  "setting": "judge",
+  "variant": "gpt-4o-mini-rubric",
+  "run_key": "906b589e37",
+  "run_id": "f2e07fb8bb76420db9351945757526b7",
+  "split": "dev",
+  "answers_path": "runs/nested_learning/nested_learning-f14011230f.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-f14011230f.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9210999999999999,
+   "relevancy": 0.7885533333333332,
+   "relevancy_when_answered": 0.7795692307692307,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 1526.851446678241,
+   "generation_ms": 2042.8136733050148,
+   "cost_usd": 0.0093349,
+   "total_ms": 3569.665119983256,
+   "wrong_context_faithfulness": 0.041423076923076924,
+   "judge_gap": 0.879676923076923
+  },
+  "overrides": {
+   "judge": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "prompt": "rubric"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": true
+ },
+ {
+  "stage": 1,
+  "anchor": "nested_learning",
+  "setting": "chunking",
+  "variant": "fixed-512-50",
+  "run_key": "df939847fb",
+  "run_id": "78b4f8c7cec749b5b220ac9a443addd4",
+  "split": "dev",
+  "answers_path": "runs/nested_learning/nested_learning-b3e84f7d72.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-b3e84f7d72.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.8907833333333334,
+   "relevancy": 0.7773066666666666,
+   "relevancy_when_answered": 0.7588416666666666,
+   "source_hit_rate": 0.9,
+   "refusal_rate": 0.2,
+   "failures": 0.0,
+   "answered_share": 0.8,
+   "retrieval_ms": 1749.0934533377488,
+   "generation_ms": 2200.0729199809334,
+   "cost_usd": 0.0071251599999999984,
+   "total_ms": 3949.1663733186824
+  },
+  "overrides": {
+   "chunking": {
+    "method": "fixed",
+    "chunk_size": 512,
+    "overlap": 50
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 1,
+  "anchor": "nested_learning",
+  "setting": "chunking",
+  "variant": "recursive-400-80",
+  "run_key": "d6c894221d",
+  "run_id": "f8ff260054c54c129431d7cc15b14039",
+  "split": "dev",
+  "answers_path": "runs/nested_learning/nested_learning-f14011230f.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-f14011230f.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9210999999999999,
+   "relevancy": 0.7885533333333332,
+   "relevancy_when_answered": 0.7795692307692307,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 1526.851446678241,
+   "generation_ms": 2042.8136733050148,
+   "cost_usd": 0.0093349,
+   "total_ms": 3569.665119983256
+  },
+  "overrides": {
+   "chunking": {
+    "method": "recursive",
+    "chunk_size": 400,
+    "overlap": 80
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 1,
+  "anchor": "nested_learning",
+  "setting": "chunking",
+  "variant": "semantic-p70",
+  "run_key": "6ac2549d78",
+  "run_id": "d622cb0dcabf4ad8820da074756c2d68",
+  "split": "dev",
+  "answers_path": "runs/nested_learning/nested_learning-e18bb8f26a.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-e18bb8f26a.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9205076923076922,
+   "relevancy": 0.7934800000000001,
+   "relevancy_when_answered": 0.7799384615384616,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 2871.4365399985886,
+   "generation_ms": 2744.6510933494815,
+   "cost_usd": 0.01107965,
+   "total_ms": 5616.08763334807
+  },
+  "overrides": {
+   "chunking": {
+    "method": "semantic"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 1,
+  "anchor": "nested_learning",
+  "setting": "chunking",
+  "variant": "recursive-800-120",
+  "run_key": "26fff623a4",
+  "run_id": "6bfbce5428a540f293888d7491233049",
+  "split": "dev",
+  "answers_path": "runs/nested_learning/nested_learning-5a3a68eb3e.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-5a3a68eb3e.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9495692307692308,
+   "relevancy": 0.78428,
+   "relevancy_when_answered": 0.7720923076923077,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 1764.0724466725562,
+   "generation_ms": 1991.4918133212875,
+   "cost_usd": 0.00902469,
+   "total_ms": 3755.5642599938437
+  },
+  "overrides": {
+   "chunking": {
+    "method": "recursive",
+    "chunk_size": 800,
+    "overlap": 120
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": true
+ },
+ {
+  "stage": 1,
+  "anchor": "nested_learning",
+  "setting": "embedding",
+  "variant": "all-MiniLM-L6-v2",
+  "run_key": "af78a3b385",
+  "run_id": "e8441ec1e3494ad1abf863db44a549db",
+  "split": "dev",
+  "answers_path": "runs/nested_learning/nested_learning-c0c199086e.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-c0c199086e.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9374642857142855,
+   "relevancy": 0.7811066666666666,
+   "relevancy_when_answered": 0.7647999999999999,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 1261.9592333290104,
+   "generation_ms": 2467.371779990693,
+   "cost_usd": 0.00894021,
+   "total_ms": 3729.3310133197037
+  },
+  "overrides": {
+   "embedding": {
+    "provider": "local",
+    "model": "sentence-transformers/all-MiniLM-L6-v2"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 1,
+  "anchor": "nested_learning",
+  "setting": "embedding",
+  "variant": "text-embedding-3-small",
+  "run_key": "3a39112c1a",
+  "run_id": "1e396169c4774d7da906db1a5f7fa52f",
+  "split": "dev",
+  "answers_path": "runs/nested_learning/nested_learning-5a3a68eb3e.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-5a3a68eb3e.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9495692307692308,
+   "relevancy": 0.78428,
+   "relevancy_when_answered": 0.7720923076923077,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 1764.0724466725562,
+   "generation_ms": 1991.4918133212875,
+   "cost_usd": 0.00902469,
+   "total_ms": 3755.5642599938437
+  },
+  "overrides": {
+   "embedding": {
+    "provider": "openai",
+    "model": "text-embedding-3-small"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": true
+ },
+ {
+  "stage": 2,
+  "anchor": "titans",
+  "setting": "retrieval_mode",
+  "variant": "semantic",
+  "run_key": "ca215e82b0",
+  "run_id": "60960a9ce3ad4ce29ea4f6d12ef7f507",
+  "split": "dev",
+  "answers_path": "runs/titans/titans-00df510ab3.answers.jsonl",
+  "scores_path": "runs/titans/titans-00df510ab3.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9380384615384615,
+   "relevancy": 0.7697133333333335,
+   "relevancy_when_answered": 0.7624153846153846,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 948.8594066662093,
+   "generation_ms": 2195.246460001605,
+   "cost_usd": 0.00907476,
+   "total_ms": 3144.1058666678146
+  },
+  "overrides": {
+   "retrieval": {
+    "mode": "semantic"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 2,
+  "anchor": "titans",
+  "setting": "retrieval_mode",
+  "variant": "hybrid",
+  "run_key": "7c614f9a4e",
+  "run_id": "b01404070aa24c4095d179f1015c7af0",
+  "split": "dev",
+  "answers_path": "runs/titans/titans-cb4a227e17.answers.jsonl",
+  "scores_path": "runs/titans/titans-cb4a227e17.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9437692307692308,
+   "relevancy": 0.7840333333333332,
+   "relevancy_when_answered": 0.7788692307692308,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 1001.2265466619283,
+   "generation_ms": 2391.995400004089,
+   "cost_usd": 0.009259469999999999,
+   "total_ms": 3393.221946666017
+  },
+  "overrides": {
+   "retrieval": {
+    "mode": "hybrid"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 2,
+  "anchor": "titans",
+  "setting": "retrieval_mode",
+  "variant": "hybrid-rerank",
+  "run_key": "4d6d4cc6c7",
+  "run_id": "29135ba033af469da79f6a5dcf868038",
+  "split": "dev",
+  "answers_path": "runs/titans/titans-5a3a68eb3e.answers.jsonl",
+  "scores_path": "runs/titans/titans-5a3a68eb3e.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9376384615384615,
+   "relevancy": 0.73842,
+   "relevancy_when_answered": 0.721576923076923,
+   "source_hit_rate": 0.9666666666666667,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 1925.4455266675602,
+   "generation_ms": 2249.4761866827807,
+   "cost_usd": 0.009023109999999999,
+   "total_ms": 4174.921713350341
+  },
+  "overrides": {
+   "retrieval": {
+    "mode": "hybrid_rerank"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 2,
+  "anchor": "titans",
+  "setting": "retrieval_mode",
+  "variant": "keyword",
+  "run_key": "ed8c02495c",
+  "run_id": "e95917e82b6b4517b900495fd711a1be",
+  "split": "dev",
+  "answers_path": "runs/titans/titans-54961dd841.answers.jsonl",
+  "scores_path": "runs/titans/titans-54961dd841.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9779,
+   "relevancy": 0.7809600000000001,
+   "relevancy_when_answered": 0.7675230769230768,
+   "source_hit_rate": 0.8666666666666667,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 9.955253335647285,
+   "generation_ms": 2123.913626675494,
+   "cost_usd": 0.00912884,
+   "total_ms": 2133.8688800111413
+  },
+  "overrides": {
+   "retrieval": {
+    "mode": "keyword"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": true
+ },
+ {
+  "stage": 2,
+  "anchor": "titans",
+  "setting": "passages_used",
+  "variant": "top-3",
+  "run_key": "fbc7bc5dfb",
+  "run_id": "f68546ebcf8a4e1789e65cd9c9470c87",
+  "split": "dev",
+  "answers_path": "runs/titans/titans-9eac91f219.answers.jsonl",
+  "scores_path": "runs/titans/titans-9eac91f219.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9650000000000001,
+   "relevancy": 0.7842800000000001,
+   "relevancy_when_answered": 0.7456799999999999,
+   "source_hit_rate": 0.8333333333333334,
+   "refusal_rate": 0.3333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.6666666666666666,
+   "retrieval_ms": 8.638493328665694,
+   "generation_ms": 1873.046773315097,
+   "cost_usd": 0.005991979999999999,
+   "total_ms": 1881.6852666437626
+  },
+  "overrides": {
+   "retrieval": {
+    "final_k": 3
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 2,
+  "anchor": "titans",
+  "setting": "passages_used",
+  "variant": "top-5",
+  "run_key": "e8f727e8dd",
+  "run_id": "e87445b3e7da4ca98568c82869ee6a3c",
+  "split": "dev",
+  "answers_path": "runs/titans/titans-54961dd841.answers.jsonl",
+  "scores_path": "runs/titans/titans-54961dd841.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9779,
+   "relevancy": 0.7809600000000001,
+   "relevancy_when_answered": 0.7675230769230768,
+   "source_hit_rate": 0.8666666666666667,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 9.955253335647285,
+   "generation_ms": 2123.913626675494,
+   "cost_usd": 0.00912884,
+   "total_ms": 2133.8688800111413
+  },
+  "overrides": {
+   "retrieval": {
+    "final_k": 5
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 2,
+  "anchor": "titans",
+  "setting": "passages_used",
+  "variant": "top-8",
+  "run_key": "ab98a365b8",
+  "run_id": "ffb2f3d72bd846a5ba10c9c26b336e1a",
+  "split": "dev",
+  "answers_path": "runs/titans/titans-4e725a3e00.answers.jsonl",
+  "scores_path": "runs/titans/titans-4e725a3e00.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9724000000000002,
+   "relevancy": 0.7856799999999999,
+   "relevancy_when_answered": 0.7744769230769231,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 7.7598066767677665,
+   "generation_ms": 2200.5766133544967,
+   "cost_usd": 0.01173259,
+   "total_ms": 2208.3364200312644
+  },
+  "overrides": {
+   "retrieval": {
+    "final_k": 8
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": true
+ },
+ {
+  "stage": 3,
+  "anchor": "ttt_rnn",
+  "setting": "prompt",
+  "variant": "p0-original",
+  "run_key": "3973352c9d",
+  "run_id": "e65adbeb99bf463386bffc8290f513ba",
+  "split": "dev",
+  "answers_path": "runs/ttt_rnn/ttt_rnn-4e725a3e00.answers.jsonl",
+  "scores_path": "runs/ttt_rnn/ttt_rnn-4e725a3e00.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9477285714285715,
+   "relevancy": 0.7444,
+   "relevancy_when_answered": 0.7301214285714286,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.06666666666666667,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 6.364339993645747,
+   "generation_ms": 2285.871253348887,
+   "cost_usd": 0.01133849,
+   "total_ms": 2292.235593342533
+  },
+  "overrides": {
+   "generation": {
+    "prompt": "p0"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 3,
+  "anchor": "ttt_rnn",
+  "setting": "prompt",
+  "variant": "p2-step-by-step",
+  "run_key": "ff2f8e6320",
+  "run_id": "18d250dacc6c4e9c8fc14c2753fc0313",
+  "split": "dev",
+  "answers_path": "runs/ttt_rnn/ttt_rnn-858d1f7645.answers.jsonl",
+  "scores_path": "runs/ttt_rnn/ttt_rnn-858d1f7645.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9625,
+   "relevancy": 0.7103733333333333,
+   "relevancy_when_answered": 0.7103733333333333,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.0,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 5.834313326825698,
+   "generation_ms": 3029.4792466408885,
+   "cost_usd": 0.01178428,
+   "total_ms": 3035.3135599677144
+  },
+  "overrides": {
+   "generation": {
+    "prompt": "p2"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p2",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 3,
+  "anchor": "ttt_rnn",
+  "setting": "prompt",
+  "variant": "p3-short-extractive",
+  "run_key": "b14861521c",
+  "run_id": "4d0177e3aa334329898a879ce33eab87",
+  "split": "dev",
+  "answers_path": "runs/ttt_rnn/ttt_rnn-70362c384e.answers.jsonl",
+  "scores_path": "runs/ttt_rnn/ttt_rnn-70362c384e.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9896866666666667,
+   "relevancy": 0.6966466666666666,
+   "relevancy_when_answered": 0.6966466666666666,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.0,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 5.933886665540437,
+   "generation_ms": 1724.9896933402244,
+   "cost_usd": 0.010945340000000001,
+   "total_ms": 1730.923580005765
+  },
+  "overrides": {
+   "generation": {
+    "prompt": "p3"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p3",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 3,
+  "anchor": "ttt_rnn",
+  "setting": "prompt",
+  "variant": "p4-by-paper",
+  "run_key": "057a68c5be",
+  "run_id": "5964a73c624b487f8b79dc868ab7a919",
+  "split": "dev",
+  "answers_path": "runs/ttt_rnn/ttt_rnn-7c56c260f9.answers.jsonl",
+  "scores_path": "runs/ttt_rnn/ttt_rnn-7c56c260f9.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9354066666666666,
+   "relevancy": 0.65738,
+   "relevancy_when_answered": 0.65738,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.0,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 5.455819998557369,
+   "generation_ms": 3797.957993322052,
+   "cost_usd": 0.015529939999999999,
+   "total_ms": 3803.4138133206093
+  },
+  "overrides": {
+   "generation": {
+    "prompt": "p4"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p4",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 3,
+  "anchor": "ttt_rnn",
+  "setting": "prompt",
+  "variant": "p1-strict-citations",
+  "run_key": "5f781219e5",
+  "run_id": "32a6b257090741eeae822afed6c54fcc",
+  "split": "dev",
+  "answers_path": "runs/ttt_rnn/ttt_rnn-3ff834ba11.answers.jsonl",
+  "scores_path": "runs/ttt_rnn/ttt_rnn-3ff834ba11.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.98222,
+   "relevancy": 0.7148266666666665,
+   "relevancy_when_answered": 0.7148266666666665,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.0,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 6.539706668506066,
+   "generation_ms": 2372.758313330511,
+   "cost_usd": 0.01170394,
+   "total_ms": 2379.298019999017
+  },
+  "overrides": {
+   "generation": {
+    "prompt": "p1"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": true
+ },
+ {
+  "stage": 4,
+  "anchor": "hrm",
+  "setting": "model",
+  "variant": "gpt-5-nano",
+  "run_key": "671934cedf",
+  "run_id": "71c4c5a2e9354aaf8679f06538d891fc",
+  "split": "dev",
+  "answers_path": "runs/hrm/hrm-0b2d849164.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-0b2d849164.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9632799999999999,
+   "relevancy": 0.6860999999999999,
+   "relevancy_when_answered": 0.6860999999999999,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.0,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 5.604266654700041,
+   "generation_ms": 3067.739486678814,
+   "cost_usd": 0.011650619999999999,
+   "total_ms": 3073.343753333514
+  },
+  "overrides": {
+   "generation": {
+    "provider": "openai",
+    "model": "gpt-5-nano"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-5-nano",
+   "prompt": "p1",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 4,
+  "anchor": "hrm",
+  "setting": "model",
+  "variant": "gpt-oss-20b",
+  "run_key": "96c8748b0a",
+  "run_id": "063435667a8f4649ae6011bf52d4903b",
+  "split": "dev",
+  "answers_path": "runs/hrm/hrm-6a8c1693f0.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-6a8c1693f0.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9222357142857142,
+   "relevancy": 0.6814066666666668,
+   "relevancy_when_answered": 0.6726142857142857,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.06666666666666667,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 6.493479975809653,
+   "generation_ms": 10062.138013308868,
+   "cost_usd": 0.01013972,
+   "total_ms": 10068.631493284678
+  },
+  "overrides": {
+   "generation": {
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b"
+   }
+  },
+  "generation": {
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "prompt": "p1",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 4,
+  "anchor": "hrm",
+  "setting": "model",
+  "variant": "gemini-3.5-flash-lite",
+  "run_key": "c75be4d3e6",
+  "run_id": "45724536b8d24b56b2db583ad06f33ae",
+  "split": "dev",
+  "answers_path": "runs/hrm/hrm-b414d8c43d.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-b414d8c43d.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9667285714285715,
+   "relevancy": 0.6884800000000001,
+   "relevancy_when_answered": 0.6970846153846154,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 5.521139999230702,
+   "generation_ms": 12450.957186659798,
+   "cost_usd": 0.007583179999999999,
+   "total_ms": 12456.47832665903
+  },
+  "overrides": {
+   "generation": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+   }
+  },
+  "generation": {
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "prompt": "p1",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 4,
+  "anchor": "hrm",
+  "setting": "model",
+  "variant": "gpt-4o-mini",
+  "run_key": "41fa793cc7",
+  "run_id": "db3fc06220434570b66a9e00bef3e4d5",
+  "split": "dev",
+  "answers_path": "runs/hrm/hrm-3ff834ba11.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-3ff834ba11.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.974007142857143,
+   "relevancy": 0.7286800000000001,
+   "relevancy_when_answered": 0.7336153846153847,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 6.2141533397759,
+   "generation_ms": 2555.458153326375,
+   "cost_usd": 0.012705539999999998,
+   "total_ms": 2561.6723066661507
+  },
+  "overrides": {
+   "generation": {
+    "provider": "openai",
+    "model": "gpt-4o-mini"
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": true
+ },
+ {
+  "stage": 4,
+  "anchor": "hrm",
+  "setting": "temperature",
+  "variant": "t-0.1",
+  "run_key": "aa42511794",
+  "run_id": "c1ebb71c4add4eba96d3ff923b6af250",
+  "split": "dev",
+  "answers_path": "runs/hrm/hrm-3ff834ba11.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-3ff834ba11.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.974007142857143,
+   "relevancy": 0.7286800000000001,
+   "relevancy_when_answered": 0.7336153846153847,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 6.2141533397759,
+   "generation_ms": 2555.458153326375,
+   "cost_usd": 0.012705539999999998,
+   "total_ms": 2561.6723066661507
+  },
+  "overrides": {
+   "generation": {
+    "temperature": 0.1
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 4,
+  "anchor": "hrm",
+  "setting": "temperature",
+  "variant": "t-0.4",
+  "run_key": "2228170487",
+  "run_id": "103c9ef591f746b1b85681d89f15a31d",
+  "split": "dev",
+  "answers_path": "runs/hrm/hrm-97717a49f8.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-97717a49f8.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9458857142857143,
+   "relevancy": 0.7494000000000002,
+   "relevancy_when_answered": 0.7436142857142859,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.06666666666666667,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 5.5671466669688625,
+   "generation_ms": 2866.4258200131976,
+   "cost_usd": 0.012513,
+   "total_ms": 2871.9929666801663
+  },
+  "overrides": {
+   "generation": {
+    "temperature": 0.4
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.4,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 4,
+  "anchor": "hrm",
+  "setting": "temperature",
+  "variant": "t-0.7",
+  "run_key": "dbcc538a4b",
+  "run_id": "7c3c3d6c84df466081a47f265fda7c80",
+  "split": "dev",
+  "answers_path": "runs/hrm/hrm-8988b55ff2.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-8988b55ff2.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9702357142857142,
+   "relevancy": 0.7401666666666665,
+   "relevancy_when_answered": 0.7343571428571426,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.06666666666666667,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 6.429379999948044,
+   "generation_ms": 2556.6139133414254,
+   "cost_usd": 0.013090889999999999,
+   "total_ms": 2563.0432933413736
+  },
+  "overrides": {
+   "generation": {
+    "temperature": 0.7
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.7,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 4,
+  "anchor": "hrm",
+  "setting": "temperature",
+  "variant": "t-1.0",
+  "run_key": "f8753b0c76",
+  "run_id": "6191a9b2c6d94e1fa0f08e2ff323e27e",
+  "split": "dev",
+  "answers_path": "runs/hrm/hrm-937553c049.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-937553c049.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.95655,
+   "relevancy": 0.7345533333333332,
+   "relevancy_when_answered": 0.7386153846153845,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 5.34071334792922,
+   "generation_ms": 3011.432580013449,
+   "cost_usd": 0.01279569,
+   "total_ms": 3016.773293361378
+  },
+  "overrides": {
+   "generation": {
+    "temperature": 1.0
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 1.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": 4,
+  "anchor": "hrm",
+  "setting": "temperature",
+  "variant": "t-0.0",
+  "run_key": "b2cf03da13",
+  "run_id": "55c4d296da314a6c97636c124a8d38ff",
+  "split": "dev",
+  "answers_path": "runs/hrm/hrm-4082a4589c.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-4082a4589c.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9857142857142858,
+   "relevancy": 0.71498,
+   "relevancy_when_answered": 0.7198384615384614,
+   "source_hit_rate": 0.9333333333333333,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 7.17339333302031,
+   "generation_ms": 3090.209866656611,
+   "cost_usd": 0.01238384,
+   "total_ms": 3097.3832599896314
+  },
+  "overrides": {
+   "generation": {
+    "temperature": 0.0
+   }
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": true
+ },
+ {
+  "stage": "final",
+  "anchor": "nested_learning",
+  "setting": "final",
+  "variant": "A-all-winners",
+  "run_key": "23a8dc8ce9",
+  "split": "test",
+  "answers_path": "runs/nested_learning/nested_learning-4082a4589c.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-4082a4589c.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9653857142857142,
+   "relevancy": 0.7303733333333333,
+   "relevancy_when_answered": 0.7187857142857144,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.06666666666666667,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 10.092699993401766,
+   "generation_ms": 2535.2948466703915,
+   "cost_usd": 0.01246793,
+   "total_ms": 2545.3875466637933
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "titans",
+  "setting": "final",
+  "variant": "A-all-winners",
+  "run_key": "9cc17576bd",
+  "split": "test",
+  "answers_path": "runs/titans/titans-4082a4589c.answers.jsonl",
+  "scores_path": "runs/titans/titans-4082a4589c.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9371749999999999,
+   "relevancy": 0.75708,
+   "relevancy_when_answered": 0.756875,
+   "source_hit_rate": 0.9666666666666667,
+   "refusal_rate": 0.2,
+   "failures": 0.0,
+   "answered_share": 0.8,
+   "retrieval_ms": 6.874726658376555,
+   "generation_ms": 2120.6422466629497,
+   "cost_usd": 0.01129676,
+   "total_ms": 2127.516973321326
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "ttt_rnn",
+  "setting": "final",
+  "variant": "A-all-winners",
+  "run_key": "b938ff163b",
+  "split": "test",
+  "answers_path": "runs/ttt_rnn/ttt_rnn-4082a4589c.answers.jsonl",
+  "scores_path": "runs/ttt_rnn/ttt_rnn-4082a4589c.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.95048,
+   "relevancy": 0.7299666666666667,
+   "relevancy_when_answered": 0.7299666666666667,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.0,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 5.491873358065884,
+   "generation_ms": 2099.0865866731233,
+   "cost_usd": 0.012336849999999998,
+   "total_ms": 2104.578460031189
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "hrm",
+  "setting": "final",
+  "variant": "A-all-winners",
+  "run_key": "d8ef6106f3",
+  "split": "test",
+  "answers_path": "runs/hrm/hrm-4082a4589c.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-4082a4589c.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9669466666666667,
+   "relevancy": 0.7343733333333333,
+   "relevancy_when_answered": 0.7343733333333333,
+   "source_hit_rate": 0.9666666666666667,
+   "refusal_rate": 0.0,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 6.189553338723878,
+   "generation_ms": 2161.5034399709352,
+   "cost_usd": 0.01259175,
+   "total_ms": 2167.692993309659
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "nested_learning",
+  "setting": "final",
+  "variant": "B-control-baseline",
+  "run_key": "4a5b8da6b8",
+  "split": "test",
+  "answers_path": "runs/nested_learning/nested_learning-f14011230f.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-f14011230f.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9212615384615385,
+   "relevancy": 0.7592866666666668,
+   "relevancy_when_answered": 0.7436153846153846,
+   "source_hit_rate": 0.9666666666666667,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 1480.5163466682036,
+   "generation_ms": 2078.170133319994,
+   "cost_usd": 0.007149530000000001,
+   "total_ms": 3558.686479988198
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "titans",
+  "setting": "final",
+  "variant": "B-control-baseline",
+  "run_key": "7c87288436",
+  "split": "test",
+  "answers_path": "runs/titans/titans-f14011230f.answers.jsonl",
+  "scores_path": "runs/titans/titans-f14011230f.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9256454545454544,
+   "relevancy": 0.7997466666666667,
+   "relevancy_when_answered": 0.7827636363636362,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.26666666666666666,
+   "failures": 0.0,
+   "answered_share": 0.7333333333333333,
+   "retrieval_ms": 1379.4007666641846,
+   "generation_ms": 1834.1033666782703,
+   "cost_usd": 0.00592063,
+   "total_ms": 3213.504133342455
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "ttt_rnn",
+  "setting": "final",
+  "variant": "B-control-baseline",
+  "run_key": "58d95cee89",
+  "split": "test",
+  "answers_path": "runs/ttt_rnn/ttt_rnn-f14011230f.answers.jsonl",
+  "scores_path": "runs/ttt_rnn/ttt_rnn-f14011230f.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9492076923076925,
+   "relevancy": 0.77698,
+   "relevancy_when_answered": 0.7614384615384615,
+   "source_hit_rate": 0.9666666666666667,
+   "refusal_rate": 0.13333333333333333,
+   "failures": 0.0,
+   "answered_share": 0.8666666666666667,
+   "retrieval_ms": 2095.3506333365417,
+   "generation_ms": 1966.554640000686,
+   "cost_usd": 0.00629301,
+   "total_ms": 4061.9052733372278
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "hrm",
+  "setting": "final",
+  "variant": "B-control-baseline",
+  "run_key": "a6afa914f3",
+  "split": "test",
+  "answers_path": "runs/hrm/hrm-f14011230f.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-f14011230f.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9158750000000001,
+   "relevancy": 0.74856,
+   "relevancy_when_answered": 0.7328916666666667,
+   "source_hit_rate": 0.9,
+   "refusal_rate": 0.2,
+   "failures": 0.0,
+   "answered_share": 0.8,
+   "retrieval_ms": 1452.160073327832,
+   "generation_ms": 2201.9529133259007,
+   "cost_usd": 0.005878229999999999,
+   "total_ms": 3654.1129866537326
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p0",
+   "temperature": 0.1,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "nested_learning",
+  "setting": "final",
+  "variant": "C-best-free-generator",
+  "run_key": "dba62bcdbe",
+  "split": "test",
+  "answers_path": "runs/nested_learning/nested_learning-28822c14c9.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-28822c14c9.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9839285714285715,
+   "relevancy": 0.7225600000000001,
+   "relevancy_when_answered": 0.7185,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.06666666666666667,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 12.05297332101812,
+   "generation_ms": 14094.287593352297,
+   "cost_usd": 0.00721421,
+   "total_ms": 14106.340566673316
+  },
+  "generation": {
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "titans",
+  "setting": "final",
+  "variant": "C-best-free-generator",
+  "run_key": "39128ea230",
+  "split": "test",
+  "answers_path": "runs/titans/titans-28822c14c9.answers.jsonl",
+  "scores_path": "runs/titans/titans-28822c14c9.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9673583333333333,
+   "relevancy": 0.7330933333333332,
+   "relevancy_when_answered": 0.7447272727272728,
+   "source_hit_rate": 0.9666666666666667,
+   "refusal_rate": 0.26666666666666666,
+   "failures": 0.0,
+   "answered_share": 0.8,
+   "retrieval_ms": 7.662539999000728,
+   "generation_ms": 12070.23999998346,
+   "cost_usd": 0.005913980000000001,
+   "total_ms": 12077.90253998246
+  },
+  "generation": {
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "ttt_rnn",
+  "setting": "final",
+  "variant": "C-best-free-generator",
+  "run_key": "4ca0de0cfe",
+  "split": "test",
+  "answers_path": "runs/ttt_rnn/ttt_rnn-28822c14c9.answers.jsonl",
+  "scores_path": "runs/ttt_rnn/ttt_rnn-28822c14c9.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9920642857142857,
+   "relevancy": 0.7243333333333334,
+   "relevancy_when_answered": 0.725907142857143,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.06666666666666667,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 11.075160008234283,
+   "generation_ms": 10800.656806700863,
+   "cost_usd": 0.00681964,
+   "total_ms": 10811.731966709098
+  },
+  "generation": {
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "hrm",
+  "setting": "final",
+  "variant": "C-best-free-generator",
+  "run_key": "339becf55a",
+  "split": "test",
+  "answers_path": "runs/hrm/hrm-28822c14c9.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-28822c14c9.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9933333333333334,
+   "relevancy": 0.6884333333333333,
+   "relevancy_when_answered": 0.6884333333333333,
+   "source_hit_rate": 0.9666666666666667,
+   "refusal_rate": 0.0,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 5.449226677107315,
+   "generation_ms": 3467.965093324892,
+   "cost_usd": 0.006807369999999999,
+   "total_ms": 3473.4143200019994
+  },
+  "generation": {
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "nested_learning",
+  "setting": "final",
+  "variant": "D-hybrid-free-generator",
+  "run_key": "cd9f76791c",
+  "split": "test",
+  "answers_path": "runs/nested_learning/nested_learning-33d4ac3941.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-33d4ac3941.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9785714285714285,
+   "relevancy": 0.7160999999999998,
+   "relevancy_when_answered": 0.7053785714285714,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.06666666666666667,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 1773.1386066569637,
+   "generation_ms": 8227.054706658237,
+   "cost_usd": 0.007327339999999999,
+   "total_ms": 10000.1933133152
+  },
+  "generation": {
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "titans",
+  "setting": "final",
+  "variant": "D-hybrid-free-generator",
+  "run_key": "9d972afd74",
+  "split": "test",
+  "answers_path": "runs/titans/titans-33d4ac3941.answers.jsonl",
+  "scores_path": "runs/titans/titans-33d4ac3941.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.97778,
+   "relevancy": 0.69742,
+   "relevancy_when_answered": 0.69742,
+   "source_hit_rate": 0.9666666666666667,
+   "refusal_rate": 0.0,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 1034.3367933373277,
+   "generation_ms": 7236.353019989717,
+   "cost_usd": 0.007696379999999999,
+   "total_ms": 8270.689813327044
+  },
+  "generation": {
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "ttt_rnn",
+  "setting": "final",
+  "variant": "D-hybrid-free-generator",
+  "run_key": "38ae1c64b5",
+  "split": "test",
+  "answers_path": "runs/ttt_rnn/ttt_rnn-33d4ac3941.answers.jsonl",
+  "scores_path": "runs/ttt_rnn/ttt_rnn-33d4ac3941.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9785733333333333,
+   "relevancy": 0.7015333333333333,
+   "relevancy_when_answered": 0.7032357142857143,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.06666666666666667,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 783.3963733554507,
+   "generation_ms": 11081.323739979416,
+   "cost_usd": 0.0074762200000000004,
+   "total_ms": 11864.720113334866
+  },
+  "generation": {
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "hrm",
+  "setting": "final",
+  "variant": "D-hybrid-free-generator",
+  "run_key": "a8f14e948b",
+  "split": "test",
+  "answers_path": "runs/hrm/hrm-33d4ac3941.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-33d4ac3941.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9761857142857142,
+   "relevancy": 0.7049466666666665,
+   "relevancy_when_answered": 0.7016571428571428,
+   "source_hit_rate": 0.9,
+   "refusal_rate": 0.06666666666666667,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 929.6295866680642,
+   "generation_ms": 10272.43454666653,
+   "cost_usd": 0.006593409999999998,
+   "total_ms": 11202.064133334596
+  },
+  "generation": {
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "nested_learning",
+  "setting": "final",
+  "variant": "E-hybrid-gpt-4o-mini",
+  "run_key": "9982f679a0",
+  "split": "test",
+  "answers_path": "runs/nested_learning/nested_learning-fc6bb1bb08.answers.jsonl",
+  "scores_path": "runs/nested_learning/nested_learning-fc6bb1bb08.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9689933333333334,
+   "relevancy": 0.7280666666666668,
+   "relevancy_when_answered": 0.7280666666666668,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.0,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 1772.6265266460057,
+   "generation_ms": 2938.94606664932,
+   "cost_usd": 0.013690289999999999,
+   "total_ms": 4711.5725932953255
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "titans",
+  "setting": "final",
+  "variant": "E-hybrid-gpt-4o-mini",
+  "run_key": "c9d7cceb9d",
+  "split": "test",
+  "answers_path": "runs/titans/titans-fc6bb1bb08.answers.jsonl",
+  "scores_path": "runs/titans/titans-fc6bb1bb08.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9142166666666668,
+   "relevancy": 0.7633733333333335,
+   "relevancy_when_answered": 0.7583250000000001,
+   "source_hit_rate": 0.9666666666666667,
+   "refusal_rate": 0.2,
+   "failures": 0.0,
+   "answered_share": 0.8,
+   "retrieval_ms": 751.4461600066473,
+   "generation_ms": 1994.1561400036637,
+   "cost_usd": 0.01121496,
+   "total_ms": 2745.602300010311
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "ttt_rnn",
+  "setting": "final",
+  "variant": "E-hybrid-gpt-4o-mini",
+  "run_key": "e7f115d0cc",
+  "split": "test",
+  "answers_path": "runs/ttt_rnn/ttt_rnn-fc6bb1bb08.answers.jsonl",
+  "scores_path": "runs/ttt_rnn/ttt_rnn-fc6bb1bb08.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9937266666666668,
+   "relevancy": 0.7448933333333334,
+   "relevancy_when_answered": 0.7448933333333334,
+   "source_hit_rate": 1.0,
+   "refusal_rate": 0.0,
+   "failures": 0.0,
+   "answered_share": 1.0,
+   "retrieval_ms": 1696.9800400004412,
+   "generation_ms": 2665.7011200053,
+   "cost_usd": 0.01243293,
+   "total_ms": 4362.681160005741
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ },
+ {
+  "stage": "final",
+  "anchor": "hrm",
+  "setting": "final",
+  "variant": "E-hybrid-gpt-4o-mini",
+  "run_key": "0a1dbdf876",
+  "split": "test",
+  "answers_path": "runs/hrm/hrm-fc6bb1bb08.answers.jsonl",
+  "scores_path": "runs/hrm/hrm-fc6bb1bb08.scores-f83fe825d1.jsonl",
+  "metrics": {
+   "faithfulness": 0.9618142857142857,
+   "relevancy": 0.7148866666666668,
+   "relevancy_when_answered": 0.7152214285714287,
+   "source_hit_rate": 0.9,
+   "refusal_rate": 0.06666666666666667,
+   "failures": 0.0,
+   "answered_share": 0.9333333333333333,
+   "retrieval_ms": 1084.2479266614343,
+   "generation_ms": 2670.2456600032747,
+   "cost_usd": 0.012131819999999998,
+   "total_ms": 3754.4935866647093
+  },
+  "generation": {
+   "provider": "openai",
+   "model": "gpt-4o-mini",
+   "prompt": "p1",
+   "temperature": 0.0,
+   "max_tokens": 512
+  },
+  "winner": false
+ }
+]

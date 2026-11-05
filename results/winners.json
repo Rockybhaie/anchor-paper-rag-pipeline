@@ -1,0 +1,32 @@
+{
+  "overrides": {
+    "judge": {
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "prompt": "rubric"
+    },
+    "chunking": {
+      "method": "recursive",
+      "chunk_size": 800,
+      "overlap": 120
+    },
+    "embedding": {
+      "provider": "openai",
+      "model": "text-embedding-3-small"
+    },
+    "retrieval": {
+      "mode": "keyword",
+      "final_k": 8
+    },
+    "generation": {
+      "prompt": "p1",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "temperature": 0.0
+    }
+  },
+  "best_free_generation": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  }
+}

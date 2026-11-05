@@ -1,0 +1,354 @@
+{
+  "best": {
+    "name": "C-best-free-generator",
+    "config": {
+      "chunking": {
+        "method": "recursive",
+        "chunk_size": 800,
+        "overlap": 120
+      },
+      "embedding": {
+        "provider": "openai",
+        "model": "text-embedding-3-small"
+      },
+      "index": {
+        "provider": "pinecone",
+        "cloud": "aws",
+        "region": "us-east-1"
+      },
+      "retrieval": {
+        "mode": "keyword",
+        "candidates": 15,
+        "final_k": 8
+      },
+      "generation": {
+        "provider": "gemini",
+        "model": "gemini-3.5-flash-lite",
+        "prompt": "p1",
+        "temperature": 0.0,
+        "max_tokens": 512
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "prompt": "rubric"
+      }
+    },
+    "metrics": {
+      "faithfulness": 0.9849490909090909,
+      "relevancy": 0.7171050000000001,
+      "relevancy_when_answered": 0.7174111111111111,
+      "source_hit_rate": 0.9833333333333333,
+      "refusal_rate": 0.1,
+      "failures": 0.0,
+      "answered_share": 0.9166666666666666,
+      "retrieval_ms": 9.059975001340112,
+      "generation_ms": 10108.287373340378,
+      "cost_usd": 0.0267552,
+      "total_ms": 10117.347348341718
+    },
+    "run_id": "6ffbf25e9cbe4071957cd3d903ded48f"
+  },
+  "serving": {
+    "name": "D-hybrid-free-generator",
+    "config": {
+      "chunking": {
+        "method": "recursive",
+        "chunk_size": 800,
+        "overlap": 120
+      },
+      "embedding": {
+        "provider": "openai",
+        "model": "text-embedding-3-small"
+      },
+      "index": {
+        "provider": "pinecone",
+        "cloud": "aws",
+        "region": "us-east-1"
+      },
+      "retrieval": {
+        "mode": "hybrid",
+        "candidates": 15,
+        "final_k": 8
+      },
+      "generation": {
+        "provider": "gemini",
+        "model": "gemini-3.5-flash-lite",
+        "prompt": "p1",
+        "temperature": 0.0,
+        "max_tokens": 512
+      },
+      "judge": {
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "prompt": "rubric"
+      }
+    },
+    "metrics": {
+      "faithfulness": 0.9777913793103449,
+      "relevancy": 0.705,
+      "relevancy_when_answered": 0.7018438596491227,
+      "source_hit_rate": 0.9666666666666667,
+      "refusal_rate": 0.05,
+      "failures": 0.0,
+      "answered_share": 0.9666666666666667,
+      "retrieval_ms": 1130.1253400044516,
+      "generation_ms": 9204.291503323475,
+      "cost_usd": 0.02909335,
+      "total_ms": 10334.416843327926
+    },
+    "run_id": "8a4e837606a7493ab9ca593dbbd510f3"
+  },
+  "all": [
+    {
+      "name": "A-all-winners",
+      "config": {
+        "chunking": {
+          "method": "recursive",
+          "chunk_size": 800,
+          "overlap": 120
+        },
+        "embedding": {
+          "provider": "openai",
+          "model": "text-embedding-3-small"
+        },
+        "index": {
+          "provider": "pinecone",
+          "cloud": "aws",
+          "region": "us-east-1"
+        },
+        "retrieval": {
+          "mode": "keyword",
+          "candidates": 15,
+          "final_k": 8
+        },
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "prompt": "p1",
+          "temperature": 0.0,
+          "max_tokens": 512
+        },
+        "judge": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "prompt": "rubric"
+        }
+      },
+      "metrics": {
+        "faithfulness": 0.9557660714285713,
+        "relevancy": 0.7379483333333331,
+        "relevancy_when_answered": 0.7341178571428569,
+        "source_hit_rate": 0.9833333333333333,
+        "refusal_rate": 0.06666666666666667,
+        "failures": 0.0,
+        "answered_share": 0.9333333333333333,
+        "retrieval_ms": 7.1622133371420205,
+        "generation_ms": 2229.13177999435,
+        "cost_usd": 0.048693289999999986,
+        "total_ms": 2236.293993331492
+      },
+      "run_id": "c42f7cee78964f5593421b3e8c997991"
+    },
+    {
+      "name": "B-control-baseline",
+      "config": {
+        "chunking": {
+          "method": "recursive",
+          "chunk_size": 400,
+          "overlap": 80
+        },
+        "embedding": {
+          "provider": "openai",
+          "model": "text-embedding-3-small"
+        },
+        "index": {
+          "provider": "pinecone",
+          "cloud": "aws",
+          "region": "us-east-1"
+        },
+        "retrieval": {
+          "mode": "hybrid_rerank",
+          "candidates": 15,
+          "final_k": 5
+        },
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "prompt": "p0",
+          "temperature": 0.1,
+          "max_tokens": 512
+        },
+        "judge": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "prompt": "rubric"
+        }
+      },
+      "metrics": {
+        "faithfulness": 0.9283408163265305,
+        "relevancy": 0.7711433333333331,
+        "relevancy_when_answered": 0.7545061224489794,
+        "source_hit_rate": 0.9583333333333334,
+        "refusal_rate": 0.18333333333333332,
+        "failures": 0.0,
+        "answered_share": 0.8166666666666667,
+        "retrieval_ms": 1601.8569549991905,
+        "generation_ms": 2020.1952633312128,
+        "cost_usd": 0.025241400000000008,
+        "total_ms": 3622.0522183304033
+      },
+      "run_id": "9518b77376df41009a5999ba3260866a"
+    },
+    {
+      "name": "C-best-free-generator",
+      "config": {
+        "chunking": {
+          "method": "recursive",
+          "chunk_size": 800,
+          "overlap": 120
+        },
+        "embedding": {
+          "provider": "openai",
+          "model": "text-embedding-3-small"
+        },
+        "index": {
+          "provider": "pinecone",
+          "cloud": "aws",
+          "region": "us-east-1"
+        },
+        "retrieval": {
+          "mode": "keyword",
+          "candidates": 15,
+          "final_k": 8
+        },
+        "generation": {
+          "provider": "gemini",
+          "model": "gemini-3.5-flash-lite",
+          "prompt": "p1",
+          "temperature": 0.0,
+          "max_tokens": 512
+        },
+        "judge": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "prompt": "rubric"
+        }
+      },
+      "metrics": {
+        "faithfulness": 0.9849490909090909,
+        "relevancy": 0.7171050000000001,
+        "relevancy_when_answered": 0.7174111111111111,
+        "source_hit_rate": 0.9833333333333333,
+        "refusal_rate": 0.1,
+        "failures": 0.0,
+        "answered_share": 0.9166666666666666,
+        "retrieval_ms": 9.059975001340112,
+        "generation_ms": 10108.287373340378,
+        "cost_usd": 0.0267552,
+        "total_ms": 10117.347348341718
+      },
+      "run_id": "6ffbf25e9cbe4071957cd3d903ded48f"
+    },
+    {
+      "name": "D-hybrid-free-generator",
+      "config": {
+        "chunking": {
+          "method": "recursive",
+          "chunk_size": 800,
+          "overlap": 120
+        },
+        "embedding": {
+          "provider": "openai",
+          "model": "text-embedding-3-small"
+        },
+        "index": {
+          "provider": "pinecone",
+          "cloud": "aws",
+          "region": "us-east-1"
+        },
+        "retrieval": {
+          "mode": "hybrid",
+          "candidates": 15,
+          "final_k": 8
+        },
+        "generation": {
+          "provider": "gemini",
+          "model": "gemini-3.5-flash-lite",
+          "prompt": "p1",
+          "temperature": 0.0,
+          "max_tokens": 512
+        },
+        "judge": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "prompt": "rubric"
+        }
+      },
+      "metrics": {
+        "faithfulness": 0.9777913793103449,
+        "relevancy": 0.705,
+        "relevancy_when_answered": 0.7018438596491227,
+        "source_hit_rate": 0.9666666666666667,
+        "refusal_rate": 0.05,
+        "failures": 0.0,
+        "answered_share": 0.9666666666666667,
+        "retrieval_ms": 1130.1253400044516,
+        "generation_ms": 9204.291503323475,
+        "cost_usd": 0.02909335,
+        "total_ms": 10334.416843327926
+      },
+      "run_id": "8a4e837606a7493ab9ca593dbbd510f3"
+    },
+    {
+      "name": "E-hybrid-gpt-4o-mini",
+      "config": {
+        "chunking": {
+          "method": "recursive",
+          "chunk_size": 800,
+          "overlap": 120
+        },
+        "embedding": {
+          "provider": "openai",
+          "model": "text-embedding-3-small"
+        },
+        "index": {
+          "provider": "pinecone",
+          "cloud": "aws",
+          "region": "us-east-1"
+        },
+        "retrieval": {
+          "mode": "hybrid",
+          "candidates": 15,
+          "final_k": 8
+        },
+        "generation": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "prompt": "p1",
+          "temperature": 0.0,
+          "max_tokens": 512
+        },
+        "judge": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "prompt": "rubric"
+        }
+      },
+      "metrics": {
+        "faithfulness": 0.9620857142857144,
+        "relevancy": 0.7378049999999999,
+        "relevancy_when_answered": 0.7358464285714286,
+        "source_hit_rate": 0.9666666666666667,
+        "refusal_rate": 0.06666666666666667,
+        "failures": 0.0,
+        "answered_share": 0.9333333333333333,
+        "retrieval_ms": 1326.325163328632,
+        "generation_ms": 2567.2622466653897,
+        "cost_usd": 0.049469999999999986,
+        "total_ms": 3893.587409994022
+      },
+      "run_id": "51194db5d3034b1f912b399218465818"
+    }
+  ]
+}
