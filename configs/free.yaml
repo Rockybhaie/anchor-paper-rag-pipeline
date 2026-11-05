@@ -1,0 +1,26 @@
+# The served setup with no paid keys: a local embedding model and the free Gemini generator.
+# Needs GEMINI_API_KEY and a free Pinecone account, but no OpenAI key.
+#   python -m src.build_index --config free
+#   Windows PowerShell: $env:ANCHOR_RAG_CONFIG="free"; uvicorn src.app:app
+#   Linux or macOS:     ANCHOR_RAG_CONFIG=free uvicorn src.app:app
+chunking:
+  method: recursive
+  chunk_size: 800
+  overlap: 120
+embedding:
+  provider: local
+  model: sentence-transformers/all-MiniLM-L6-v2
+index:
+  provider: pinecone
+  cloud: aws
+  region: us-east-1
+retrieval:
+  mode: hybrid
+  candidates: 15
+  final_k: 8
+generation:
+  provider: gemini
+  model: gemini-3.5-flash-lite
+  prompt: p1
+  temperature: 0.0
+  max_tokens: 512
