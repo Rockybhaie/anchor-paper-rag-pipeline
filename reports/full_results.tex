@@ -1,0 +1,478 @@
+\documentclass[10pt,a4paper,landscape]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=16mm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+% Table colors. Chosen rows are also bold and labelled, so color is never the only signal.
+\definecolor{tablehead}{HTML}{1F3A5F}
+\definecolor{tablerule}{HTML}{8A97A8}
+\definecolor{zebra}{HTML}{F3F5F8}
+\definecolor{chosen}{HTML}{D6E6F8}
+\definecolor{topscore}{HTML}{FFF1C7}
+\definecolor{scoregood}{HTML}{BFE6C8}
+\definecolor{scoremid}{HTML}{E4F4E0}
+\definecolor{scorelow}{HTML}{FBDCC6}
+\definecolor{refusalhigh}{HTML}{F7C9C9}
+
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+\setlength{\extrarowheight}{1.6pt}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\titleformat{\section}{\large\bfseries\color{tablehead}}{\thesection}{0.6em}{}
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize Anchor Paper RAG: complete evaluation results}
+\fancyfoot[R]{\footnotesize Page \thepage}
+
+\newcommand{\swatch}[1]{\fcolorbox{tablerule}{#1}{\rule{0pt}{5pt}\rule{9pt}{0pt}}}
+
+\title{\vspace{-8mm}Anchor Paper RAG: Complete Evaluation Results}
+\author{Abdullah Irfan (29266), Muhammad Fahad (29264), Ateeb (29010)}
+\date{MLOps Course Project, Milestone 1}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+
+\section{Summary}
+
+This document lists all 57 MLflow runs from the evaluation: 32 runs that chose settings, and 25 runs on held-back questions (5 setups, each with 4 per-anchor child runs).
+
+\begin{itemize}\setlength{\itemsep}{1pt}
+\item \textbf{Served setup (D):} hybrid search through Pinecone with \texttt{gemini-3.5-flash-lite}, with faithfulness 0.978 and 5\% refusals.
+\item \textbf{Top score (C):} keyword-only retrieval with the same generator, with faithfulness 0.985 and 10\% refusals.
+\item \textbf{Earlier project's setup (B):} faithfulness 0.928 and 18\% refusals, but higher relevancy when it answers (0.755 against 0.702 for D).
+\item \textbf{Estimated evaluation spend:} \$0.47, because repeated settings reused saved answers.
+\end{itemize}
+
+
+\section{How to read the tables}
+
+\textbf{Color key:} \swatch{chosen} chosen or served row (also bold) \quad \swatch{topscore} top score \quad \swatch{scoregood} faithfulness 0.97 or higher \quad \swatch{scoremid} 0.94 to 0.97 \quad \swatch{scorelow} below 0.94 \quad \swatch{refusalhigh} refusals 20\% or higher
+
+\begin{itemize}\setlength{\itemsep}{1pt}
+\item \textbf{Faithful.:} share of an answer's claims supported by its retrieved passages. This is the only score used to choose settings.
+\item \textbf{Relev.:} how closely questions generated from the answer match the question asked. \textbf{Rel.\ if ans.} leaves out refusals, which can score well by repeating the question's words.
+\item \textbf{Right paper:} share of a question's source papers found among the retrieved passages.
+\item \textbf{Refusals:} answers using a known refusal phrase, or with no factual claims. \textbf{Claims made:} answers with a faithfulness score. \textbf{Judge fails:} judge replies that could not be read.
+\item \textbf{Retrieve, Generate, Total:} average seconds per question. \textbf{Cost:} estimated dollars for the run's questions, counted even when saved answers were reused.
+\item \textbf{Winner rule:} highest faithfulness. Within 0.01, higher relevancy wins, then lower latency. A run cannot win if it refuses over 34\% of questions or makes claims on under 80\%.
+\item \textbf{Questions:} each stage used 15 setting-selection questions on one anchor. The final test used 15 held-back questions per anchor, or 60 in total.
+\end{itemize}
+
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries Starting setup and what each stage chose\par}\smallskip
+{\footnotesize\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{14mm}>{\raggedright\arraybackslash}p{50mm}>{\raggedright\arraybackslash}p{40mm}>{\raggedright\arraybackslash}p{60mm}>{\raggedright\arraybackslash}p{60mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{Stage}} & \textcolor{white}{\textbf{Anchor}} & \textcolor{white}{\textbf{Setting}} & \textcolor{white}{\textbf{Started as}} & \textcolor{white}{\textbf{Chosen}} \\
+\midrule
+1 & Nested Learning & Judge & gpt-4o-mini & \textbf{gpt-4o-mini-rubric} \\
+\rowcolor{zebra}1 & Nested Learning & Chunking & recursive 400/80 & \textbf{recursive 800/120} \\
+1 & Nested Learning & Embeddings & text-embedding-3-small & \textbf{text-embedding-3-small} \\
+\rowcolor{zebra}2 & Titans & Retrieval & hybrid + rerank & \textbf{keyword} \\
+2 & Titans & Passages used & 5 & \textbf{8} \\
+\rowcolor{zebra}3 & TTT RNNs & Prompt & P0 original & \textbf{P1 strict citations} \\
+4 & Hierarchical Reasoning & Model & gpt-4o-mini & \textbf{gpt-4o-mini} \\
+\rowcolor{zebra}4 & Hierarchical Reasoning & Temperature & 0.1 & \textbf{0.0} \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{Each stage kept the winners from earlier stages, so later stages tested on an already improved setup.}\par
+\end{minipage}
+\par\bigskip
+
+
+\clearpage
+
+\section{Stage results}
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries Stage 1: Judges on Nested Learning\par}\smallskip
+{\footnotesize\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{55mm}>{\raggedleft\arraybackslash}p{28mm}>{\raggedleft\arraybackslash}p{28mm}>{\raggedleft\arraybackslash}p{28mm}>{\raggedleft\arraybackslash}p{28mm}>{\raggedleft\arraybackslash}p{28mm}>{\raggedleft\arraybackslash}p{28mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{Judge}} & \textcolor{white}{\textbf{On real passages}} & \textcolor{white}{\textbf{On unrelated passages}} & \textcolor{white}{\textbf{Gap}} & \textcolor{white}{\textbf{Relevancy}} & \textcolor{white}{\textbf{Judge fails}} & \textcolor{white}{\textbf{Cost (\$)}} \\
+\midrule
+gpt-4o-mini & 0.894 & 0.083 & 0.812 & 0.794 & 0 & 0.0091 \\
+\rowcolor{chosen}\textbf{gpt-4o-mini-rubric (chosen)} & \textbf{0.921} & \textbf{0.041} & \textbf{0.880} & \textbf{0.789} & \textbf{0} & \textbf{0.0093} \\
+gpt-5-nano & 0.864 & 0.065 & 0.800 & 0.771 & 0 & 0.0058 \\
+\rowcolor{zebra}gemini-3.5-flash-lite & 0.782 & 0.023 & 0.759 & 0.812 & 0 & 0.0024 \\
+gpt-oss-20b & 0.964 & 0.117 & 0.847 & 0.772 & 0 & 0.0024 \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{The same answers scored from 0.782 to 0.964, so the judge with the largest gap won, not the one with the highest score.}\par
+\end{minipage}
+\par\bigskip
+
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries Stage 1: Chunking on Nested Learning\par}\smallskip
+{\footnotesize\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{43mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{Value tried}} & \textcolor{white}{\textbf{Faithful.}} & \textcolor{white}{\textbf{Relev.}} & \textcolor{white}{\textbf{Rel.\ if ans.}} & \textcolor{white}{\textbf{Right paper}} & \textcolor{white}{\textbf{Refusals}} & \textcolor{white}{\textbf{Claims made}} & \textcolor{white}{\textbf{Judge fails}} & \textcolor{white}{\textbf{Retrieve (s)}} & \textcolor{white}{\textbf{Generate (s)}} & \textcolor{white}{\textbf{Total (s)}} & \textcolor{white}{\textbf{Cost (\$)}} \\
+\midrule
+fixed-512-50 & \cellcolor{scorelow}0.891 & 0.777 & 0.759 & 0.90 & \cellcolor{refusalhigh}20\% & 80\% & 0 & 1.75 & 2.20 & 3.95 & 0.0071 \\
+\rowcolor{zebra}recursive-400-80 & \cellcolor{scorelow}0.921 & 0.789 & 0.780 & 0.93 & 13\% & 87\% & 0 & 1.53 & 2.04 & 3.57 & 0.0093 \\
+\rowcolor{chosen}\textbf{recursive-800-120 (chosen)} & \cellcolor{scoremid}\textbf{0.950} & \textbf{0.784} & \textbf{0.772} & \textbf{0.93} & \textbf{13\%} & \textbf{87\%} & \textbf{0} & \textbf{1.76} & \textbf{1.99} & \textbf{3.76} & \textbf{0.0090} \\
+\rowcolor{zebra}semantic-p70 & \cellcolor{scorelow}0.921 & 0.793 & 0.780 & 0.93 & 13\% & 87\% & 0 & 2.87 & 2.74 & 5.62 & 0.0111 \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{Larger recursive chunks scored highest at 0.950, and semantic chunking tied with recursive 400/80 at about 0.921.}\par
+\end{minipage}
+\par\bigskip
+
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries Stage 1: Embeddings on Nested Learning\par}\smallskip
+{\footnotesize\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{43mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{Value tried}} & \textcolor{white}{\textbf{Faithful.}} & \textcolor{white}{\textbf{Relev.}} & \textcolor{white}{\textbf{Rel.\ if ans.}} & \textcolor{white}{\textbf{Right paper}} & \textcolor{white}{\textbf{Refusals}} & \textcolor{white}{\textbf{Claims made}} & \textcolor{white}{\textbf{Judge fails}} & \textcolor{white}{\textbf{Retrieve (s)}} & \textcolor{white}{\textbf{Generate (s)}} & \textcolor{white}{\textbf{Total (s)}} & \textcolor{white}{\textbf{Cost (\$)}} \\
+\midrule
+\rowcolor{chosen}\textbf{text-embedding-3-small (chosen)} & \cellcolor{scoremid}\textbf{0.950} & \textbf{0.784} & \textbf{0.772} & \textbf{0.93} & \textbf{13\%} & \textbf{87\%} & \textbf{0} & \textbf{1.76} & \textbf{1.99} & \textbf{3.76} & \textbf{0.0090} \\
+\rowcolor{zebra}all-MiniLM-L6-v2 & \cellcolor{scorelow}0.937 & 0.781 & 0.765 & 0.93 & 13\% & 93\% & 0 & 1.26 & 2.47 & 3.73 & 0.0089 \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{The paid model scored 0.950 against 0.937 for the free local one, a gap small enough to be noise on 15 questions.}\par
+\end{minipage}
+\par\bigskip
+
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries Stage 2: Retrieval on Titans\par}\smallskip
+{\footnotesize\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{43mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{Value tried}} & \textcolor{white}{\textbf{Faithful.}} & \textcolor{white}{\textbf{Relev.}} & \textcolor{white}{\textbf{Rel.\ if ans.}} & \textcolor{white}{\textbf{Right paper}} & \textcolor{white}{\textbf{Refusals}} & \textcolor{white}{\textbf{Claims made}} & \textcolor{white}{\textbf{Judge fails}} & \textcolor{white}{\textbf{Retrieve (s)}} & \textcolor{white}{\textbf{Generate (s)}} & \textcolor{white}{\textbf{Total (s)}} & \textcolor{white}{\textbf{Cost (\$)}} \\
+\midrule
+semantic & \cellcolor{scorelow}0.938 & 0.770 & 0.762 & 1.00 & 13\% & 87\% & 0 & 0.95 & 2.20 & 3.14 & 0.0091 \\
+\rowcolor{chosen}\textbf{keyword (chosen)} & \cellcolor{scoregood}\textbf{0.978} & \textbf{0.781} & \textbf{0.768} & \textbf{0.87} & \textbf{13\%} & \textbf{87\%} & \textbf{0} & \textbf{0.01} & \textbf{2.12} & \textbf{2.13} & \textbf{0.0091} \\
+hybrid & \cellcolor{scoremid}0.944 & 0.784 & 0.779 & 1.00 & 13\% & 87\% & 0 & 1.00 & 2.39 & 3.39 & 0.0093 \\
+\rowcolor{zebra}hybrid-rerank & \cellcolor{scorelow}0.938 & 0.738 & 0.722 & 0.97 & 13\% & 87\% & 0 & 1.93 & 2.25 & 4.17 & 0.0090 \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{Keyword search scored highest at 0.978 but found the right paper least often, at 0.87 against 1.00 for hybrid.}\par
+\end{minipage}
+\par\bigskip
+
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries Stage 2: Passages used on Titans\par}\smallskip
+{\footnotesize\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{43mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{Value tried}} & \textcolor{white}{\textbf{Faithful.}} & \textcolor{white}{\textbf{Relev.}} & \textcolor{white}{\textbf{Rel.\ if ans.}} & \textcolor{white}{\textbf{Right paper}} & \textcolor{white}{\textbf{Refusals}} & \textcolor{white}{\textbf{Claims made}} & \textcolor{white}{\textbf{Judge fails}} & \textcolor{white}{\textbf{Retrieve (s)}} & \textcolor{white}{\textbf{Generate (s)}} & \textcolor{white}{\textbf{Total (s)}} & \textcolor{white}{\textbf{Cost (\$)}} \\
+\midrule
+top-3 & \cellcolor{scoremid}0.965 & 0.784 & 0.746 & 0.83 & \cellcolor{refusalhigh}33\% & 67\% & 0 & 0.01 & 1.87 & 1.88 & 0.0060 \\
+\rowcolor{zebra}top-5 & \cellcolor{scoregood}0.978 & 0.781 & 0.768 & 0.87 & 13\% & 87\% & 0 & 0.01 & 2.12 & 2.13 & 0.0091 \\
+\rowcolor{chosen}\textbf{top-8 (chosen)} & \cellcolor{scoregood}\textbf{0.972} & \textbf{0.786} & \textbf{0.774} & \textbf{0.93} & \textbf{13\%} & \textbf{87\%} & \textbf{0} & \textbf{0.01} & \textbf{2.20} & \textbf{2.21} & \textbf{0.0117} \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{Using 3 passages raised refusals to 33\%, and 8 won a close tie with 5 because its relevancy was higher.}\par
+\end{minipage}
+\par\bigskip
+
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries Stage 3: Prompts on TTT RNNs\par}\smallskip
+{\footnotesize\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{43mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{Value tried}} & \textcolor{white}{\textbf{Faithful.}} & \textcolor{white}{\textbf{Relev.}} & \textcolor{white}{\textbf{Rel.\ if ans.}} & \textcolor{white}{\textbf{Right paper}} & \textcolor{white}{\textbf{Refusals}} & \textcolor{white}{\textbf{Claims made}} & \textcolor{white}{\textbf{Judge fails}} & \textcolor{white}{\textbf{Retrieve (s)}} & \textcolor{white}{\textbf{Generate (s)}} & \textcolor{white}{\textbf{Total (s)}} & \textcolor{white}{\textbf{Cost (\$)}} \\
+\midrule
+p0-original & \cellcolor{scoremid}0.948 & 0.744 & 0.730 & 1.00 & 7\% & 93\% & 0 & 0.01 & 2.29 & 2.29 & 0.0113 \\
+\rowcolor{chosen}\textbf{p1-strict-citations (chosen)} & \cellcolor{scoregood}\textbf{0.982} & \textbf{0.715} & \textbf{0.715} & \textbf{1.00} & \textbf{0\%} & \textbf{100\%} & \textbf{0} & \textbf{0.01} & \textbf{2.37} & \textbf{2.38} & \textbf{0.0117} \\
+p2-step-by-step & \cellcolor{scoremid}0.963 & 0.710 & 0.710 & 1.00 & 0\% & 100\% & 0 & 0.01 & 3.03 & 3.04 & 0.0118 \\
+\rowcolor{zebra}p3-short-extractive & \cellcolor{scoregood}0.990 & 0.697 & 0.697 & 1.00 & 0\% & 100\% & 0 & 0.01 & 1.72 & 1.73 & 0.0109 \\
+p4-by-paper & \cellcolor{scorelow}0.935 & 0.657 & 0.657 & 1.00 & 0\% & 100\% & 0 & 0.01 & 3.80 & 3.80 & 0.0155 \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{P3 scored highest at 0.990, but P1 (0.982) won the close tie on relevancy, and the by-paper prompt P4 scored lowest.}\par
+\end{minipage}
+\par\bigskip
+
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries Stage 4: Models on Hierarchical Reasoning\par}\smallskip
+{\footnotesize\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{43mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{Value tried}} & \textcolor{white}{\textbf{Faithful.}} & \textcolor{white}{\textbf{Relev.}} & \textcolor{white}{\textbf{Rel.\ if ans.}} & \textcolor{white}{\textbf{Right paper}} & \textcolor{white}{\textbf{Refusals}} & \textcolor{white}{\textbf{Claims made}} & \textcolor{white}{\textbf{Judge fails}} & \textcolor{white}{\textbf{Retrieve (s)}} & \textcolor{white}{\textbf{Generate (s)}} & \textcolor{white}{\textbf{Total (s)}} & \textcolor{white}{\textbf{Cost (\$)}} \\
+\midrule
+\rowcolor{chosen}\textbf{gpt-4o-mini (chosen)} & \cellcolor{scoregood}\textbf{0.974} & \textbf{0.729} & \textbf{0.734} & \textbf{0.93} & \textbf{13\%} & \textbf{93\%} & \textbf{0} & \textbf{0.01} & \textbf{2.56} & \textbf{2.56} & \textbf{0.0127} \\
+\rowcolor{zebra}gpt-5-nano & \cellcolor{scoremid}0.963 & 0.686 & 0.686 & 0.93 & 0\% & 100\% & 0 & 0.01 & 3.07 & 3.07 & 0.0117 \\
+gpt-oss-20b & \cellcolor{scorelow}0.922 & 0.681 & 0.673 & 0.93 & 7\% & 93\% & 0 & 0.01 & 10.06 & 10.07 & 0.0101 \\
+\rowcolor{zebra}gemini-3.5-flash-lite & \cellcolor{scoremid}0.967 & 0.688 & 0.697 & 0.93 & 13\% & 93\% & 0 & 0.01 & 12.45 & 12.46 & 0.0076 \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{\texttt{gpt-4o-mini} won at 0.974, and the free Gemini model was close at 0.967 but slower. gpt-5-nano rejected the temperature setting, so it ran at its default.}\par
+\end{minipage}
+\par\bigskip
+
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries Stage 4: Temperature on Hierarchical Reasoning\par}\smallskip
+{\footnotesize\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{43mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{Value tried}} & \textcolor{white}{\textbf{Faithful.}} & \textcolor{white}{\textbf{Relev.}} & \textcolor{white}{\textbf{Rel.\ if ans.}} & \textcolor{white}{\textbf{Right paper}} & \textcolor{white}{\textbf{Refusals}} & \textcolor{white}{\textbf{Claims made}} & \textcolor{white}{\textbf{Judge fails}} & \textcolor{white}{\textbf{Retrieve (s)}} & \textcolor{white}{\textbf{Generate (s)}} & \textcolor{white}{\textbf{Total (s)}} & \textcolor{white}{\textbf{Cost (\$)}} \\
+\midrule
+\rowcolor{chosen}\textbf{t-0.0 (chosen)} & \cellcolor{scoregood}\textbf{0.986} & \textbf{0.715} & \textbf{0.720} & \textbf{0.93} & \textbf{13\%} & \textbf{93\%} & \textbf{0} & \textbf{0.01} & \textbf{3.09} & \textbf{3.10} & \textbf{0.0124} \\
+\rowcolor{zebra}t-0.1 & \cellcolor{scoregood}0.974 & 0.729 & 0.734 & 0.93 & 13\% & 93\% & 0 & 0.01 & 2.56 & 2.56 & 0.0127 \\
+t-0.4 & \cellcolor{scoremid}0.946 & 0.749 & 0.744 & 0.93 & 7\% & 93\% & 0 & 0.01 & 2.87 & 2.87 & 0.0125 \\
+\rowcolor{zebra}t-0.7 & \cellcolor{scoregood}0.970 & 0.740 & 0.734 & 0.93 & 7\% & 93\% & 0 & 0.01 & 2.56 & 2.56 & 0.0131 \\
+t-1.0 & \cellcolor{scoremid}0.957 & 0.735 & 0.739 & 0.93 & 13\% & 93\% & 0 & 0.01 & 3.01 & 3.02 & 0.0128 \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{Temperature 0.0 scored highest at 0.986, but scores did not fall smoothly as it rose, because 0.7 beat 0.4, which suggests noise on 15 questions.}\par
+\end{minipage}
+\par\bigskip
+
+
+\clearpage
+
+\section{Final results on held-back questions}
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries The five setups\par}\smallskip
+{\footnotesize\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{38mm}>{\raggedright\arraybackslash}p{35mm}>{\raggedright\arraybackslash}p{16mm}>{\raggedright\arraybackslash}p{30mm}>{\raggedright\arraybackslash}p{9mm}>{\raggedright\arraybackslash}p{26mm}>{\raggedright\arraybackslash}p{14mm}>{\raggedright\arraybackslash}p{12mm}>{\raggedright\arraybackslash}p{44mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{Setup}} & \textcolor{white}{\textbf{Chunking}} & \textcolor{white}{\textbf{Embed.}} & \textcolor{white}{\textbf{Retrieval}} & \textcolor{white}{\textbf{$k$}} & \textcolor{white}{\textbf{Generator}} & \textcolor{white}{\textbf{Prompt}} & \textcolor{white}{\textbf{Temp.}} & \textcolor{white}{\textbf{Judge (prompt)}} \\
+\midrule
+\rowcolor{topscore}C (top score) & recursive 800/120 & TE3S & keyword & 8 & Gemini Lite & p1 & 0.0 & gpt-4o-mini (rubric) \\
+\rowcolor{chosen}\textbf{D (served)} & \textbf{recursive 800/120} & \textbf{TE3S} & \textbf{hybrid} & \textbf{8} & \textbf{Gemini Lite} & \textbf{p1} & \textbf{0.0} & \textbf{gpt-4o-mini (rubric)} \\
+E & recursive 800/120 & TE3S & hybrid & 8 & gpt-4o-mini & p1 & 0.0 & gpt-4o-mini (rubric) \\
+\rowcolor{zebra}A & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p1 & 0.0 & gpt-4o-mini (rubric) \\
+B & recursive 400/80 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{A combined every stage winner, B is the earlier project's setup, and C changed only A's generator. D and E were added after the first results, once keyword search was seen to bypass Pinecone.}\par
+\end{minipage}
+\par\bigskip
+
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries Combined scores on all 60 held-back questions\par}\smallskip
+{\footnotesize\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{43mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{Setup}} & \textcolor{white}{\textbf{Faithful.}} & \textcolor{white}{\textbf{Relev.}} & \textcolor{white}{\textbf{Rel.\ if ans.}} & \textcolor{white}{\textbf{Right paper}} & \textcolor{white}{\textbf{Refusals}} & \textcolor{white}{\textbf{Claims made}} & \textcolor{white}{\textbf{Judge fails}} & \textcolor{white}{\textbf{Retrieve (s)}} & \textcolor{white}{\textbf{Generate (s)}} & \textcolor{white}{\textbf{Total (s)}} & \textcolor{white}{\textbf{Cost (\$)}} \\
+\midrule
+\rowcolor{topscore}C (top score) & \cellcolor{scoregood}0.985 & 0.717 & 0.717 & 0.98 & 10\% & 92\% & 0 & 0.01 & 10.11 & 10.12 & 0.0268 \\
+\rowcolor{chosen}\textbf{D (served)} & \cellcolor{scoregood}\textbf{0.978} & \textbf{0.705} & \textbf{0.702} & \textbf{0.97} & \textbf{5\%} & \textbf{97\%} & \textbf{0} & \textbf{1.13} & \textbf{9.20} & \textbf{10.33} & \textbf{0.0291} \\
+E & \cellcolor{scoremid}0.962 & 0.738 & 0.736 & 0.97 & 7\% & 93\% & 0 & 1.33 & 2.57 & 3.89 & 0.0495 \\
+\rowcolor{zebra}A & \cellcolor{scoremid}0.956 & 0.738 & 0.734 & 0.98 & 7\% & 93\% & 0 & 0.01 & 2.23 & 2.24 & 0.0487 \\
+B & \cellcolor{scorelow}0.928 & 0.771 & 0.755 & 0.96 & 18\% & 82\% & 0 & 1.60 & 2.02 & 3.62 & 0.0252 \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{D is 0.007 behind C on faithfulness, refuses half as often, and is 0.049 ahead of the earlier project's setup.}\par
+\end{minipage}
+\par\bigskip
+
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries Faithfulness by anchor\par}\smallskip
+{\footnotesize\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{32mm}>{\raggedleft\arraybackslash}p{40mm}>{\raggedleft\arraybackslash}p{40mm}>{\raggedleft\arraybackslash}p{40mm}>{\raggedleft\arraybackslash}p{40mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{Setup}} & \textcolor{white}{\textbf{Nested Learning}} & \textcolor{white}{\textbf{Titans}} & \textcolor{white}{\textbf{TTT RNNs}} & \textcolor{white}{\textbf{Hierarchical Reasoning}} \\
+\midrule
+\rowcolor{topscore}C & \cellcolor{scoregood}0.984 & \cellcolor{scoremid}0.967 & \cellcolor{scoregood}0.992 & \cellcolor{scoregood}0.993 \\
+\rowcolor{chosen}\textbf{D} & \cellcolor{scoregood}\textbf{0.979} & \cellcolor{scoregood}\textbf{0.978} & \cellcolor{scoregood}\textbf{0.979} & \cellcolor{scoregood}\textbf{0.976} \\
+E & \cellcolor{scoremid}0.969 & \cellcolor{scorelow}0.914 & \cellcolor{scoregood}0.994 & \cellcolor{scoremid}0.962 \\
+\rowcolor{zebra}A & \cellcolor{scoremid}0.965 & \cellcolor{scorelow}0.937 & \cellcolor{scoremid}0.950 & \cellcolor{scoremid}0.967 \\
+B & \cellcolor{scorelow}0.921 & \cellcolor{scorelow}0.926 & \cellcolor{scoremid}0.949 & \cellcolor{scorelow}0.916 \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{D ranges from 0.976 to 0.979 across anchors, the narrowest range, while C ranges from 0.967 to 0.993.}\par
+\end{minipage}
+\par\bigskip
+
+
+\clearpage
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries All per-anchor runs on held-back questions\par}\smallskip
+{\footnotesize\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{43mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}>{\raggedleft\arraybackslash}p{15mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{Setup, anchor}} & \textcolor{white}{\textbf{Faithful.}} & \textcolor{white}{\textbf{Relev.}} & \textcolor{white}{\textbf{Rel.\ if ans.}} & \textcolor{white}{\textbf{Right paper}} & \textcolor{white}{\textbf{Refusals}} & \textcolor{white}{\textbf{Claims made}} & \textcolor{white}{\textbf{Judge fails}} & \textcolor{white}{\textbf{Retrieve (s)}} & \textcolor{white}{\textbf{Generate (s)}} & \textcolor{white}{\textbf{Total (s)}} & \textcolor{white}{\textbf{Cost (\$)}} \\
+\midrule
+\rowcolor{topscore}C, Nested Learning & \cellcolor{scoregood}0.984 & 0.723 & 0.719 & 1.00 & 7\% & 93\% & 0 & 0.01 & 14.09 & 14.11 & 0.0072 \\
+\rowcolor{topscore}C, Titans & \cellcolor{scoremid}0.967 & 0.733 & 0.745 & 0.97 & \cellcolor{refusalhigh}27\% & 80\% & 0 & 0.01 & 12.07 & 12.08 & 0.0059 \\
+\rowcolor{topscore}C, TTT RNNs & \cellcolor{scoregood}0.992 & 0.724 & 0.726 & 1.00 & 7\% & 93\% & 0 & 0.01 & 10.80 & 10.81 & 0.0068 \\
+\rowcolor{topscore}C, Hierarchical Reasoning & \cellcolor{scoregood}0.993 & 0.688 & 0.688 & 0.97 & 0\% & 100\% & 0 & 0.01 & 3.47 & 3.47 & 0.0068 \\
+\arrayrulecolor{tablerule}\midrule
+\rowcolor{chosen}\textbf{D, Nested Learning} & \cellcolor{scoregood}\textbf{0.979} & \textbf{0.716} & \textbf{0.705} & \textbf{1.00} & \textbf{7\%} & \textbf{93\%} & \textbf{0} & \textbf{1.77} & \textbf{8.23} & \textbf{10.00} & \textbf{0.0073} \\
+\rowcolor{chosen}\textbf{D, Titans} & \cellcolor{scoregood}\textbf{0.978} & \textbf{0.697} & \textbf{0.697} & \textbf{0.97} & \textbf{0\%} & \textbf{100\%} & \textbf{0} & \textbf{1.03} & \textbf{7.24} & \textbf{8.27} & \textbf{0.0077} \\
+\rowcolor{chosen}\textbf{D, TTT RNNs} & \cellcolor{scoregood}\textbf{0.979} & \textbf{0.702} & \textbf{0.703} & \textbf{1.00} & \textbf{7\%} & \textbf{100\%} & \textbf{0} & \textbf{0.78} & \textbf{11.08} & \textbf{11.86} & \textbf{0.0075} \\
+\rowcolor{chosen}\textbf{D, Hierarchical Reasoning} & \cellcolor{scoregood}\textbf{0.976} & \textbf{0.705} & \textbf{0.702} & \textbf{0.90} & \textbf{7\%} & \textbf{93\%} & \textbf{0} & \textbf{0.93} & \textbf{10.27} & \textbf{11.20} & \textbf{0.0066} \\
+\arrayrulecolor{tablerule}\midrule
+E, Nested Learning & \cellcolor{scoremid}0.969 & 0.728 & 0.728 & 1.00 & 0\% & 100\% & 0 & 1.77 & 2.94 & 4.71 & 0.0137 \\
+\rowcolor{zebra}E, Titans & \cellcolor{scorelow}0.914 & 0.763 & 0.758 & 0.97 & \cellcolor{refusalhigh}20\% & 80\% & 0 & 0.75 & 1.99 & 2.75 & 0.0112 \\
+E, TTT RNNs & \cellcolor{scoregood}0.994 & 0.745 & 0.745 & 1.00 & 0\% & 100\% & 0 & 1.70 & 2.67 & 4.36 & 0.0124 \\
+\rowcolor{zebra}E, Hierarchical Reasoning & \cellcolor{scoremid}0.962 & 0.715 & 0.715 & 0.90 & 7\% & 93\% & 0 & 1.08 & 2.67 & 3.75 & 0.0121 \\
+\arrayrulecolor{tablerule}\midrule
+A, Nested Learning & \cellcolor{scoremid}0.965 & 0.730 & 0.719 & 1.00 & 7\% & 93\% & 0 & 0.01 & 2.54 & 2.55 & 0.0125 \\
+\rowcolor{zebra}A, Titans & \cellcolor{scorelow}0.937 & 0.757 & 0.757 & 0.97 & \cellcolor{refusalhigh}20\% & 80\% & 0 & 0.01 & 2.12 & 2.13 & 0.0113 \\
+A, TTT RNNs & \cellcolor{scoremid}0.950 & 0.730 & 0.730 & 1.00 & 0\% & 100\% & 0 & 0.01 & 2.10 & 2.10 & 0.0123 \\
+\rowcolor{zebra}A, Hierarchical Reasoning & \cellcolor{scoremid}0.967 & 0.734 & 0.734 & 0.97 & 0\% & 100\% & 0 & 0.01 & 2.16 & 2.17 & 0.0126 \\
+\arrayrulecolor{tablerule}\midrule
+B, Nested Learning & \cellcolor{scorelow}0.921 & 0.759 & 0.744 & 0.97 & 13\% & 87\% & 0 & 1.48 & 2.08 & 3.56 & 0.0071 \\
+\rowcolor{zebra}B, Titans & \cellcolor{scorelow}0.926 & 0.800 & 0.783 & 1.00 & \cellcolor{refusalhigh}27\% & 73\% & 0 & 1.38 & 1.83 & 3.21 & 0.0059 \\
+B, TTT RNNs & \cellcolor{scoremid}0.949 & 0.777 & 0.761 & 0.97 & 13\% & 87\% & 0 & 2.10 & 1.97 & 4.06 & 0.0063 \\
+\rowcolor{zebra}B, Hierarchical Reasoning & \cellcolor{scorelow}0.916 & 0.749 & 0.733 & 0.90 & \cellcolor{refusalhigh}20\% & 80\% & 0 & 1.45 & 2.20 & 3.65 & 0.0059 \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{These are the 20 child runs behind the combined scores. Latency varies most for the free Gemini model, which may reflect free-tier load.}\par
+\end{minipage}
+\par\bigskip
+
+
+\section{Why setup D is served}
+
+\begin{itemize}\setlength{\itemsep}{1pt}
+\item \textbf{It uses Pinecone:} keyword-only retrieval never queries Pinecone when answering, while D searches by keywords and by meaning, as the proposal describes.
+\item \textbf{The test favours keywords:} question rules told the generator to name the method being asked about, so exact-word matching has an easy job. Real users paraphrase.
+\item \textbf{It refuses less and is more consistent:} it refuses 5\% of questions against 10\% for C.
+\item \textbf{The trade-offs:} D's relevancy when answered is 0.702 against 0.755 for B, and it takes 10.3 seconds against 3.6. Setup E is the faster alternative, at 3.9 seconds and 0.962 faithfulness.
+\end{itemize}
+
+
+\clearpage
+
+\section{Full configuration of every run}
+
+TE3S is \texttt{text-embedding-3-small}, MiniLM is \texttt{all-MiniLM-L6-v2}, and Gemini Lite is \texttt{gemini-3.5-flash-lite}. All runs used 15 retrieval candidates and at most 512 output tokens. $k$ is the number of passages used.
+
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries Runs 1 to 32: choosing settings\par}\smallskip
+{\scriptsize\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{7mm}>{\raggedright\arraybackslash}p{9mm}>{\raggedright\arraybackslash}p{18mm}>{\raggedright\arraybackslash}p{34mm}>{\raggedright\arraybackslash}p{27mm}>{\raggedright\arraybackslash}p{27mm}>{\raggedright\arraybackslash}p{12mm}>{\raggedright\arraybackslash}p{20mm}>{\raggedright\arraybackslash}p{5mm}>{\raggedright\arraybackslash}p{18mm}>{\raggedright\arraybackslash}p{13mm}>{\raggedright\arraybackslash}p{10mm}>{\raggedright\arraybackslash}p{33mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{\#}} & \textcolor{white}{\textbf{Stage}} & \textcolor{white}{\textbf{Setting}} & \textcolor{white}{\textbf{Value}} & \textcolor{white}{\textbf{Anchor}} & \textcolor{white}{\textbf{Chunking}} & \textcolor{white}{\textbf{Embed.}} & \textcolor{white}{\textbf{Retrieval}} & \textcolor{white}{\textbf{$k$}} & \textcolor{white}{\textbf{Generator}} & \textcolor{white}{\textbf{Prompt}} & \textcolor{white}{\textbf{Temp.}} & \textcolor{white}{\textbf{Judge (prompt)}} \\
+\midrule
+1 & 1 & judge & gpt-4o-mini & Nested Learning & recursive 400/80 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (binary) \\
+\rowcolor{chosen}\textbf{2} & \textbf{1} & \textbf{judge} & \textbf{gpt-4o-mini-rubric} & \textbf{Nested Learning} & \textbf{recursive 400/80} & \textbf{TE3S} & \textbf{hybrid + rerank} & \textbf{5} & \textbf{gpt-4o-mini} & \textbf{p0} & \textbf{0.1} & \textbf{gpt-4o-mini (rubric)} \\
+3 & 1 & judge & gpt-5-nano & Nested Learning & recursive 400/80 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-5-nano (binary) \\
+\rowcolor{zebra}4 & 1 & judge & gemini-3.5-flash-lite & Nested Learning & recursive 400/80 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & Gemini Lite (binary) \\
+5 & 1 & judge & gpt-oss-20b & Nested Learning & recursive 400/80 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-oss-20b (binary) \\
+\arrayrulecolor{tablerule}\midrule
+\rowcolor{zebra}6 & 1 & chunking & fixed-512-50 & Nested Learning & fixed 512/50 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+7 & 1 & chunking & recursive-400-80 & Nested Learning & recursive 400/80 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+\rowcolor{chosen}\textbf{8} & \textbf{1} & \textbf{chunking} & \textbf{recursive-800-120} & \textbf{Nested Learning} & \textbf{recursive 800/120} & \textbf{TE3S} & \textbf{hybrid + rerank} & \textbf{5} & \textbf{gpt-4o-mini} & \textbf{p0} & \textbf{0.1} & \textbf{gpt-4o-mini (rubric)} \\
+9 & 1 & chunking & semantic-p70 & Nested Learning & semantic p70 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+\arrayrulecolor{tablerule}\midrule
+\rowcolor{chosen}\textbf{10} & \textbf{1} & \textbf{embedding} & \textbf{text-embedding-3-small} & \textbf{Nested Learning} & \textbf{recursive 800/120} & \textbf{TE3S} & \textbf{hybrid + rerank} & \textbf{5} & \textbf{gpt-4o-mini} & \textbf{p0} & \textbf{0.1} & \textbf{gpt-4o-mini (rubric)} \\
+11 & 1 & embedding & all-MiniLM-L6-v2 & Nested Learning & recursive 800/120 & MiniLM & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+\arrayrulecolor{tablerule}\midrule
+\rowcolor{zebra}12 & 2 & retrieval mode & semantic & Titans & recursive 800/120 & TE3S & semantic & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+\rowcolor{chosen}\textbf{13} & \textbf{2} & \textbf{retrieval mode} & \textbf{keyword} & \textbf{Titans} & \textbf{recursive 800/120} & \textbf{TE3S} & \textbf{keyword} & \textbf{5} & \textbf{gpt-4o-mini} & \textbf{p0} & \textbf{0.1} & \textbf{gpt-4o-mini (rubric)} \\
+\rowcolor{zebra}14 & 2 & retrieval mode & hybrid & Titans & recursive 800/120 & TE3S & hybrid & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+15 & 2 & retrieval mode & hybrid-rerank & Titans & recursive 800/120 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+\arrayrulecolor{tablerule}\midrule
+\rowcolor{zebra}16 & 2 & passages used & top-3 & Titans & recursive 800/120 & TE3S & keyword & 3 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+17 & 2 & passages used & top-5 & Titans & recursive 800/120 & TE3S & keyword & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+\rowcolor{chosen}\textbf{18} & \textbf{2} & \textbf{passages used} & \textbf{top-8} & \textbf{Titans} & \textbf{recursive 800/120} & \textbf{TE3S} & \textbf{keyword} & \textbf{8} & \textbf{gpt-4o-mini} & \textbf{p0} & \textbf{0.1} & \textbf{gpt-4o-mini (rubric)} \\
+\arrayrulecolor{tablerule}\midrule
+19 & 3 & prompt & p0-original & TTT RNNs & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+\rowcolor{chosen}\textbf{20} & \textbf{3} & \textbf{prompt} & \textbf{p1-strict-citations} & \textbf{TTT RNNs} & \textbf{recursive 800/120} & \textbf{TE3S} & \textbf{keyword} & \textbf{8} & \textbf{gpt-4o-mini} & \textbf{p1} & \textbf{0.1} & \textbf{gpt-4o-mini (rubric)} \\
+21 & 3 & prompt & p2-step-by-step & TTT RNNs & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p2 & 0.1 & gpt-4o-mini (rubric) \\
+\rowcolor{zebra}22 & 3 & prompt & p3-short-extractive & TTT RNNs & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p3 & 0.1 & gpt-4o-mini (rubric) \\
+23 & 3 & prompt & p4-by-paper & TTT RNNs & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p4 & 0.1 & gpt-4o-mini (rubric) \\
+\arrayrulecolor{tablerule}\midrule
+\rowcolor{chosen}\textbf{24} & \textbf{4} & \textbf{model} & \textbf{gpt-4o-mini} & \textbf{Hierarchical Reasoning} & \textbf{recursive 800/120} & \textbf{TE3S} & \textbf{keyword} & \textbf{8} & \textbf{gpt-4o-mini} & \textbf{p1} & \textbf{0.1} & \textbf{gpt-4o-mini (rubric)} \\
+25 & 4 & model & gpt-5-nano & Hierarchical Reasoning & recursive 800/120 & TE3S & keyword & 8 & gpt-5-nano & p1 & 0.1 & gpt-4o-mini (rubric) \\
+\rowcolor{zebra}26 & 4 & model & gpt-oss-20b & Hierarchical Reasoning & recursive 800/120 & TE3S & keyword & 8 & gpt-oss-20b & p1 & 0.1 & gpt-4o-mini (rubric) \\
+27 & 4 & model & gemini-3.5-flash-lite & Hierarchical Reasoning & recursive 800/120 & TE3S & keyword & 8 & Gemini Lite & p1 & 0.1 & gpt-4o-mini (rubric) \\
+\arrayrulecolor{tablerule}\midrule
+\rowcolor{chosen}\textbf{28} & \textbf{4} & \textbf{temperature} & \textbf{t-0.0} & \textbf{Hierarchical Reasoning} & \textbf{recursive 800/120} & \textbf{TE3S} & \textbf{keyword} & \textbf{8} & \textbf{gpt-4o-mini} & \textbf{p1} & \textbf{0.0} & \textbf{gpt-4o-mini (rubric)} \\
+29 & 4 & temperature & t-0.1 & Hierarchical Reasoning & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p1 & 0.1 & gpt-4o-mini (rubric) \\
+\rowcolor{zebra}30 & 4 & temperature & t-0.4 & Hierarchical Reasoning & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p1 & 0.4 & gpt-4o-mini (rubric) \\
+31 & 4 & temperature & t-0.7 & Hierarchical Reasoning & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p1 & 0.7 & gpt-4o-mini (rubric) \\
+\rowcolor{zebra}32 & 4 & temperature & t-1.0 & Hierarchical Reasoning & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p1 & 1.0 & gpt-4o-mini (rubric) \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{Each group changes one setting, and chosen rows carry forward. Some rows share saved answers when their settings match, so they cost nothing extra to run.}\par
+\end{minipage}
+\par\bigskip
+
+
+\clearpage
+
+\noindent\begin{minipage}{\textwidth}
+{\normalsize\bfseries Runs 33 to 57: held-back questions\par}\smallskip
+{\scriptsize\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{7mm}>{\raggedright\arraybackslash}p{9mm}>{\raggedright\arraybackslash}p{18mm}>{\raggedright\arraybackslash}p{34mm}>{\raggedright\arraybackslash}p{27mm}>{\raggedright\arraybackslash}p{27mm}>{\raggedright\arraybackslash}p{12mm}>{\raggedright\arraybackslash}p{20mm}>{\raggedright\arraybackslash}p{5mm}>{\raggedright\arraybackslash}p{18mm}>{\raggedright\arraybackslash}p{13mm}>{\raggedright\arraybackslash}p{10mm}>{\raggedright\arraybackslash}p{33mm}@{}}
+\toprule
+\rowcolor{tablehead}\textcolor{white}{\textbf{\#}} & \textcolor{white}{\textbf{Stage}} & \textcolor{white}{\textbf{Setting}} & \textcolor{white}{\textbf{Value}} & \textcolor{white}{\textbf{Anchor}} & \textcolor{white}{\textbf{Chunking}} & \textcolor{white}{\textbf{Embed.}} & \textcolor{white}{\textbf{Retrieval}} & \textcolor{white}{\textbf{$k$}} & \textcolor{white}{\textbf{Generator}} & \textcolor{white}{\textbf{Prompt}} & \textcolor{white}{\textbf{Temp.}} & \textcolor{white}{\textbf{Judge (prompt)}} \\
+\midrule
+\rowcolor{topscore}33 & Final & setup & C-best-free-generator & All 4 (parent run) & recursive 800/120 & TE3S & keyword & 8 & Gemini Lite & p1 & 0.0 & gpt-4o-mini (rubric) \\
+\rowcolor{topscore}34 & Final & setup & C-best-free-generator & Nested Learning & recursive 800/120 & TE3S & keyword & 8 & Gemini Lite & p1 & 0.0 & gpt-4o-mini (rubric) \\
+\rowcolor{topscore}35 & Final & setup & C-best-free-generator & Titans & recursive 800/120 & TE3S & keyword & 8 & Gemini Lite & p1 & 0.0 & gpt-4o-mini (rubric) \\
+\rowcolor{topscore}36 & Final & setup & C-best-free-generator & TTT RNNs & recursive 800/120 & TE3S & keyword & 8 & Gemini Lite & p1 & 0.0 & gpt-4o-mini (rubric) \\
+\rowcolor{topscore}37 & Final & setup & C-best-free-generator & Hierarchical Reasoning & recursive 800/120 & TE3S & keyword & 8 & Gemini Lite & p1 & 0.0 & gpt-4o-mini (rubric) \\
+\arrayrulecolor{tablerule}\midrule
+\rowcolor{chosen}\textbf{38} & \textbf{Final} & \textbf{setup} & \textbf{D-hybrid-free-generator} & \textbf{All 4 (parent run)} & \textbf{recursive 800/120} & \textbf{TE3S} & \textbf{hybrid} & \textbf{8} & \textbf{Gemini Lite} & \textbf{p1} & \textbf{0.0} & \textbf{gpt-4o-mini (rubric)} \\
+\rowcolor{chosen}\textbf{39} & \textbf{Final} & \textbf{setup} & \textbf{D-hybrid-free-generator} & \textbf{Nested Learning} & \textbf{recursive 800/120} & \textbf{TE3S} & \textbf{hybrid} & \textbf{8} & \textbf{Gemini Lite} & \textbf{p1} & \textbf{0.0} & \textbf{gpt-4o-mini (rubric)} \\
+\rowcolor{chosen}\textbf{40} & \textbf{Final} & \textbf{setup} & \textbf{D-hybrid-free-generator} & \textbf{Titans} & \textbf{recursive 800/120} & \textbf{TE3S} & \textbf{hybrid} & \textbf{8} & \textbf{Gemini Lite} & \textbf{p1} & \textbf{0.0} & \textbf{gpt-4o-mini (rubric)} \\
+\rowcolor{chosen}\textbf{41} & \textbf{Final} & \textbf{setup} & \textbf{D-hybrid-free-generator} & \textbf{TTT RNNs} & \textbf{recursive 800/120} & \textbf{TE3S} & \textbf{hybrid} & \textbf{8} & \textbf{Gemini Lite} & \textbf{p1} & \textbf{0.0} & \textbf{gpt-4o-mini (rubric)} \\
+\rowcolor{chosen}\textbf{42} & \textbf{Final} & \textbf{setup} & \textbf{D-hybrid-free-generator} & \textbf{Hierarchical Reasoning} & \textbf{recursive 800/120} & \textbf{TE3S} & \textbf{hybrid} & \textbf{8} & \textbf{Gemini Lite} & \textbf{p1} & \textbf{0.0} & \textbf{gpt-4o-mini (rubric)} \\
+\arrayrulecolor{tablerule}\midrule
+43 & Final & setup & E-hybrid-gpt-4o-mini & All 4 (parent run) & recursive 800/120 & TE3S & hybrid & 8 & gpt-4o-mini & p1 & 0.0 & gpt-4o-mini (rubric) \\
+\rowcolor{zebra}44 & Final & setup & E-hybrid-gpt-4o-mini & Nested Learning & recursive 800/120 & TE3S & hybrid & 8 & gpt-4o-mini & p1 & 0.0 & gpt-4o-mini (rubric) \\
+45 & Final & setup & E-hybrid-gpt-4o-mini & Titans & recursive 800/120 & TE3S & hybrid & 8 & gpt-4o-mini & p1 & 0.0 & gpt-4o-mini (rubric) \\
+\rowcolor{zebra}46 & Final & setup & E-hybrid-gpt-4o-mini & TTT RNNs & recursive 800/120 & TE3S & hybrid & 8 & gpt-4o-mini & p1 & 0.0 & gpt-4o-mini (rubric) \\
+47 & Final & setup & E-hybrid-gpt-4o-mini & Hierarchical Reasoning & recursive 800/120 & TE3S & hybrid & 8 & gpt-4o-mini & p1 & 0.0 & gpt-4o-mini (rubric) \\
+\arrayrulecolor{tablerule}\midrule
+\rowcolor{zebra}48 & Final & setup & A-all-winners & All 4 (parent run) & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p1 & 0.0 & gpt-4o-mini (rubric) \\
+49 & Final & setup & A-all-winners & Nested Learning & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p1 & 0.0 & gpt-4o-mini (rubric) \\
+\rowcolor{zebra}50 & Final & setup & A-all-winners & Titans & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p1 & 0.0 & gpt-4o-mini (rubric) \\
+51 & Final & setup & A-all-winners & TTT RNNs & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p1 & 0.0 & gpt-4o-mini (rubric) \\
+\rowcolor{zebra}52 & Final & setup & A-all-winners & Hierarchical Reasoning & recursive 800/120 & TE3S & keyword & 8 & gpt-4o-mini & p1 & 0.0 & gpt-4o-mini (rubric) \\
+\arrayrulecolor{tablerule}\midrule
+53 & Final & setup & B-control-baseline & All 4 (parent run) & recursive 400/80 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+\rowcolor{zebra}54 & Final & setup & B-control-baseline & Nested Learning & recursive 400/80 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+55 & Final & setup & B-control-baseline & Titans & recursive 400/80 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+\rowcolor{zebra}56 & Final & setup & B-control-baseline & TTT RNNs & recursive 400/80 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+57 & Final & setup & B-control-baseline & Hierarchical Reasoning & recursive 400/80 & TE3S & hybrid + rerank & 5 & gpt-4o-mini & p0 & 0.1 & gpt-4o-mini (rubric) \\
+\bottomrule
+\end{tabular}\par}
+\smallskip\noindent\textit{Each setup has one parent run and 4 per-anchor child runs. Together with runs 1 to 32, this covers all 57 MLflow runs.}\par
+\end{minipage}
+\par\bigskip
+
+
+\section{Limits of these results}
+
+\begin{itemize}\setlength{\itemsep}{1pt}
+\item \textbf{Small samples:} each stage used 15 questions on one anchor, so small gaps may be noise, and a winner on one anchor may not win elsewhere.
+\item \textbf{Stage winners do not simply add up:} changing only A's generator gave C a higher score than the combined winners.
+\item \textbf{Questions were written by an LLM:} they test finding and using what is in the corpus, not what real researchers would ask. The team removed 13 that did not stand alone.
+\item \textbf{Scores are LLM judgements:} they vary slightly between runs, and \texttt{gpt-4o-mini} judges its own answers in setups A, B and E.
+\item \textbf{Faithfulness has blind spots:} an answer can be faithful to the wrong passages, so the right-paper rate is shown alongside it.
+\item \textbf{Latency is not production latency:} it was measured on a laptop CPU, with free-tier models.
+\item \textbf{The history was rebuilt:} MLflow runs were re-logged from saved answers after fixing measurement bugs, so MLflow's own timestamps and durations reflect that step, not the original model calls.
+\item \textbf{Added setups:} D and E were tested after seeing A, B and C, so their comparison is slightly less clean than a fully planned one.
+\end{itemize}
+
+
+\end{document}

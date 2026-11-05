@@ -172,6 +172,8 @@ mlflow ui --backend-store-uri sqlite:///mlflow.db    # Then open http://127.0.0.
 - [reports/milestone1_report.pdf](reports/milestone1_report.pdf) has the results and MLflow screenshots.
 - [results/side_by_side.md](results/side_by_side.md) shows the same question answered under each setting.
 - [results/summary.csv](results/summary.csv) has every run's metrics.
+- [reports/full_results.pdf](reports/full_results.pdf) lists all 57 runs with their settings and scores.
+
 
 To rerun the evaluation, use `python -m src.evaluate`. Saved answers are reused, so this costs nothing unless a setting changes. The whole evaluation cost about $0.47. It stops itself if estimated spend passes $3.
 
