@@ -1,0 +1,18 @@
+[
+  {
+    "anchor_id": "nested_learning",
+    "question": "How does Delta Gradient Descent differ from traditional gradient descent?"
+  },
+  {
+    "anchor_id": "titans",
+    "question": "How does Titans use surprise when updating its memory?"
+  },
+  {
+    "anchor_id": "ttt_rnn",
+    "question": "How do TTT layers update their hidden state at test time?"
+  },
+  {
+    "anchor_id": "hrm",
+    "question": "How do looped reasoning models increase computational depth without adding parameters?"
+  }
+]

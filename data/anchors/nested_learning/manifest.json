@@ -1,0 +1,212 @@
+{
+  "anchor": "nested_learning",
+  "papers": [
+    {
+      "id": "00_nested_learning_original",
+      "role": "anchor",
+      "urls": [
+        "https://arxiv.org/pdf/2512.24695v1",
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/00_nested_learning_original.pdf"
+      ],
+      "sha256": "e87a9ce82ff24e96f55b83fb9713a5d6fc9e4a1a232c12d42da49c10022ed891",
+      "pages": 52,
+      "title": "Nested Learning: The Illusion of Deep Learning Architectures",
+      "authors": "Behrouz, Razaviyayn, Zhong, Mirrokni",
+      "year": 2025,
+      "category": "Core Extension"
+    },
+    {
+      "id": "03_fast_weight_programming",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2508.08435v6",
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/03_fast_weight_programming.pdf"
+      ],
+      "sha256": "8f8b57e762e63de95354a46049b02a4126bcca9efba53ca8f0e6b2fd7bdf96f8",
+      "pages": 37,
+      "title": "Fast Weight Programming and Linear Transformers: From ML to Neurobiology",
+      "authors": "Irie, Gershman",
+      "year": 2026,
+      "category": "Related Theory"
+    },
+    {
+      "id": "04_end_to_end_ttt_long_context",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2512.23675v2",
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/04_end_to_end_ttt_long_context.pdf"
+      ],
+      "sha256": "e1390e9347fe339e31205351420bfddcfb1f5cfa540841706228c07184b7ec7a",
+      "pages": 29,
+      "title": "End-to-End Test-Time Training for Long Context",
+      "authors": "Tandon, Dalal, Li et al.",
+      "year": 2025,
+      "category": "Core Extension"
+    },
+    {
+      "id": "05_dynamic_nested_hierarchies",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2511.14823v1",
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/05_dynamic_nested_hierarchies.pdf"
+      ],
+      "sha256": "a86011e57fded46d0b29e801efaaca129c67d2a7c1f531a5bd2dde54b3cc613f",
+      "pages": 12,
+      "title": "Dynamic Nested Hierarchies: Self-Evolution in ML for Lifelong Intelligence",
+      "authors": "Akbar Anbar Jafari, Ozcinar, Anbarjafari",
+      "year": 2025,
+      "category": "Core Extension"
+    },
+    {
+      "id": "06_crad_hope_anomaly_detection",
+      "role": "citing",
+      "urls": [
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/06_crad_hope_anomaly_detection.pdf"
+      ],
+      "sha256": "7268cec27536f5c15396bca54f041c04079f21ab15008cc34874a2b9f10742a4",
+      "pages": 30,
+      "title": "CRAD-HOPE: Brain-inspired Nested Learning Framework for Few-Shot Anomaly Detection",
+      "authors": "Cao, Cao, Wu",
+      "year": 2026,
+      "category": "Application"
+    },
+    {
+      "id": "08_tiny_autoregressive_recursive",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2603.08082v1",
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/08_tiny_autoregressive_recursive.pdf"
+      ],
+      "sha256": "b3e020705223858289c80be4b4b100c904d4ec230d1a37a781def8b3cc904329",
+      "pages": 15,
+      "title": "Tiny Autoregressive Recursive Models",
+      "authors": "Rauba, Fanconi, van der Schaar",
+      "year": 2026,
+      "category": "Related Theory"
+    },
+    {
+      "id": "10_hydra_dual_exponentiated_memory",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2511.00989v1",
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/10_hydra_dual_exponentiated_memory.pdf"
+      ],
+      "sha256": "b643bbe601acb305c09a8aaf676e131837d3e6d0f1863572af0e85bfac4fad89",
+      "pages": 22,
+      "title": "HYDRA: Dual Exponentiated Memory for Multivariate Time Series Analysis",
+      "authors": "Meskin, Mirrokni, Najar, Behrouz",
+      "year": 2025,
+      "category": "Core Extension"
+    },
+    {
+      "id": "11_beyond_ttt_optimal_control",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2603.09221v2",
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/11_beyond_ttt_optimal_control.pdf"
+      ],
+      "sha256": "22c616e6d5e2f4534838ca3d69debe6b366e04a786665f5486a419986a2bb78c",
+      "pages": 33,
+      "title": "Beyond Test-Time Training: Learning to Reason via Hardware-Efficient Optimal Control",
+      "authors": "Wang, Yang, Wang, Xiao, Liu et al.",
+      "year": 2026,
+      "category": "Core Extension"
+    },
+    {
+      "id": "13_allmem_long_context",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2602.13680v1",
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/13_allmem_long_context.pdf"
+      ],
+      "sha256": "cb5028eb5368fb9d92c943a463a65ceee4305be58e6fc2d9b8bfc435b5781539",
+      "pages": 14,
+      "title": "AllMem: A Memory-centric Recipe for Efficient Long-context Modeling",
+      "authors": "Wang, Wang, Peng, Qin et al.",
+      "year": 2026,
+      "category": "Application"
+    },
+    {
+      "id": "14_vision_transformers_never_stop",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2603.07787v1",
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/14_vision_transformers_never_stop.pdf"
+      ],
+      "sha256": "2ca49766de65c7d3cae106df712954fb4c58b977ed991939bdbec89ad66403fc",
+      "pages": 26,
+      "title": "Vision Transformers That Never Stop Learning",
+      "authors": "Sun, Yuan, Wang, Chen",
+      "year": 2026,
+      "category": "Application"
+    },
+    {
+      "id": "15_msa_memory_sparse_attention",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2603.23516v2",
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/15_msa_memory_sparse_attention.pdf"
+      ],
+      "sha256": "ce8bda91baf1187db80e44bcb7e9e36ff6c811122644f87b400a9fa45544b7d8",
+      "pages": 20,
+      "title": "MSA: Memory Sparse Attention for Efficient End-to-End Memory Model Scaling",
+      "authors": "Chen, Chen, Yi, Zhao et al.",
+      "year": 2026,
+      "category": "Application"
+    },
+    {
+      "id": "16_prompt_injection_nested_learning",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2601.13186v1",
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/16_prompt_injection_nested_learning.pdf"
+      ],
+      "sha256": "2f518e50bb067badebced5db5f2a4740105de395175952c85c72807437010bf5",
+      "pages": 33,
+      "title": "Prompt Injection Mitigation with Agentic AI, Nested Learning, and AI Sustainability",
+      "authors": "Gosmar, Dah",
+      "year": 2026,
+      "category": "Application"
+    },
+    {
+      "id": "17_memory_caching_rnns",
+      "role": "citing",
+      "urls": [
+        "https://arxiv.org/pdf/2602.24281v1",
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/17_memory_caching_rnns.pdf"
+      ],
+      "sha256": "f4983c96c96400320b3d883e8d39f96ade91cae55e2bde04c4d99b06a8348e82",
+      "pages": 22,
+      "title": "Memory Caching: RNNs with Growing Memory",
+      "authors": "Behrouz, Li, Deng, Zhong, Razaviyayn, Mirrokni",
+      "year": 2026,
+      "category": "Core Extension"
+    },
+    {
+      "id": "22_learning_to_learn_at_scale",
+      "role": "citing",
+      "urls": [
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/22_learning_to_learn_at_scale.pdf"
+      ],
+      "sha256": "5582abea7423b6a19fe8c654a30b22fd4142d90246e209613ac9374cd0d208a8",
+      "pages": 7,
+      "title": "Learning-to-Learn at Scale: Promises and Challenges",
+      "authors": "Wang, Wang, Chen, Yu, Gan, Liu",
+      "year": 2026,
+      "category": "Related Theory"
+    },
+    {
+      "id": "26_attention_not_retention",
+      "role": "citing",
+      "urls": [
+        "https://raw.githubusercontent.com/Rockybhaie/Tracking-the-Evolution-of-Nested-Learning-via-RAG/1f41c68/Part%201%20Preprocessing/Dataset/Selected%20Papers/26_attention_not_retention.pdf"
+      ],
+      "sha256": "000e88207fce858f30d1e4a281a5dadfb5f979e89934e836d75f4b65f56f7f3b",
+      "pages": 32,
+      "title": "Attention Is Not Retention: The Orthogonality Constraint in Infinite-Context Architectures",
+      "authors": "Zahn, Beton, Chana",
+      "year": 2025,
+      "category": "Related Theory"
+    }
+  ]
+}

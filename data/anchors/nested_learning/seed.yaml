@@ -1,0 +1,20 @@
+# The 15 papers chosen by hand in the earlier project, kept unchanged.
+# Source: index.xlsx and PAPER_META in the earlier project's notebooks.
+# Three papers cannot be downloaded from their original sites by a script,
+# so they use the copy in the earlier project's public repository.
+papers:
+  - {id: 00_nested_learning_original, role: anchor, arxiv: "2512.24695", title: "Nested Learning: The Illusion of Deep Learning Architectures", authors: "Behrouz, Razaviyayn, Zhong, Mirrokni", year: 2025, category: Core Extension}
+  - {id: 03_fast_weight_programming, role: citing, arxiv: "2508.08435", title: "Fast Weight Programming and Linear Transformers: From ML to Neurobiology", authors: "Irie, Gershman", year: 2026, category: Related Theory}
+  - {id: 04_end_to_end_ttt_long_context, role: citing, arxiv: "2512.23675", title: "End-to-End Test-Time Training for Long Context", authors: "Tandon, Dalal, Li et al.", year: 2025, category: Core Extension}
+  - {id: 05_dynamic_nested_hierarchies, role: citing, arxiv: "2511.14823", title: "Dynamic Nested Hierarchies: Self-Evolution in ML for Lifelong Intelligence", authors: "Akbar Anbar Jafari, Ozcinar, Anbarjafari", year: 2025, category: Core Extension}
+  - {id: 06_crad_hope_anomaly_detection, role: citing, old_repo_file: 06_crad_hope_anomaly_detection.pdf, title: "CRAD-HOPE: Brain-inspired Nested Learning Framework for Few-Shot Anomaly Detection", authors: "Cao, Cao, Wu", year: 2026, category: Application}
+  - {id: 08_tiny_autoregressive_recursive, role: citing, arxiv: "2603.08082", title: "Tiny Autoregressive Recursive Models", authors: "Rauba, Fanconi, van der Schaar", year: 2026, category: Related Theory}
+  - {id: 10_hydra_dual_exponentiated_memory, role: citing, arxiv: "2511.00989", title: "HYDRA: Dual Exponentiated Memory for Multivariate Time Series Analysis", authors: "Meskin, Mirrokni, Najar, Behrouz", year: 2025, category: Core Extension}
+  - {id: 11_beyond_ttt_optimal_control, role: citing, arxiv: "2603.09221", title: "Beyond Test-Time Training: Learning to Reason via Hardware-Efficient Optimal Control", authors: "Wang, Yang, Wang, Xiao, Liu et al.", year: 2026, category: Core Extension}
+  - {id: 13_allmem_long_context, role: citing, arxiv: "2602.13680", title: "AllMem: A Memory-centric Recipe for Efficient Long-context Modeling", authors: "Wang, Wang, Peng, Qin et al.", year: 2026, category: Application}
+  - {id: 14_vision_transformers_never_stop, role: citing, arxiv: "2603.07787", title: "Vision Transformers That Never Stop Learning", authors: "Sun, Yuan, Wang, Chen", year: 2026, category: Application}
+  - {id: 15_msa_memory_sparse_attention, role: citing, arxiv: "2603.23516", title: "MSA: Memory Sparse Attention for Efficient End-to-End Memory Model Scaling", authors: "Chen, Chen, Yi, Zhao et al.", year: 2026, category: Application}
+  - {id: 16_prompt_injection_nested_learning, role: citing, arxiv: "2601.13186", title: "Prompt Injection Mitigation with Agentic AI, Nested Learning, and AI Sustainability", authors: "Gosmar, Dah", year: 2026, category: Application}
+  - {id: 17_memory_caching_rnns, role: citing, arxiv: "2602.24281", title: "Memory Caching: RNNs with Growing Memory", authors: "Behrouz, Li, Deng, Zhong, Razaviyayn, Mirrokni", year: 2026, category: Core Extension}
+  - {id: 22_learning_to_learn_at_scale, role: citing, old_repo_file: 22_learning_to_learn_at_scale.pdf, title: "Learning-to-Learn at Scale: Promises and Challenges", authors: "Wang, Wang, Chen, Yu, Gan, Liu", year: 2026, category: Related Theory}
+  - {id: 26_attention_not_retention, role: citing, old_repo_file: 26_attention_not_retention.pdf, title: "Attention Is Not Retention: The Orthogonality Constraint in Infinite-Context Architectures", authors: "Zahn, Beton, Chana", year: 2025, category: Related Theory}
