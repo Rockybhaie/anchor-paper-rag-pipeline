@@ -1,0 +1,22 @@
+# Written by src/evaluate.py. Served setup: D-hybrid-free-generator.
+chunking:
+  chunk_size: 800
+  method: recursive
+  overlap: 120
+embedding:
+  model: text-embedding-3-small
+  provider: openai
+generation:
+  max_tokens: 512
+  model: gemini-3.5-flash-lite
+  prompt: p1
+  provider: gemini
+  temperature: 0.0
+index:
+  cloud: aws
+  provider: pinecone
+  region: us-east-1
+retrieval:
+  candidates: 15
+  final_k: 8
+  mode: hybrid
