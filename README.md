@@ -186,6 +186,20 @@ ruff check .    # Or: make lint
 
 The tests use stand-ins for OpenAI, Gemini, Groq and Pinecone, so they need no keys and no network. They cover data preparation, index loading, retrieval, generation, the judge, the evaluation and MLflow logging, and the API endpoints. GitHub Actions runs both commands on every push.
 
+## Project Focus: LLM-as-a-Judge
+
+**What it is.** Every result in this project comes from an LLM judge scoring faithfulness and relevancy. Our focus is to make that judge trustworthy and to keep using it after deployment: checking it against people, and scoring the live service's answers with it.
+
+**Why it suits this project.** It is a RAG system, so there is no accuracy against fixed labels. In Milestone 1 the choice of judge alone moved the same answers' faithfulness from 0.78 to 0.96, and the setup we serve was chosen by that judge. If the judge is wrong, every decision built on it is wrong too.
+
+**What we build and compare.**
+
+1. **Live judging (built).** After `/predict` responds, a background task scores a sample of answers with the chosen judge (`gpt-4o-mini` with the rubric prompt) against the passages actually used. `/stats` shows how many were judged and their average faithfulness and relevancy. `JUDGE_SAMPLE_RATE` and `JUDGE_MAX_PER_HOUR` limit spending on the public URL. Code: `src/live_judge.py`.
+2. **Judge against people (started).** `python -m src.judge_agreement sample` picks 40 claims from the served setup's held-back answers, putting every claim the judge doubted first. The team labels them from the passages without seeing the judge's verdicts. `python -m src.judge_agreement score` then logs agreement and Cohen's kappa to the MLflow experiment `focus-judge-agreement`.
+3. **Next, for the final evaluation:** compare the judge's live scores with its offline ones to detect quality drift, and compare judge models and prompts by their agreement with people, not only by the gap between real and unrelated passages used in Milestone 1.
+
+**How we demonstrate it.** Send a few `/predict` requests and show `/stats` filling in the live judge's scores, then open the `focus-judge-agreement` experiment in MLflow.
+
 ## Project layout
 
 ```text
