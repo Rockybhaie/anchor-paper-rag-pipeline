@@ -56,6 +56,7 @@ def corpus(tmp_path, monkeypatch):
     monkeypatch.setattr(build_index, "ANCHOR_DATA", tmp_path / "anchors")
     monkeypatch.setattr(build_index, "PROCESSED", tmp_path / "processed")
     monkeypatch.setattr(build_index, "ARTIFACTS", tmp_path / "artifacts")
+    monkeypatch.setattr(build_index, "INDEX_MANIFESTS", tmp_path / "index_manifests")
     monkeypatch.setattr(build_index, "embed_texts", fake_embed)
     return tmp_path
 

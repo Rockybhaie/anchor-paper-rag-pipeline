@@ -1,0 +1,20 @@
+{
+  "anchor": "nested_learning",
+  "setup": "recursive-800-120__text-embedding-3-small__v1",
+  "version": "v1",
+  "namespace": "nested_learning__recursive-800-120__text-embedding-3-small__v1",
+  "dimension": 1536,
+  "chunking": {
+    "method": "recursive",
+    "chunk_size": 800,
+    "overlap": 120
+  },
+  "embedding": {
+    "provider": "openai",
+    "model": "text-embedding-3-small"
+  },
+  "passages": 1391,
+  "papers": 15,
+  "passages_sha256": "4bd75d8f732343bc48ac95d9d8c05988d3f0a3cb5f5d82883c899ea461288564",
+  "built_at": "2026-11-05T15:14:30+00:00"
+}

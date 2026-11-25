@@ -1,0 +1,20 @@
+{
+  "anchor": "titans",
+  "setup": "recursive-800-120__text-embedding-3-small__v1",
+  "version": "v1",
+  "namespace": "titans__recursive-800-120__text-embedding-3-small__v1",
+  "dimension": 1536,
+  "chunking": {
+    "method": "recursive",
+    "chunk_size": 800,
+    "overlap": 120
+  },
+  "embedding": {
+    "provider": "openai",
+    "model": "text-embedding-3-small"
+  },
+  "passages": 1251,
+  "papers": 15,
+  "passages_sha256": "67df2f21463e765dba82da23c1750b6c67fbc6efe8ca29c0141a27c194092b79",
+  "built_at": "2026-11-05T15:30:57+00:00"
+}

@@ -1,0 +1,20 @@
+{
+  "anchor": "ttt_rnn",
+  "setup": "recursive-800-120__text-embedding-3-small__v1",
+  "version": "v1",
+  "namespace": "ttt_rnn__recursive-800-120__text-embedding-3-small__v1",
+  "dimension": 1536,
+  "chunking": {
+    "method": "recursive",
+    "chunk_size": 800,
+    "overlap": 120
+  },
+  "embedding": {
+    "provider": "openai",
+    "model": "text-embedding-3-small"
+  },
+  "passages": 981,
+  "papers": 15,
+  "passages_sha256": "23fca28483d979d4fd1c6a33677282769edfacc6cf541e3f431cefd44e2c766b",
+  "built_at": "2026-11-05T15:37:31+00:00"
+}

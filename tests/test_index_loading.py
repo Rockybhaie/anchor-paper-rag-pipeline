@@ -94,6 +94,69 @@ def test_load_index_rejects_changed_passages(corpus, store, config):
         load_index("titans", config)
 
 
+def remove_local_artifact(config):
+    """Leave only what a container has: the committed manifest and the vectors in Pinecone."""
+    for path in artifact_dir("titans", config).iterdir():
+        path.unlink()
+
+
+def test_build_commits_a_manifest_without_paper_text(corpus, store, config):
+    manifest = build("titans", config, store)
+
+    committed = json.loads(build_index.committed_manifest_path("titans", config).read_text("utf-8"))
+    assert committed["passages_sha256"] == manifest["passages_sha256"]
+    assert "Titans keep" not in json.dumps(committed)
+
+
+def test_index_is_rebuilt_from_the_store_without_a_local_artifact(corpus, store, config):
+    build("titans", config, store)
+    expected = load_index("titans", config).chunks
+    remove_local_artifact(config)
+
+    index = load_index("titans", config, store)
+
+    assert index.chunks == expected
+    assert (artifact_dir("titans", config) / "chunks.jsonl").exists()
+
+
+def test_rebuild_rejects_passages_that_differ_from_the_manifest(corpus, store, config):
+    build("titans", config, store)
+    remove_local_artifact(config)
+    metadata = store.namespaces[namespace_for("titans", config)][2]
+    metadata[0]["chunk"] = metadata[0]["chunk"].replace("Titans", "Tiatns")
+
+    with pytest.raises(ValueError, match="do not match"):
+        load_index("titans", config, store)
+
+
+def test_rebuild_explains_vectors_uploaded_without_text(corpus, store, config):
+    build("titans", config, store)
+    remove_local_artifact(config)
+    namespace = namespace_for("titans", config)
+    ids, vectors, _ = store.namespaces[namespace]
+    store.upsert(namespace, ids, vectors)
+
+    with pytest.raises(ValueError, match="--attach-text"):
+        load_index("titans", config, store)
+
+
+def test_attach_text_adds_passages_without_embedding_again(corpus, store, config, monkeypatch):
+    build("titans", config, store)
+    namespace = namespace_for("titans", config)
+    ids, vectors, _ = store.namespaces[namespace]
+    store.upsert(namespace, ids, vectors)
+
+    def must_not_embed(texts, embedding):
+        raise AssertionError("should not embed again")
+
+    monkeypatch.setattr(build_index, "embed_texts", must_not_embed)
+    build_index.attach_text("titans", config, store)
+    remove_local_artifact(config)
+
+    assert len(load_index("titans", config, store).chunks) == len(ids)
+    assert np.array_equal(store.namespaces[namespace][1], vectors)
+
+
 def test_build_explains_missing_prepared_text(corpus, store, config):
     for path in (corpus / "processed" / "titans").iterdir():
         path.unlink()
