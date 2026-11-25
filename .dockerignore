@@ -1,0 +1,21 @@
+# Keep secrets, local environments and large or generated files out of the image.
+.env
+.git
+.github
+.venv
+venv
+__pycache__
+*.pyc
+.pytest_cache
+.ruff_cache
+.cache
+artifacts
+data/raw
+data/processed
+mlflow.db
+mlruns
+mlartifacts
+results
+reports
+tools
+tests
