@@ -112,3 +112,29 @@ def test_docs_are_generated(client):
     assert client.get("/docs").status_code == 200
     paths = client.get("/openapi.json").json()["paths"]
     assert "/predict" in paths and "/explain" in paths
+
+
+def test_health_reports_ok_and_the_loaded_anchors(client):
+    response = client.get("/health")
+
+    assert response.status_code == 200
+    assert response.json() == {"status": "ok", "version": "2.0.0", "anchors": ["titans"]}
+
+
+def test_stats_count_requests_and_average_their_latency(client):
+    before = client.get("/stats").json()["request_count"]
+    for _ in range(3):
+        client.post("/predict", json=QUESTION)
+
+    stats = client.get("/stats").json()
+
+    # The three questions plus the first /stats call.
+    assert stats["request_count"] == before + 4
+    assert stats["by_path"]["/predict"]["count"] == 3
+    assert stats["by_path"]["/predict"]["average_latency_ms"] > 0
+    assert stats["average_latency_ms"] > 0
+
+
+def test_stats_also_count_rejected_requests(client):
+    client.post("/predict", json={"anchor_id": "not_an_anchor", "question": "A valid question?"})
+    assert client.get("/stats").json()["by_path"]["/predict"]["count"] == 1
