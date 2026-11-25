@@ -18,6 +18,9 @@ PROCESSED = DATA / "processed"
 ANCHOR_DATA = DATA / "anchors"
 GOLDEN = DATA / "golden"
 ARTIFACTS = ROOT / "artifacts" / "indexes"
+# Copies of each index manifest. They hold no paper text, so they are committed and let a
+# container check the passages it rebuilds from Pinecone.
+INDEX_MANIFESTS = DATA / "index_manifests"
 RESULTS = ROOT / "results"
 
 load_dotenv(ROOT / ".env")

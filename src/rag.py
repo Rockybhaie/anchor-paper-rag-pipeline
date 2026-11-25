@@ -29,7 +29,10 @@ class RagEngine:
             key: value for key, value in config.get("index", {}).items() if key != "provider"
         })
         names = load_anchors() if anchors is None else anchors
-        self.indexes: dict[str, LoadedIndex] = {name: load_index(name, config) for name in names}
+        # A container has no local artifact, so each index is rebuilt from Pinecone on first start.
+        self.indexes: dict[str, LoadedIndex] = {
+            name: load_index(name, config, self.store) for name in names
+        }
 
     def explain(self, anchor_id: str, question: str) -> dict:
         result = retrieve(question, self.indexes[anchor_id], self.config, self.store)

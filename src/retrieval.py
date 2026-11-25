@@ -7,7 +7,6 @@ from dataclasses import dataclass
 from functools import lru_cache
 
 import numpy as np
-from fastembed.rerank.cross_encoder import TextCrossEncoder
 
 from src.build_index import LoadedIndex, tokenize
 from src.embeddings import CACHE_DIR, embed_texts
@@ -48,7 +47,10 @@ def semantic_search(
 
 
 @lru_cache(maxsize=1)
-def _reranker() -> TextCrossEncoder:
+def _reranker():
+    # Imported here so setups without reranking never load this library.
+    from fastembed.rerank.cross_encoder import TextCrossEncoder
+
     return TextCrossEncoder(model_name=RERANK_MODEL, cache_dir=str(CACHE_DIR))
 
 
