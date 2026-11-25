@@ -9,7 +9,6 @@ from functools import lru_cache
 os.environ.setdefault("HF_HUB_DISABLE_SYMLINKS_WARNING", "1")
 
 import numpy as np  # noqa: E402
-from fastembed import TextEmbedding  # noqa: E402
 
 from src.config import ROOT  # noqa: E402
 from src.llm import NETWORK_ERRORS, estimate_cost, get_client, with_retries  # noqa: E402
@@ -23,7 +22,11 @@ CACHE_DIR = ROOT / ".cache" / "fastembed"
 
 
 @lru_cache(maxsize=2)
-def _local_model(model: str) -> TextEmbedding:
+def _local_model(model: str):
+    # Imported here so the served setup, which embeds with OpenAI, never loads this library.
+    # That keeps the container well inside a free host's memory limit.
+    from fastembed import TextEmbedding
+
     return TextEmbedding(model_name=model, cache_dir=str(CACHE_DIR))
 
 
