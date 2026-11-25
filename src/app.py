@@ -6,11 +6,12 @@ import os
 import time
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import BackgroundTasks, FastAPI, HTTPException, Request
 from openai import OpenAIError
 from pinecone.exceptions import PineconeException
 
 from src.config import load_config
+from src.live_judge import LiveJudge
 from src.rag import RagEngine
 from src.schemas import ExplainResponse, PredictResponse, QuestionRequest
 
@@ -47,12 +48,13 @@ class RequestStats:
         }
 
 
-def create_app(engine: RagEngine | None = None) -> FastAPI:
+def create_app(engine: RagEngine | None = None, live_judge: LiveJudge | None = None) -> FastAPI:
     @asynccontextmanager
     async def lifespan(app: FastAPI):
         # Fails at startup with a clear message if the saved index has not been built.
         config_name = os.environ.get("ANCHOR_RAG_CONFIG", "serving")
         app.state.engine = engine or RagEngine(load_config(config_name))
+        app.state.live_judge = live_judge or LiveJudge.from_env()
         app.state.started_at = time.time()
         yield
 
@@ -71,7 +73,7 @@ def create_app(engine: RagEngine | None = None) -> FastAPI:
         app.state.stats.record(request.url.path, (time.perf_counter() - start) * 1000)
         return response
 
-    def run(request: Request, method: str, body: QuestionRequest) -> dict:
+    def run(request: Request, method: str, body: QuestionRequest):
         rag = request.app.state.engine
         anchor_id = body.anchor_id.value
         if anchor_id not in rag.indexes:
@@ -84,9 +86,14 @@ def create_app(engine: RagEngine | None = None) -> FastAPI:
             ) from error
 
     @app.post("/predict", response_model=PredictResponse)
-    def predict(request: Request, body: QuestionRequest) -> dict:
+    def predict(request: Request, body: QuestionRequest, background: BackgroundTasks) -> dict:
         """Answer a question and name the source papers."""
-        return run(request, "predict", body)
+        response, passages = run(request, "answer", body)
+        live_judge = request.app.state.live_judge
+        if live_judge.should_judge():
+            # Runs after the response is sent, so judging never slows the answer down.
+            background.add_task(live_judge.score, body.question, response["answer"], passages)
+        return response
 
     @app.post("/explain", response_model=ExplainResponse)
     def explain(request: Request, body: QuestionRequest) -> dict:
@@ -104,9 +111,12 @@ def create_app(engine: RagEngine | None = None) -> FastAPI:
 
     @app.get("/stats")
     def stats(request: Request) -> dict:
-        """Request count and average latency since the service started."""
+        """Request count and average latency since start, and the live judge's scores."""
         uptime_s = time.time() - request.app.state.started_at
-        return request.app.state.stats.summary() | {"uptime_s": int(uptime_s)}
+        return request.app.state.stats.summary() | {
+            "uptime_s": int(uptime_s),
+            "live_judge": request.app.state.live_judge.summary(),
+        }
 
     return app
 

@@ -52,11 +52,12 @@ class RagEngine:
             "setup": setup_name(self.config),
         }
 
-    def predict(self, anchor_id: str, question: str) -> dict:
+    def answer(self, anchor_id: str, question: str) -> tuple[dict, list[dict]]:
+        """Return the response and the passages it was written from, which the live judge needs."""
         start = time.perf_counter()
         result = retrieve(question, self.indexes[anchor_id], self.config, self.store)
         answer = generate(question, result.passages, self.config["generation"])
-        return {
+        response = {
             "anchor_id": anchor_id,
             "answer": answer.text,
             "sources": unique_sources(result.passages),
@@ -64,3 +65,7 @@ class RagEngine:
             "setup": setup_name(self.config),
             "latency_ms": int((time.perf_counter() - start) * 1000),
         }
+        return response, result.passages
+
+    def predict(self, anchor_id: str, question: str) -> dict:
+        return self.answer(anchor_id, question)[0]
