@@ -26,3 +26,12 @@ jobs:
       - run: pip install -r requirements-dev.txt
       # Tests use stand-ins for every outside service, so no API keys are needed.
       - run: pytest
+
+  build:
+    # Only builds an image from code that passed lint and tests.
+    needs: [lint, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t anchor-rag:${{ github.sha }} .
+      - run: docker image ls anchor-rag
