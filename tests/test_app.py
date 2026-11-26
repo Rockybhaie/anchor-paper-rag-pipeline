@@ -138,3 +138,10 @@ def test_stats_count_requests_and_average_their_latency(client):
 def test_stats_also_count_rejected_requests(client):
     client.post("/predict", json={"anchor_id": "not_an_anchor", "question": "A valid question?"})
     assert client.get("/stats").json()["by_path"]["/predict"]["count"] == 1
+
+
+def test_stats_report_uptime_and_the_live_judge(client):
+    stats = client.get("/stats").json()
+
+    assert stats["uptime_s"] >= 0
+    assert {"enabled", "judged", "failed", "average_faithfulness"} <= stats["live_judge"].keys()
