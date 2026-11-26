@@ -23,12 +23,26 @@ The team also approved the citing papers for each anchor, approved the removal o
 
 Claude Code wrote most of the first drafts of the code in `src/`, `tests/`, `tools/` and `configs/`, along with `README.md`, the report, the member reflections in `CONTRIBUTION.md`, and this file's first draft.
 
+### Milestone 2
+
+The team made the main decisions:
+
+- **Passages:** rebuilding them from Pinecone at startup, so no paper text is published in the repo or the image.
+- **Platform:** Render, deployed from the Docker image.
+- **Project Focus:** LLM-as-a-Judge, starting with live judging and a check of the judge against our own labels.
+- **Work split:** which member owns which part of the milestone.
+
+The team also set up the Render service, reviewed and tested each pull request, and recorded the video.
+
+Claude Code wrote most of the first drafts of the Milestone 2 code, tests and documentation, including the `Dockerfile`, `RUNBOOK.md` and the new README sections.
+
 ## Models used inside the project
 
 These are part of the system, separate from the coding assistant above:
 
 - `gpt-4o-mini` scored paper abstracts, wrote the golden questions, and acted as the evaluation judge.
 - `gpt-4o-mini`, `gpt-5-nano`, `gemini-3.5-flash-lite` and `gpt-oss-20b` were compared as answer generators, and as judges.
+- In the deployed service, `gemini-3.5-flash-lite` writes the answers and `gpt-4o-mini` judges a sample of them.
 
 ## Group confirmation
 
