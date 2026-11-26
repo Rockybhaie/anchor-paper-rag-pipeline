@@ -14,15 +14,20 @@ flowchart LR
         C --> D[(Pinecone<br/>vectors)]
         C --> E[Versioned artifact<br/>passages and manifest]
     end
-    subgraph API["FastAPI service"]
+    subgraph API["FastAPI service in Docker, deployed on Render"]
         F[Question] --> G[Keyword + meaning search]
         D --> G
         E --> G
         G --> H[LLM writes answer<br/>from passages only]
         H --> I["/predict and /explain"]
+        H -. sampled .-> K[Live LLM judge]
+        K --> L["/stats and /health"]
     end
     E -. evaluated by .-> J[evaluate.py<br/>MLflow runs]
+    M[GitHub Actions<br/>lint, test, Docker build] -. checks every push .-> API
 ```
+
+The container does not hold the papers' text. On start, it rebuilds the passages from Pinecone, where each vector carries its passage, and checks them against the manifests committed in `data/index_manifests/`.
 
 ## Quick start
 
@@ -76,9 +81,80 @@ curl -X POST http://127.0.0.1:8000/predict \
 |---|---|
 | `POST /predict` | Answers the question and names the source papers. |
 | `POST /explain` | Returns the passages used and the paper each came from. |
+| `GET /health` | Returns `ok`, the version and the anchors loaded. Calls no outside service. |
+| `GET /stats` | Request count and average latency since start, by path too, and the live judge's scores. |
 | `GET /docs` | Interactive API documentation. |
 
 `anchor_id` must be `nested_learning`, `titans`, `ttt_rnn` or `hrm`. The question must be 5 to 500 characters. Anything else returns a 422 error.
+
+## Run with Docker
+
+One command builds the image and one runs it. Run them from the project root, with Docker Desktop running and your keys in `.env`:
+
+```bash
+docker build -t anchor-rag:v2.0 . && docker run --env-file .env -p 8000:8000 anchor-rag:v2.0
+```
+
+Then open <http://localhost:8000/docs>. In a second terminal, `docker ps` shows `(healthy)` in the STATUS column after about a minute, once the health check on `/health` passes.
+
+**Where the "model" comes from.** For this RAG project, building the search index takes the place of training. Building it needs paid API calls and about 50 minutes of downloads, so the image does not build it. Instead, the container rebuilds its passages from Pinecone on start and checks them against the committed manifests. Your Pinecone account must therefore hold an index built with `python -m src.build_index` (see Quick start). The team's deployed service already uses ours.
+
+Rebuilding the passages takes from a few seconds to about two minutes, depending on your connection. If you already built the index on this machine, mount it to skip that step:
+
+```bash
+docker run --env-file .env -p 8000:8000 -v "$(pwd)/artifacts:/app/artifacts" anchor-rag:v2.0
+```
+
+In PowerShell, use `${PWD}` in place of `$(pwd)`.
+
+The image installs only `requirements-serve.txt`, which is what the API needs. Evaluation and PDF tools stay out of it. The live judge is on in the image (`JUDGE_SAMPLE_RATE=1.0`, at most 30 answers an hour); set `-e JUDGE_SAMPLE_RATE=0` to turn it off.
+
+## Deployment
+
+**Live service: <https://anchor-paper-rag-pipeline.onrender.com>** (on Render's free plan, so the first request after a quiet period can take a minute while it wakes up).
+
+```bash
+curl https://anchor-paper-rag-pipeline.onrender.com/health
+curl -X POST https://anchor-paper-rag-pipeline.onrender.com/predict \
+  -H "Content-Type: application/json" \
+  -d '{"anchor_id": "titans", "question": "How does Titans use surprise when updating its memory?"}'
+curl https://anchor-paper-rag-pipeline.onrender.com/stats
+```
+
+In Windows PowerShell, quoting JSON for `curl.exe` differs between versions, so `Invoke-RestMethod` is simpler:
+
+```powershell
+Invoke-RestMethod https://anchor-paper-rag-pipeline.onrender.com/health
+$body = @{anchor_id = "titans"; question = "How does Titans use surprise when updating its memory?"} | ConvertTo-Json
+Invoke-RestMethod -Method Post https://anchor-paper-rag-pipeline.onrender.com/predict -ContentType "application/json" -Body $body
+Invoke-RestMethod https://anchor-paper-rag-pipeline.onrender.com/stats | ConvertTo-Json -Depth 5
+```
+
+**How it is deployed:** a Render web service with the Docker runtime builds this repository's `Dockerfile` on every push to `main`. Its health check path is `/health`, and the three API keys are set as secret environment variables in Render, never in the repository. To deploy your own copy:
+
+1. In Render, choose **New**, then **Web Service**, and connect your GitHub copy of this repository.
+2. Choose the **Docker** runtime, the `main` branch and the **Free** instance type.
+3. Under **Environment**, add `OPENAI_API_KEY`, `PINECONE_API_KEY` and `GEMINI_API_KEY`.
+4. Under **Advanced**, set **Health Check Path** to `/health`, then create the service.
+5. When the deploy finishes, open the URL Render shows, followed by `/health`.
+
+[RUNBOOK.md](RUNBOOK.md) covers redeploying, rolling back and common problems. If the service is shut down after grading to save cost, this section will say so.
+
+## Monitoring
+
+`GET /stats` counts every request and the time each took, since the service last started:
+
+```json
+{
+  "request_count": 12,
+  "average_latency_ms": 2318.4,
+  "by_path": {"/predict": {"count": 4, "average_latency_ms": 6852.1}, "/health": {"count": 6, "average_latency_ms": 1.2}},
+  "uptime_s": 940,
+  "live_judge": {"judged": 4, "average_faithfulness": 0.975, "average_relevancy": 0.71}
+}
+```
+
+Health checks are frequent and fast, so each path also has its own count and average. Counts live in memory and reset when the service restarts or sleeps, which the course allows. `live_judge` is described under [Project Focus](#project-focus-llm-as-a-judge).
 
 ### Running without an OpenAI key
 
@@ -184,7 +260,9 @@ pytest          # Or: make test
 ruff check .    # Or: make lint
 ```
 
-The tests use stand-ins for OpenAI, Gemini, Groq and Pinecone, so they need no keys and no network. They cover data preparation, index loading, retrieval, generation, the judge, the evaluation and MLflow logging, and the API endpoints. GitHub Actions runs both commands on every push.
+The tests use stand-ins for OpenAI, Gemini, Groq and Pinecone, so they need no keys and no network. They cover data preparation, index loading and rebuilding it from Pinecone, retrieval, generation, the judge, the evaluation and MLflow logging, the API endpoints, monitoring, the live judge and the judge agreement check.
+
+GitHub Actions (`.github/workflows/ci.yml`) runs three jobs on every push and pull request: **lint** (`ruff check .`), **test** (`pytest`) and **build**, which builds the Docker image and only runs when lint and test pass. The test job does not build the search index first, as a classic ML project would train its model: building it needs paid API keys and the papers, and the tests use a small corpus and stand-ins instead.
 
 ## Project Focus: LLM-as-a-Judge
 
@@ -195,26 +273,28 @@ The tests use stand-ins for OpenAI, Gemini, Groq and Pinecone, so they need no k
 **What we build and compare.**
 
 1. **Live judging (built).** After `/predict` responds, a background task scores a sample of answers with the chosen judge (`gpt-4o-mini` with the rubric prompt) against the passages actually used. `/stats` shows how many were judged and their average faithfulness and relevancy. `JUDGE_SAMPLE_RATE` and `JUDGE_MAX_PER_HOUR` limit spending on the public URL. Code: `src/live_judge.py`.
-2. **Judge against people (started).** `python -m src.judge_agreement sample` picks 40 claims from the served setup's held-back answers, putting every claim the judge doubted first. The team labels them from the passages without seeing the judge's verdicts. `python -m src.judge_agreement score` then logs agreement and Cohen's kappa to the MLflow experiment `focus-judge-agreement`.
+2. **Judge against people (started).** `python -m src.judge_agreement sample` picks 40 claims from the served setup's held-back answers, putting every claim the judge doubted first. The sample is ready in `results/judge_agreement/`. Next, the team labels the claims from the passages without seeing the judge's verdicts, and `python -m src.judge_agreement score` logs agreement and Cohen's kappa to the MLflow experiment `focus-judge-agreement`.
 3. **Next, for the final evaluation:** compare the judge's live scores with its offline ones to detect quality drift, and compare judge models and prompts by their agreement with people, not only by the gap between real and unrelated passages used in Milestone 1.
 
-**How we demonstrate it.** Send a few `/predict` requests and show `/stats` filling in the live judge's scores, then open the `focus-judge-agreement` experiment in MLflow.
+**How we demonstrate it.** Send a few `/predict` requests and show `/stats` filling in the live judge's scores. Once the labels are in, open the `focus-judge-agreement` experiment in MLflow.
 
 ## Project layout
 
 ```text
 configs/    Anchors, baseline, staged evaluation, served setup, free setup
 prompts/    Prompt options for generation, the judge and question writing
-data/       Frozen paper lists and golden questions (papers are downloaded, not stored)
-src/        collect_citations, prepare_data, build_index, evaluate, app and their helpers
+data/       Frozen paper lists, golden questions and index manifests (papers are downloaded, not stored)
+src/        collect_citations, prepare_data, build_index, evaluate, app, live_judge, judge_agreement
 tests/      pytest tests
-results/    Saved answers and scores, summary tables, side-by-side answers
+results/    Saved answers and scores, summary tables, side-by-side answers, claims sampled for the judge agreement check
 reports/    Milestone report and MLflow screenshots
 tools/      Scripts that rebuild the report and screenshots
 mlflow.db, mlartifacts/    The MLflow run history
+Dockerfile, .dockerignore  The API image
+RUNBOOK.md  Redeploying, rolling back and common problems
 ```
 
-`src/build_index.py` is the RAG equivalent of a training script. It saves a versioned artifact such as `artifacts/indexes/titans/recursive-800-120__text-embedding-3-small__v1/`, which the API loads at startup.
+`src/build_index.py` is the RAG equivalent of a training script. It saves a versioned artifact such as `artifacts/indexes/titans/recursive-800-120__text-embedding-3-small__v1/`, which the API loads at startup, and a copy of its manifest in `data/index_manifests/`. Each vector in Pinecone also carries its passage, so a machine without the artifact rebuilds it from Pinecone and checks it against that manifest.
 
 ## Changes from the proposal
 
